@@ -1,0 +1,5118 @@
+{
+  "meta": {
+    "version": "0.4",
+    "baseline": 150,
+    "assumption": "150 entradas adotadas como válidas para o projeto; documentação individual em revisão",
+    "source": "MELISFERA_RN_dados_v03.json"
+  },
+  "taxa": [
+    {
+      "id": "ARN-0001",
+      "taxonId": "TAX-ARN-0001",
+      "name": "Acamptopoeum prinii",
+      "originalName": "Acamptopoeum prinii",
+      "family": "Andrenidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0001",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0002",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0003",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0002",
+      "taxonId": "TAX-ARN-0002",
+      "name": "Alloscirtetica alvarengai",
+      "originalName": "Alloscirtetica alvarengai",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0004",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0003",
+      "taxonId": "TAX-ARN-0003",
+      "name": "Alloscirtetica labiatarum",
+      "originalName": "Alloscirtetica labiatarum",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0005",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0004",
+      "taxonId": "TAX-ARN-0004",
+      "name": "Ancyloscelis apiformis",
+      "originalName": "Ancyloscelis apiformis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0006",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0007",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0008",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0005",
+      "taxonId": "TAX-ARN-0005",
+      "name": "Anthidium latum",
+      "originalName": "Anthidium latum",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0009",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0010",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0011",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0006",
+      "taxonId": "TAX-ARN-0006",
+      "name": "Apis mellifera",
+      "originalName": "Apis mellifera",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Introduzida/exótica",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0012",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Exótica documentada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-002",
+          "linkId": "LF-0013",
+          "label": "Jorge et al. 2024",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Exótica documentada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0014",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Exótica documentada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0015",
+          "label": "EIA",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Exótica documentada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0007",
+      "taxonId": "TAX-ARN-0007",
+      "name": "Arhysoceble huberi",
+      "originalName": "Arhysoceble huberi",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0016",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0017",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0018",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0008",
+      "taxonId": "TAX-ARN-0008",
+      "name": "Augochlora aurinasis",
+      "originalName": "Augochlora aurinasis",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0019",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0009",
+      "taxonId": "TAX-ARN-0009",
+      "name": "Augochlora diaphractes",
+      "originalName": "Augochlora diaphractes",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0020",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0010",
+      "taxonId": "TAX-ARN-0010",
+      "name": "Augochlora esox",
+      "originalName": "Augochlora esox",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0021",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0022",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0023",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0011",
+      "taxonId": "TAX-ARN-0011",
+      "name": "Augochlora modica",
+      "originalName": "Augochlora modica",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0024",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0012",
+      "taxonId": "TAX-ARN-0012",
+      "name": "Augochlora thalia",
+      "originalName": "Augochlora thalia",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0025",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0026",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0013",
+      "taxonId": "TAX-ARN-0013",
+      "name": "Augochlorella tredecim",
+      "originalName": "Augochlorella tredecim",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0027",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0028",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0014",
+      "taxonId": "TAX-ARN-0014",
+      "name": "Augochloropsis callichroa",
+      "originalName": "Augochloropsis callichroa",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0029",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0030",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0015",
+      "taxonId": "TAX-ARN-0015",
+      "name": "Bombus brevivillus",
+      "originalName": "Bombus brevivillus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0031",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0032",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0033",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0034",
+          "label": "EIA",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0016",
+      "taxonId": "TAX-ARN-0016",
+      "name": "Caenonomada bruneri",
+      "originalName": "Caenonomada bruneri",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0035",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0017",
+      "taxonId": "TAX-ARN-0017",
+      "name": "Caenonomada unicalcarata",
+      "originalName": "Caenonomada unicalcarata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0036",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0037",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0038",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0018",
+      "taxonId": "TAX-ARN-0018",
+      "name": "Callonychium brasiliense",
+      "originalName": "Callonychium brasiliense",
+      "family": "Andrenidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0039",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0040",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0041",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0019",
+      "taxonId": "TAX-ARN-0019",
+      "name": "Centris aenea",
+      "originalName": "Centris aenea",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0042",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0043",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0044",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0045",
+          "label": "EIA",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0020",
+      "taxonId": "TAX-ARN-0020",
+      "name": "Centris analis",
+      "originalName": "Centris analis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0046",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0021",
+      "taxonId": "TAX-ARN-0021",
+      "name": "Centris burgdorfi",
+      "originalName": "Centris burgdorfi",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0047",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0048",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0049",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0022",
+      "taxonId": "TAX-ARN-0022",
+      "name": "Centris caxiensis",
+      "originalName": "Centris caxiensis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0050",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0051",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0023",
+      "taxonId": "TAX-ARN-0023",
+      "name": "Centris flavifrons",
+      "originalName": "Centris flavifrons",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0052",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0024",
+      "taxonId": "TAX-ARN-0024",
+      "name": "Centris fuscata",
+      "originalName": "Centris fuscata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0053",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0054",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0055",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0056",
+          "label": "EIA",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0025",
+      "taxonId": "TAX-ARN-0025",
+      "name": "Centris hyptidis",
+      "originalName": "Centris hyptidis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0057",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0058",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0026",
+      "taxonId": "TAX-ARN-0026",
+      "name": "Centris tarsata",
+      "originalName": "Centris tarsata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0059",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0060",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0061",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0027",
+      "taxonId": "TAX-ARN-0027",
+      "name": "Centris trigonoides",
+      "originalName": "Centris trigonoides",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0062",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0063",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0028",
+      "taxonId": "TAX-ARN-0028",
+      "name": "Centris xanthomelaena",
+      "originalName": "Centris xanthomelaena",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0064",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0065",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0029",
+      "taxonId": "TAX-ARN-0029",
+      "name": "Ceratina maculifrons",
+      "originalName": "Ceratina maculifrons",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0066",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0067",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0030",
+      "taxonId": "TAX-ARN-0030",
+      "name": "Ceratina manni",
+      "originalName": "Ceratina manni",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0068",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0069",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0070",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0031",
+      "taxonId": "TAX-ARN-0031",
+      "name": "Chilicola minima",
+      "originalName": "Chilicola minima",
+      "family": "Colletidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0071",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0072",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0032",
+      "taxonId": "TAX-ARN-0032",
+      "name": "Coelioxoides waltheriae",
+      "originalName": "Coelioxoides waltheriae",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0073",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0033",
+      "taxonId": "TAX-ARN-0033",
+      "name": "Coelioxys cearensis",
+      "originalName": "Coelioxys cearensis",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0074",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0075",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0034",
+      "taxonId": "TAX-ARN-0034",
+      "name": "Coelioxys cerasiopleura",
+      "originalName": "Coelioxys cerasiopleura",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0076",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0077",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0035",
+      "taxonId": "TAX-ARN-0035",
+      "name": "Coelioxys chacoensis",
+      "originalName": "Coelioxys chacoensis",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0078",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0079",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0036",
+      "taxonId": "TAX-ARN-0036",
+      "name": "Coelioxys praetextata",
+      "originalName": "Coelioxys praetextata",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0080",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0081",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0037",
+      "taxonId": "TAX-ARN-0037",
+      "name": "Coelioxys praetextatus",
+      "originalName": "Coelioxys praetextatus",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0082",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0038",
+      "taxonId": "TAX-ARN-0038",
+      "name": "Coelioxys simillima",
+      "originalName": "Coelioxys simillima",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0083",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0039",
+      "taxonId": "TAX-ARN-0039",
+      "name": "Coelioxys simillimus",
+      "originalName": "Coelioxys simillimus",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0084",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0040",
+      "taxonId": "TAX-ARN-0040",
+      "name": "Coelioxys tolteca",
+      "originalName": "Coelioxys tolteca",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0085",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0041",
+      "taxonId": "TAX-ARN-0041",
+      "name": "Diadasina paraensis",
+      "originalName": "Diadasina paraensis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0086",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0087",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0088",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0042",
+      "taxonId": "TAX-ARN-0042",
+      "name": "Diadasina riparia",
+      "originalName": "Diadasina riparia",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0089",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0090",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0091",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0043",
+      "taxonId": "TAX-ARN-0043",
+      "name": "Dicranthidium arenarium",
+      "originalName": "Dicranthidium arenarium",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0092",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0093",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0044",
+      "taxonId": "TAX-ARN-0044",
+      "name": "Epanthidium maculatum",
+      "originalName": "Epanthidium maculatum",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0094",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0095",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0045",
+      "taxonId": "TAX-ARN-0045",
+      "name": "Epanthidium tigrinum",
+      "originalName": "Epanthidium tigrinum",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0096",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0097",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0098",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0046",
+      "taxonId": "TAX-ARN-0046",
+      "name": "Epicharis nigrita",
+      "originalName": "Epicharis nigrita",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0099",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0047",
+      "taxonId": "TAX-ARN-0047",
+      "name": "Euglossa cordata",
+      "originalName": "Euglossa cordata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0100",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0048",
+      "taxonId": "TAX-ARN-0048",
+      "name": "Euglossa melanotricha",
+      "originalName": "Euglossa melanotricha",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0101",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0049",
+      "taxonId": "TAX-ARN-0049",
+      "name": "Euglossa sp.",
+      "originalName": "Euglossa sp.",
+      "family": "Não determinada",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-005",
+          "linkId": "LF-0102",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Identificação aberta / morfoespécie",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0050",
+      "taxonId": "TAX-ARN-0050",
+      "name": "Eulaema cingulata",
+      "originalName": "Eulaema cingulata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0103",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0051",
+      "taxonId": "TAX-ARN-0051",
+      "name": "Eulaema nigrita",
+      "originalName": "Eulaema nigrita",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0104",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0105",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0106",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0052",
+      "taxonId": "TAX-ARN-0052",
+      "name": "Exaerete smaragdina",
+      "originalName": "Exaerete smaragdina",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0107",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0053",
+      "taxonId": "TAX-ARN-0053",
+      "name": "Exomalopsis analis",
+      "originalName": "Exomalopsis analis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0108",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0109",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0110",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0054",
+      "taxonId": "TAX-ARN-0054",
+      "name": "Florilegus festivus",
+      "originalName": "Florilegus festivus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0111",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0112",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0113",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0055",
+      "taxonId": "TAX-ARN-0055",
+      "name": "Florilegus melectoides",
+      "originalName": "Florilegus melectoides",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0114",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0056",
+      "taxonId": "TAX-ARN-0056",
+      "name": "Florilegus similis",
+      "originalName": "Florilegus similis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0115",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0116",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0057",
+      "taxonId": "TAX-ARN-0057",
+      "name": "Frieseomelitta doederleini",
+      "originalName": "Frieseomelitta doederleini",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0117",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0118",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0058",
+      "taxonId": "TAX-ARN-0058",
+      "name": "Frieseomelitta flavicornis",
+      "originalName": "Frieseomelitta flavicornis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0119",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0059",
+      "taxonId": "TAX-ARN-0059",
+      "name": "Frieseomelitta meadewaldoi",
+      "originalName": "Frieseomelitta meadewaldoi",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0120",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0060",
+      "taxonId": "TAX-ARN-0060",
+      "name": "Frieseomelitta varia",
+      "originalName": "Frieseomelitta varia",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0121",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0122",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0061",
+      "taxonId": "TAX-ARN-0061",
+      "name": "Gaesischia araguaiana",
+      "originalName": "Gaesischia araguaiana",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0123",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0062",
+      "taxonId": "TAX-ARN-0062",
+      "name": "Gaesischia buzzii",
+      "originalName": "Gaesischia buzzii",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0124",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0063",
+      "taxonId": "TAX-ARN-0063",
+      "name": "Gaesischia carinata",
+      "originalName": "Gaesischia carinata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0125",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0126",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0064",
+      "taxonId": "TAX-ARN-0064",
+      "name": "Gaesischia cearensis",
+      "originalName": "Gaesischia cearensis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0127",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0065",
+      "taxonId": "TAX-ARN-0065",
+      "name": "Gaesischia glabrata",
+      "originalName": "Gaesischia glabrata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0128",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0129",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0066",
+      "taxonId": "TAX-ARN-0066",
+      "name": "Gaesischia hyptidis",
+      "originalName": "Gaesischia hyptidis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0130",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0131",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0132",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0067",
+      "taxonId": "TAX-ARN-0067",
+      "name": "Gaesischia interrupta",
+      "originalName": "Gaesischia interrupta",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0133",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0068",
+      "taxonId": "TAX-ARN-0068",
+      "name": "Gaesischia rosadoi",
+      "originalName": "Gaesischia rosadoi",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0134",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0135",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0136",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0069",
+      "taxonId": "TAX-ARN-0069",
+      "name": "Gaesischia similis",
+      "originalName": "Gaesischia similis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0137",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0070",
+      "taxonId": "TAX-ARN-0070",
+      "name": "Hypanthidioides arenaria",
+      "originalName": "Hypanthidioides arenaria",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0138",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0071",
+      "taxonId": "TAX-ARN-0071",
+      "name": "Hypanthidioides emarginata",
+      "originalName": "Hypanthidioides emarginata",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0139",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0072",
+      "taxonId": "TAX-ARN-0072",
+      "name": "Larocanthidium emarginatum",
+      "originalName": "Larocanthidium emarginatum",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0140",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0073",
+      "taxonId": "TAX-ARN-0073",
+      "name": "Leiopodus abnormis",
+      "originalName": "Leiopodus abnormis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0141",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0074",
+      "taxonId": "TAX-ARN-0074",
+      "name": "Leiopodus lacertinus",
+      "originalName": "Leiopodus lacertinus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0142",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0075",
+      "taxonId": "TAX-ARN-0075",
+      "name": "Leiopodus nigripes",
+      "originalName": "Leiopodus nigripes",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0143",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0144",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0076",
+      "taxonId": "TAX-ARN-0076",
+      "name": "Leiopodus trochantericus",
+      "originalName": "Leiopodus trochantericus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0145",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0146",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0077",
+      "taxonId": "TAX-ARN-0077",
+      "name": "Leioproctus bicellularis",
+      "originalName": "Leioproctus bicellularis",
+      "family": "Colletidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0147",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0078",
+      "taxonId": "TAX-ARN-0078",
+      "name": "Lithurgus huberi",
+      "originalName": "Lithurgus huberi",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0148",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0149",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0150",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0079",
+      "taxonId": "TAX-ARN-0079",
+      "name": "Megachile asuncicola",
+      "originalName": "Megachile asuncicola",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0151",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0152",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0080",
+      "taxonId": "TAX-ARN-0080",
+      "name": "Megachile brethesi",
+      "originalName": "Megachile brethesi",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0153",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0154",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0155",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0081",
+      "taxonId": "TAX-ARN-0081",
+      "name": "Megachile cylindrica",
+      "originalName": "Megachile cylindrica",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0156",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0157",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0082",
+      "taxonId": "TAX-ARN-0082",
+      "name": "Megachile eburnipes",
+      "originalName": "Megachile eburnipes",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0158",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0159",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0083",
+      "taxonId": "TAX-ARN-0083",
+      "name": "Megachile inscita",
+      "originalName": "Megachile inscita",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0160",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0161",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0162",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0084",
+      "taxonId": "TAX-ARN-0084",
+      "name": "Megachile orba",
+      "originalName": "Megachile orba",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0163",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0164",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0165",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0085",
+      "taxonId": "TAX-ARN-0085",
+      "name": "Megachile paulistana",
+      "originalName": "Megachile paulistana",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0166",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0167",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0086",
+      "taxonId": "TAX-ARN-0086",
+      "name": "Megachile permunda",
+      "originalName": "Megachile permunda",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0168",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0087",
+      "taxonId": "TAX-ARN-0087",
+      "name": "Megachile verrucosa",
+      "originalName": "Megachile verrucosa",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0169",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0170",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0088",
+      "taxonId": "TAX-ARN-0088",
+      "name": "Megachile virescens",
+      "originalName": "Megachile virescens",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0171",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0089",
+      "taxonId": "TAX-ARN-0089",
+      "name": "Melipona asilvai",
+      "originalName": "Melipona asilvai",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0172",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0173",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0090",
+      "taxonId": "TAX-ARN-0090",
+      "name": "Melipona mandacaia",
+      "originalName": "Melipona mandacaia",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Origem silvestre incerta; manejo possível",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0174",
+          "label": "Jorge et al. 2024",
+          "municipality": "Não informado",
+          "evidenceClass": "Ocorrência manejada / origem a verificar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0175",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Ocorrência manejada / origem a verificar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0091",
+      "taxonId": "TAX-ARN-0091",
+      "name": "Melipona scutellaris",
+      "originalName": "Melipona scutellaris",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0176",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0177",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0178",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0092",
+      "taxonId": "TAX-ARN-0092",
+      "name": "Melipona subnitida",
+      "originalName": "Melipona subnitida",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0179",
+          "label": "Jorge et al. 2024",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0180",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0181",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0182",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0093",
+      "taxonId": "TAX-ARN-0093",
+      "name": "Melissodes nigroaenea",
+      "originalName": "Melissodes nigroaenea",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0183",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0184",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0094",
+      "taxonId": "TAX-ARN-0094",
+      "name": "Melissodes nigroaeneus",
+      "originalName": "Melissodes nigroaeneus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0185",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0095",
+      "taxonId": "TAX-ARN-0095",
+      "name": "Melissoptila cnecomala",
+      "originalName": "Melissoptila cnecomala",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0186",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0187",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0188",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0096",
+      "taxonId": "TAX-ARN-0096",
+      "name": "Melissoptila moureana",
+      "originalName": "Melissoptila moureana",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0189",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0097",
+      "taxonId": "TAX-ARN-0097",
+      "name": "Melissoptila pubescens",
+      "originalName": "Melissoptila pubescens",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0190",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0098",
+      "taxonId": "TAX-ARN-0098",
+      "name": "Melitoma ipomoearum",
+      "originalName": "Melitoma ipomoearum",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0191",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0192",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0193",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0099",
+      "taxonId": "TAX-ARN-0099",
+      "name": "Melitoma osmioides",
+      "originalName": "Melitoma osmioides",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0194",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0100",
+      "taxonId": "TAX-ARN-0100",
+      "name": "Melitoma segmentaria",
+      "originalName": "Melitoma segmentaria",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0195",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0196",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0197",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0101",
+      "taxonId": "TAX-ARN-0101",
+      "name": "Melitoma taurea",
+      "originalName": "Melitoma taurea",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0198",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0102",
+      "taxonId": "TAX-ARN-0102",
+      "name": "Melitomella murihirta",
+      "originalName": "Melitomella murihirta",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0199",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0200",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0103",
+      "taxonId": "TAX-ARN-0103",
+      "name": "Mesocheira bicolor",
+      "originalName": "Mesocheira bicolor",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0201",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0202",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0104",
+      "taxonId": "TAX-ARN-0104",
+      "name": "Micronychapis duckei",
+      "originalName": "Micronychapis duckei",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0203",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0105",
+      "taxonId": "TAX-ARN-0105",
+      "name": "Microthurge friesei",
+      "originalName": "Microthurge friesei",
+      "family": "Megachilidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0204",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0205",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0206",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0106",
+      "taxonId": "TAX-ARN-0106",
+      "name": "Nannotrigona punctata",
+      "originalName": "Nannotrigona punctata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0207",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0107",
+      "taxonId": "TAX-ARN-0107",
+      "name": "Osirinus parvicollis",
+      "originalName": "Osirinus parvicollis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0208",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0209",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0210",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0108",
+      "taxonId": "TAX-ARN-0108",
+      "name": "Oxytrigona tataira",
+      "originalName": "Oxytrigona tataira",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0211",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0109",
+      "taxonId": "TAX-ARN-0109",
+      "name": "Parapsaenythia lanata",
+      "originalName": "Parapsaenythia lanata",
+      "family": "Andrenidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0212",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0110",
+      "taxonId": "TAX-ARN-0110",
+      "name": "Parepeolus aterrimus",
+      "originalName": "Parepeolus aterrimus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0213",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0214",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0111",
+      "taxonId": "TAX-ARN-0111",
+      "name": "Partamona cupira",
+      "originalName": "Partamona cupira",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0215",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Identificação histórica contestada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0112",
+      "taxonId": "TAX-ARN-0112",
+      "name": "Partamona littoralis",
+      "originalName": "Partamona littoralis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0216",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0217",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0113",
+      "taxonId": "TAX-ARN-0113",
+      "name": "Partamona seridoensis",
+      "originalName": "Partamona seridoensis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0218",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0219",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0114",
+      "taxonId": "TAX-ARN-0114",
+      "name": "Plebeia droryana",
+      "originalName": "Plebeia droryana",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0220",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0115",
+      "taxonId": "TAX-ARN-0115",
+      "name": "Plebeia flavocincta",
+      "originalName": "Plebeia flavocincta",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0221",
+          "label": "Jorge et al. 2024",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0222",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0223",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0116",
+      "taxonId": "TAX-ARN-0116",
+      "name": "Plebeia mosquito",
+      "originalName": "Plebeia mosquito",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0224",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Identificação histórica contestada",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0117",
+      "taxonId": "TAX-ARN-0117",
+      "name": "Protodiscelis alismatis",
+      "originalName": "Protodiscelis alismatis",
+      "family": "Colletidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0225",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0226",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0118",
+      "taxonId": "TAX-ARN-0118",
+      "name": "Protodiscelis palpalis",
+      "originalName": "Protodiscelis palpalis",
+      "family": "Colletidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0227",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0119",
+      "taxonId": "TAX-ARN-0119",
+      "name": "Protomeliturga turnerae",
+      "originalName": "Protomeliturga turnerae",
+      "family": "Andrenidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0228",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0229",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0230",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0120",
+      "taxonId": "TAX-ARN-0120",
+      "name": "Psaenythia variabilis",
+      "originalName": "Psaenythia variabilis",
+      "family": "Andrenidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0231",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0232",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0233",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0121",
+      "taxonId": "TAX-ARN-0121",
+      "name": "Pseudaugochlora pandora",
+      "originalName": "Pseudaugochlora pandora",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0234",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0235",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0236",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0122",
+      "taxonId": "TAX-ARN-0122",
+      "name": "Ptilothrix plumata",
+      "originalName": "Ptilothrix plumata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0237",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0238",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0239",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0123",
+      "taxonId": "TAX-ARN-0123",
+      "name": "Ptilothrix vulpihirta",
+      "originalName": "Ptilothrix vulpihirta",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0240",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0124",
+      "taxonId": "TAX-ARN-0124",
+      "name": "Scaptotrigona depilis",
+      "originalName": "Scaptotrigona depilis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0241",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0125",
+      "taxonId": "TAX-ARN-0125",
+      "name": "Scaptotrigona postica",
+      "originalName": "Scaptotrigona postica",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0242",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0126",
+      "taxonId": "TAX-ARN-0126",
+      "name": "Tapinotaspoides rufescens",
+      "originalName": "Tapinotaspoides rufescens",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0243",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0127",
+      "taxonId": "TAX-ARN-0127",
+      "name": "Tetrapedia diversipes",
+      "originalName": "Tetrapedia diversipes",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0244",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0128",
+      "taxonId": "TAX-ARN-0128",
+      "name": "Thectochlora alaris",
+      "originalName": "Thectochlora alaris",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-004",
+          "linkId": "LF-0245",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Fonte secundária — localizar primária",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0129",
+      "taxonId": "TAX-ARN-0129",
+      "name": "Triepeolus alvarengai",
+      "originalName": "Triepeolus alvarengai",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0246",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0130",
+      "taxonId": "TAX-ARN-0130",
+      "name": "Triepeolus lunatus",
+      "originalName": "Triepeolus lunatus",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0247",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0131",
+      "taxonId": "TAX-ARN-0131",
+      "name": "Trigona corvina",
+      "originalName": "Trigona corvina",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0248",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0132",
+      "taxonId": "TAX-ARN-0132",
+      "name": "Trigona fulviventris",
+      "originalName": "Trigona fulviventris",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0249",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0133",
+      "taxonId": "TAX-ARN-0133",
+      "name": "Trigona guianae",
+      "originalName": "Trigona guianae",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0250",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0134",
+      "taxonId": "TAX-ARN-0134",
+      "name": "Trigona spinipes",
+      "originalName": "Trigona spinipes",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0251",
+          "label": "Jorge et al. 2024",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0252",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0253",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0254",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0135",
+      "taxonId": "TAX-ARN-0135",
+      "name": "Xylocopa brasilianorum",
+      "originalName": "Xylocopa brasilianorum",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0255",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0136",
+      "taxonId": "TAX-ARN-0136",
+      "name": "Xylocopa carbonaria",
+      "originalName": "Xylocopa carbonaria",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0256",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0257",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0137",
+      "taxonId": "TAX-ARN-0137",
+      "name": "Xylocopa cearensis",
+      "originalName": "Xylocopa cearensis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0258",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0259",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0260",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0138",
+      "taxonId": "TAX-ARN-0138",
+      "name": "Xylocopa dimidiata",
+      "originalName": "Xylocopa dimidiata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0261",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0139",
+      "taxonId": "TAX-ARN-0139",
+      "name": "Xylocopa frontalis",
+      "originalName": "Xylocopa frontalis",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0262",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0263",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0264",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0140",
+      "taxonId": "TAX-ARN-0140",
+      "name": "Xylocopa grisescens",
+      "originalName": "Xylocopa grisescens",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0265",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0266",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0267",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-005",
+          "linkId": "LF-0268",
+          "label": "EIA",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0141",
+      "taxonId": "TAX-ARN-0141",
+      "name": "Xylocopa lucida",
+      "originalName": "Xylocopa lucida",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0269",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0142",
+      "taxonId": "TAX-ARN-0142",
+      "name": "Xylocopa muscaria",
+      "originalName": "Xylocopa muscaria",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0270",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-003",
+          "linkId": "LF-0271",
+          "label": "GBIF",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        },
+        {
+          "id": "FON-004",
+          "linkId": "LF-0272",
+          "label": "A.B.E.L.H.A.",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0143",
+      "taxonId": "TAX-ARN-0143",
+      "name": "Xylocopa ordinaria",
+      "originalName": "Xylocopa ordinaria",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0273",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0144",
+      "taxonId": "TAX-ARN-0144",
+      "name": "Xylocopa sp.",
+      "originalName": "Xylocopa sp.",
+      "family": "Não determinada",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-005",
+          "linkId": "LF-0274",
+          "label": "EIA",
+          "municipality": "Não informado",
+          "evidenceClass": "Identificação aberta / morfoespécie",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0145",
+      "taxonId": "TAX-ARN-0145",
+      "name": "Xylocopa subzonata",
+      "originalName": "Xylocopa subzonata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0275",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-0146",
+      "taxonId": "TAX-ARN-0146",
+      "name": "Xylocopa violacea",
+      "originalName": "Xylocopa violacea",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-003",
+          "linkId": "LF-0276",
+          "label": "GBIF",
+          "municipality": "Não informado",
+          "evidenceClass": "Registro digital RN — validar",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ZAN-2",
+      "taxonId": "TAX-ZAN-2",
+      "name": "Baptonedys bicellularis",
+      "originalName": "Baptonedys bicellularis",
+      "family": "Colletidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0277",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ZAN-18",
+      "taxonId": "TAX-ZAN-18",
+      "name": "Dialictus opacus",
+      "originalName": "Dialictus opacus",
+      "family": "Halictidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-001",
+          "linkId": "LF-0278",
+          "label": "Zanella 2000",
+          "municipality": "Serra Negra do Norte",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-NOVO-001",
+      "taxonId": "TAX-ARN-NOVO-001",
+      "name": "Xylocopa abbreviata",
+      "originalName": "Xylocopa abbreviata",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0279",
+          "label": "Jorge et al. 2024",
+          "municipality": "RN; município por espécie não discriminado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    },
+    {
+      "id": "ARN-NOVO-002",
+      "taxonId": "TAX-ARN-NOVO-002",
+      "name": "Xylocopa macambirae",
+      "originalName": "Xylocopa macambirae",
+      "family": "Apidae",
+      "taxonomicResolution": "Binômio nominal",
+      "origin": "Não avaliada individualmente",
+      "sources": [
+        {
+          "id": "FON-002",
+          "linkId": "LF-0280",
+          "label": "Jorge et al. 2024",
+          "municipality": "RN; município por espécie não discriminado",
+          "evidenceClass": "Evidência bibliográfica RN",
+          "voucher": null,
+          "occurrenceId": null,
+          "page": null,
+          "url": null,
+          "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "FONTE_ID": "FON-001",
+      "Tipo": "Literatura / levantamento",
+      "Referência completa": "Zanella, F.C.V. (2000). The bees of the Caatinga. Apidologie 31:579–592.",
+      "DOI ou URL": "https://doi.org/10.1051/apido:2000148",
+      "Página / tabela": null,
+      "Dataset ou instituição": "Zanella 2000",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-002",
+      "Tipo": "Literatura / levantamento",
+      "Referência completa": "Jorge et al. (2024). Semi-arid’s Unsung Heroes. Neotropical Entomology.",
+      "DOI ou URL": "https://doi.org/10.1007/s13744-024-01152-7",
+      "Página / tabela": null,
+      "Dataset ou instituição": "Jorge et al. 2024",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-003",
+      "Tipo": "Base digital",
+      "Referência completa": "GBIF.org — registros de ocorrência de abelhas filtrados para RN",
+      "DOI ou URL": "https://www.gbif.org/",
+      "Página / tabela": null,
+      "Dataset ou instituição": "GBIF",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-004",
+      "Tipo": "Base digital",
+      "Referência completa": "Sistema A.B.E.L.H.A. / CRIA — lista de abelhas",
+      "DOI ou URL": "https://abelha.cria.org.br/list",
+      "Página / tabela": null,
+      "Dataset ou instituição": "A.B.E.L.H.A.",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-005",
+      "Tipo": "Literatura / levantamento",
+      "Referência completa": "Planilha EIA-Abelhas-JC — levantamento de João Câmara, RN",
+      "DOI ou URL": null,
+      "Página / tabela": null,
+      "Dataset ou instituição": "EIA",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-006",
+      "Tipo": "Literatura / levantamento",
+      "Referência completa": "Pereira et al. (2011). Meliponicultura no Rio Grande do Norte. Acta Veterinaria Brasilica 5(1):81–91.",
+      "DOI ou URL": "https://doi.org/10.21708/avb.2011.5.1.2015",
+      "Página / tabela": null,
+      "Dataset ou instituição": "Pereira et al. 2011",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-007",
+      "Tipo": "Literatura / levantamento",
+      "Referência completa": "Carvalho & Zanella (2017), capítulo sobre abelhas sem ferrão do RN, livro A abelha jandaíra no passado, no presente e no futuro.",
+      "DOI ou URL": null,
+      "Página / tabela": null,
+      "Dataset ou instituição": "Carvalho & Zanella 2017",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    },
+    {
+      "FONTE_ID": "FON-008",
+      "Tipo": "Base digital",
+      "Referência completa": "Catálogo Moure de Abelhas — nomes aceitos e sinonímias",
+      "DOI ou URL": "https://moure.cria.org.br/catalogue",
+      "Página / tabela": null,
+      "Dataset ou instituição": "Catálogo Moure",
+      "Data de consulta": null,
+      "Licença": null,
+      "Verificação documental": "Não verificada individualmente",
+      "Responsável": null
+    }
+  ]
+}

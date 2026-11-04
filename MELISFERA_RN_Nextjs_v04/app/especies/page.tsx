@@ -1,0 +1,2 @@
+import CatalogClient from '@/components/CatalogClient';import {taxa,families} from '@/lib/catalog';
+export default function Species(){return <section className="shell section"><p className="eyebrow">BIODIVERSIDADE</p><h1>Catálogo de espécies</h1><p className="intro">150 entradas adotadas como válidas para a fase atual. Cada ficha mantém os vínculos documentais da base original.</p><CatalogClient taxa={taxa} families={families}/></section>}
