@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import EcologyExplorer from '@/components/EcologyExplorer';
 import {ecologyRecords} from '@/lib/insights';
 import {taxa} from '@/lib/catalog';
 export const metadata={title:'Interações ecológicas e serviços ecossistêmicos'};
 export default function Ecology(){return <section className="shell section">
-<p className="eyebrow">ECOLOGIA FUNCIONAL · MELISFERA RN</p><h1>Interações e serviços ecossistêmicos</h1>
+<p className="eyebrow">ECOLOGIA FUNCIONAL · MELISFERA RN</p><div className="notice"><strong>Explore os serviços ecossistêmicos:</strong> conheça as contribuições das abelhas à flora nativa, agricultura, segurança alimentar, economia e cultura, com fichas temáticas e referências científicas. <Link href="/ecologia/servicos">Abrir catálogo de serviços →</Link></div><h1>Interações e serviços ecossistêmicos</h1>
 <p className="intro">As abelhas integram redes ecológicas que conectam plantas, habitats e paisagens. Ao visitar flores, coletar néctar e pólen e utilizar diferentes substratos para nidificação, podem contribuir para processos fundamentais à reprodução vegetal, à manutenção da biodiversidade e ao funcionamento dos ecossistemas. A natureza e a intensidade dessas contribuições variam entre espécies e ambientes e precisam ser documentadas com evidências específicas.</p>
 <p>O observatório reúne registros científicos de interações entre abelhas e outros organismos, com atenção à Caatinga e ao Semiárido potiguar. A consulta diferencia <strong>visitação floral observada</strong>, <strong>polinização efetivamente demonstrada</strong> e <strong>serviços ecossistêmicos potenciais</strong>. A visita a uma flor, isoladamente, não comprova transferência efetiva de pólen nem benefícios mensurados para uma cultura agrícola ou população vegetal.</p>
 <p>Nesta primeira etapa, o conjunto disponível corresponde às observações de abelhas em <i>Encholirium spectabile</i> publicadas por Jorge et al. (2024). A plataforma poderá incorporar novos estudos de redes planta–polinizador, recursos florais, nidificação e serviços de polinização, sempre acompanhados de referência, localidade, método e grau de evidência.</p>
