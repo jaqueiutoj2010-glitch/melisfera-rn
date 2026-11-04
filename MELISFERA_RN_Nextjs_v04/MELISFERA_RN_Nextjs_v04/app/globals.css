@@ -187,3 +187,6 @@
  .header .nav nav{justify-content:center;gap:7px 13px}
  .header .nav nav a{font-size:14px;line-height:1.4}
 }
+
+/* Galeria fotográfica das fichas taxonômicas */
+.beeGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:15px;margin-top:14px}.beeFigure{margin:0;border:1px solid #dce7dd;border-radius:13px;overflow:hidden;background:#f7faf7}.beeFigure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.beeFigure figcaption{font-size:12px;line-height:1.6;padding:12px 14px;color:#52685a}
