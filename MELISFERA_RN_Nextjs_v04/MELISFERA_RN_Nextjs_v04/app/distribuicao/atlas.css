@@ -8,3 +8,6 @@
 .atlasSpeciesLink{display:inline-flex;margin:12px 0 20px;padding:11px 15px;border-radius:9px;background:#245e42;color:#fff!important;font-weight:700;font-size:13px;text-decoration:none}
 .atlasSpeciesLink:hover,.atlasSpeciesLink:focus-visible{background:#16442f}
 @media(min-width:1150px){.atlasLayout{grid-template-columns:335px minmax(0,1fr)}.atlasMapColumn{padding:24px 27px}}
+
+/* Etiquetas cartográficas dos municípios informados */
+.atlasMapLabel text{font:700 13px system-ui,-apple-system,sans-serif;fill:#19475c;stroke:#f7faf7;stroke-width:3.5px;stroke-linejoin:round;paint-order:stroke fill}.atlasMapLabel circle{filter:drop-shadow(0 1px 2px #ffffffaa)}.atlasLegendTop{margin-bottom:3px}.atlasSvgWrap svg{overflow:visible}@media(max-width:600px){.atlasMapLabel text{font-size:15px}}
