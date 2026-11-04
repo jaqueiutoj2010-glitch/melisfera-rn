@@ -81,3 +81,33 @@
 .heroPhotoFallback{display:none}
 @media(max-width:1050px){.hero .shell.heroGrid{grid-template-columns:1fr;gap:32px}.heroGallery{height:460px;max-width:800px;width:100%;margin:auto}.hero .heroCopy h1{font-size:clamp(46px,6vw,70px)}}
 @media(max-width:650px){.hero .shell.heroGrid{gap:25px}.heroGallery{height:330px}.hero .heroCopy h1{font-size:clamp(38px,9vw,55px)}.hero .heroCopy .lead{font-size:17px}.heroGallery:before{border-width:5px;inset:-5px}}
+
+/* Home v0.7 — tipografia em duas linhas, fotografia enquadrada e CTA visível */
+@media(min-width:1051px){
+  .hero{padding:clamp(38px,3.7vw,62px) 0 clamp(42px,4vw,66px)}
+  .hero .shell.heroGrid{grid-template-columns:minmax(0,1.18fr) minmax(340px,.82fr);gap:clamp(24px,2.7vw,44px);align-items:center}
+  .hero .heroCopy h1{font-size:clamp(44px,3.75vw,66px);line-height:1.1;letter-spacing:-.045em}
+  .hero .heroCopy .eyebrow{margin-bottom:18px}
+  .hero .heroCopy .lead{font-size:clamp(17px,1.2vw,20px);line-height:1.55;margin:23px 0 27px}
+  .heroGallery{height:clamp(390px,31vw,510px)}
+  .heroPhotoOne{flex:1.04;background-position:center 51%}
+  .heroPhotoTwo{flex:.96;background-position:center 38%}
+}
+@media(min-width:1051px) and (max-width:1350px){
+  .hero .shell.heroGrid{grid-template-columns:minmax(0,1.12fr) minmax(330px,.88fr);gap:24px}
+  .hero .heroCopy h1{font-size:clamp(42px,3.7vw,52px)}
+  .heroGallery{height:410px}
+}
+@media(max-width:1050px){
+  .hero{padding:45px 0 58px}
+  .hero .heroCopy h1{font-size:clamp(40px,5.8vw,61px)}
+  .heroGallery{height:clamp(340px,48vw,450px)}
+  .heroPhotoTwo{background-position:center 36%}
+}
+@media(max-width:650px){
+  .hero{padding:38px 0 45px}
+  .hero .heroCopy h1{font-size:clamp(36px,8.6vw,49px)}
+  .hero .heroCopy .lead{margin:20px 0 25px}
+  .heroGallery{height:330px}
+  .heroPhotoTwo{background-position:center 34%}
+}
