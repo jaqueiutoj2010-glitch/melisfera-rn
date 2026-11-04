@@ -1,0 +1,11 @@
+import {taxa,references,countLinks} from '@/lib/catalog';
+import ecology from '@/data/ecology.json';
+export const familyCounts=Object.entries(taxa.reduce<Record<string,number>>((a,t)=>{const f=t.family?.trim()||'Não atribuída';a[f]=(a[f]||0)+1;return a;},{})).sort((a,b)=>b[1]-a[1]);
+export const namedFamilies=familyCounts.filter(([f])=>f!=='Não atribuída'&&f!=='Sem família');
+export const unassignedFamilies=familyCounts.filter(([f])=>f==='Não atribuída'||f==='Sem família');
+export const sourceCounts=references.map(r=>({id:r.FONTE_ID,label:r['Referência completa'],n:taxa.filter(t=>t.sources.some(s=>s.id===r.FONTE_ID)).length})).sort((a,b)=>b.n-a.n);
+export const localityCounts=Object.entries(taxa.reduce<Record<string,Set<string>>>((a,t)=>{for(const s of t.sources){const m=(s.municipality||'').trim();if(m){(a[m]??=new Set()).add(t.id)}}return a;},{})).map(([name,ids])=>({name,count:ids.size})).sort((a,b)=>b.count-a.count);
+export const taxaWithLocality=taxa.filter(t=>t.sources.some(s=>s.municipality?.trim())).length;
+export const ecologyRecords=ecology.records;
+export const ecologyFor=(name:string)=>ecologyRecords.find(r=>r.name.toLowerCase()===name.toLowerCase());
+export {countLinks};

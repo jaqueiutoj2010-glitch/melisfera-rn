@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="shell section"><h1>Registro não encontrado</h1><p>O identificador solicitado não está presente no catálogo atual.</p><Link className="button primary" href="/especies">Voltar ao catálogo</Link></section>}

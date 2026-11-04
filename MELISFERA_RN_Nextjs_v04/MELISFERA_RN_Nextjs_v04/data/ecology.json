@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "name": "Apis mellifera",
+      "dry": 3386,
+      "rainy": 4275,
+      "total": 7661,
+      "note": "Exótica; observada visitando Encholirium spectabile",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Centris sp.",
+      "dry": 87,
+      "rainy": 337,
+      "total": 424,
+      "note": "Identificação em nível de gênero",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Melipona mandacaia",
+      "dry": 358,
+      "rainy": 102,
+      "total": 460,
+      "note": "Ocorrência observada no estudo; origem local não inferida",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Melipona subnitida",
+      "dry": 520,
+      "rainy": 0,
+      "total": 520,
+      "note": "Observada no estudo",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Plebeia flavocincta",
+      "dry": 0,
+      "rainy": 208,
+      "total": 208,
+      "note": "Identificação publicada; verificar distinção de Plebeia aff. flavocincta",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Trigona spinipes",
+      "dry": 3227,
+      "rainy": 4799,
+      "total": 8026,
+      "note": "Observada no estudo",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Xylocopa abbreviata",
+      "dry": 4,
+      "rainy": 15,
+      "total": 19,
+      "note": "Observada no estudo",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    },
+    {
+      "name": "Xylocopa macambirae",
+      "dry": 1,
+      "rainy": 0,
+      "total": 1,
+      "note": "Observada no estudo",
+      "sourceId": "FON-002",
+      "plant": "Encholirium spectabile",
+      "interaction": "Visita floral registrada",
+      "service": "Potencial contribuição à polinização; não equivale a eficiência polinizadora medida"
+    }
+  ],
+  "scope": "Observações de Hymenoptera reportadas por Jorge et al. (2024); contagens de indivíduos/visitas conforme tabela do estudo, não estimativas populacionais estaduais.",
+  "citation": "Jorge et al. (2024), Neotropical Entomology, DOI 10.1007/s13744-024-01152-7"
+}
