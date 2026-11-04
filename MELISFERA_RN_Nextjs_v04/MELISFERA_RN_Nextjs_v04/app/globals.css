@@ -124,3 +124,16 @@
 @media (max-width:1100px){
   .header .nav nav a{font-size:14px;line-height:1.5}
 }
+
+/* Logo oficial MELISFERA RN: proporções preservadas e cabeçalho responsivo */
+.header .nav .brand{display:flex;align-items:center;flex:0 0 auto;min-width:0}
+.header .nav .brandLogoOfficial{display:block;width:clamp(190px,15vw,240px);height:auto;max-height:145px;object-fit:contain}
+.header .nav{min-height:130px}
+@media(max-width:1100px){
+  .header .nav{min-height:0}
+  .header .nav .brandLogoOfficial{width:205px;max-height:none}
+}
+@media(max-width:650px){
+  .header .nav .brandLogoOfficial{width:185px}
+  .header .nav nav{row-gap:8px}
+}
