@@ -66,3 +66,18 @@
  .hero .lead{font-size:17px;margin:24px 0 28px}
  .hero .button{font-size:15px}
 }
+
+/* Página inicial: composição editorial com duas fotografias de campo */
+.hero{overflow:hidden;padding:clamp(52px,6vw,88px) 0;background:linear-gradient(110deg,#edf3e9 0%,#faf9ee 65%,#f7f0e3 100%)}
+.hero .shell.heroGrid{max-width:1600px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(380px,.9fr);gap:clamp(20px,3vw,52px);align-items:center;padding-left:clamp(22px,3.4vw,56px);padding-right:clamp(22px,3.4vw,56px)}
+.heroCopy{position:relative;z-index:1;min-width:0}
+.hero .heroCopy h1{font-size:clamp(46px,4.8vw,79px);line-height:1.09;letter-spacing:-.048em}
+.hero .heroCopy .lead{font-size:clamp(17px,1.3vw,21px);max-width:760px;line-height:1.58}
+.heroGallery{height:clamp(440px,40vw,640px);position:relative;isolation:isolate;display:flex;flex-direction:column;gap:8px;min-width:0;filter:drop-shadow(0 12px 22px rgba(27,73,38,.09))}
+.heroGallery:before{content:"";position:absolute;inset:-9px -10px -9px -9px;border:8px solid #9fc63a;border-radius:43% 4% 5% 42%/28% 6% 7% 32%;z-index:-1}
+.heroPhoto{position:relative;flex:1;min-height:0;background-color:#dce8c4;background-position:center;background-size:cover;overflow:hidden}
+.heroPhotoOne{border-radius:44% 12px 0 9%/33% 12px 0 12%;background-image:linear-gradient(0deg,rgba(18,60,27,.13),rgba(18,60,27,.03)),url('/images/abelhas/abelha-maracuja.jpg')}
+.heroPhotoTwo{border-radius:8% 0 12px 44%/11% 0 12px 36%;background-image:linear-gradient(0deg,rgba(18,60,27,.14),rgba(18,60,27,.03)),url('/images/abelhas/abelhas-inflorescencia.jpg')}
+.heroPhotoFallback{display:none}
+@media(max-width:1050px){.hero .shell.heroGrid{grid-template-columns:1fr;gap:32px}.heroGallery{height:460px;max-width:800px;width:100%;margin:auto}.hero .heroCopy h1{font-size:clamp(46px,6vw,70px)}}
+@media(max-width:650px){.hero .shell.heroGrid{gap:25px}.heroGallery{height:330px}.hero .heroCopy h1{font-size:clamp(38px,9vw,55px)}.hero .heroCopy .lead{font-size:17px}.heroGallery:before{border-width:5px;inset:-5px}}
