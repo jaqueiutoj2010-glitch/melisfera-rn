@@ -153,3 +153,10 @@
  .header .nav .brandLogoOfficial{width:165px}
  .header .nav nav a{font-size:14px}
 }
+
+/* Logomarca oficial em destaque — revisão solicitada */
+.header .shell.nav{padding-top:8px;padding-bottom:8px;gap:18px}
+.header .nav .brandLogoOfficial{width:clamp(255px,17vw,315px);max-height:none;height:auto}
+.header .nav nav{gap:10px clamp(10px,1vw,19px)}
+@media(max-width:1200px){.header .nav .brandLogoOfficial{width:260px}}
+@media(max-width:650px){.header .nav .brandLogoOfficial{width:225px}}
