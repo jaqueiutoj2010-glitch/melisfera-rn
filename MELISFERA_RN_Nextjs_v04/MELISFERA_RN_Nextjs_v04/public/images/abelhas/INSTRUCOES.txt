@@ -1,0 +1,1 @@
+Envie os 11 arquivos JPG desta pasta para public/images/especies/ no repositório GitHub, respeitando a estrutura do projeto Next.js. As fichas de 10 espécies já estão preparadas para exibi-los.
