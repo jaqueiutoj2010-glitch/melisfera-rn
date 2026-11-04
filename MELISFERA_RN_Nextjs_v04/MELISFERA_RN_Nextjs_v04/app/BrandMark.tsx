@@ -1,1 +1,12 @@
-export default function BrandMark(){return <svg className="brandMark" viewBox="0 0 112 112" role="img" aria-label="Símbolo ilustrativo do MELISFERA RN: abelha, flor e território"><defs><linearGradient id="melGold" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#ffd143"/><stop offset="1" stopColor="#ed9500"/></linearGradient></defs><path d="M12 74 C-2 39 28 5 62 7 C79 7 89 14 95 23" fill="none" stroke="#5d9d1b" strokeWidth="4" strokeLinecap="round"/><path d="M25 48 L30 31 L40 28 L44 17 L56 23 L66 19 L74 30 L86 34 L83 48 L72 54 L60 49 L48 57 L37 51Z" fill="#fff1b5" stroke="#276533" strokeWidth="2"/><path d="M45 26 L60 30 L72 41 L65 49 L53 43Z" fill="#efb747"/><path d="M18 69 Q37 60 53 91 Q23 86 18 69Z" fill="url(#melGold)"/><path d="M7 81 Q35 75 53 93 Q20 99 7 81Z" fill="#579e30"/><path d="M53 91 Q56 61 72 51 M53 91 Q50 69 42 63 M53 91 Q66 70 78 72" fill="none" stroke="#eda619" strokeWidth="4" strokeLinecap="round"/><path d="M57 98 Q80 89 101 99 M64 105 Q80 100 94 106" fill="none" stroke="#6aa62d" strokeWidth="3" strokeLinecap="round"/><g transform="translate(83 45) rotate(-22)"><ellipse cx="0" cy="0" rx="12" ry="8" fill="#f2af1e" stroke="#16492c" strokeWidth="2"/><path d="M-3 -7 V7 M4 -7 V7" stroke="#16492c" strokeWidth="3"/><ellipse cx="-2" cy="-12" rx="8" ry="4" fill="#fff9ed" stroke="#e9a622"/><ellipse cx="7" cy="-11" rx="8" ry="4" fill="#fff9ed" stroke="#e9a622"/><circle cx="-12" cy="0" r="6" fill="#174d2e"/></g><path d="M82 77 l9 -5 l9 5 v11 l-9 5 l-9 -5Z" fill="none" stroke="#f3a400" strokeWidth="3"/></svg>}
+import Image from 'next/image';
+
+export default function BrandMark(){
+  return <Image
+    className="brandLogoOfficial"
+    src="/images/abelhas/Logo%20Abelha%20e%20Melisfera%20RN.png"
+    alt="MELISFERA RN — Observatório de Abelhas do Rio Grande do Norte"
+    width={240}
+    height={160}
+    priority
+  />;
+}
