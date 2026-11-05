@@ -211,3 +211,9 @@
 .speciesServicesWide .passifloraPhotoGrid img{height:clamp(370px,43vw,600px);object-fit:contain;background:#eaf0e7}
 .speciesServicesWide .passifloraPhotoGrid figcaption{font-size:15px;padding:16px 18px}
 @media(max-width:760px){.speciesServicesWide .passifloraPhotoGrid{grid-template-columns:1fr}.speciesServicesWide .passifloraPhotoGrid img{height:auto;max-height:650px}.speciesServicesWide .speciesServiceSpotlight{padding:22px}}
+
+/* Galeria compacta: imagens verticais sem cortes e sem alongar a ficha */
+.speciesServicesWide .passifloraPhotoGrid{gap:18px;align-items:start}
+.speciesServicesWide .passifloraPhotoGrid img{height:400px;max-height:400px;object-fit:contain;background:#edf2eb}
+.speciesServicesWide .passifloraPhotoGrid figcaption{font-size:14px;line-height:1.55;padding:12px 15px}
+@media(max-width:760px){.speciesServicesWide .passifloraPhotoGrid img{height:360px;max-height:360px}}
