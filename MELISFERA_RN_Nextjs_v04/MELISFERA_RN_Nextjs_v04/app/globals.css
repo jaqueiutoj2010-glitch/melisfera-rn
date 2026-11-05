@@ -250,3 +250,5 @@
 @media(max-width:650px){
  .header .nav .brandLogoOfficial{width:160px;max-height:120px}
 }
+
+@media(min-width:1201px){.header .nav .brand{flex:0 0 300px!important}.header .nav .brandLogoOfficial{width:300px!important;max-width:none!important;max-height:none!important;height:auto!important}}
