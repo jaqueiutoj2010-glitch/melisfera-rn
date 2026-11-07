@@ -302,3 +302,38 @@
  .header .nav nav{width:100%;justify-content:center;gap:7px 13px;background:#f3f7ed;padding:12px;border-radius:14px}
  .header .nav nav a{font-size:14px!important}
 }
+
+
+/* MELISFERA RN — identidade editorial unificada v1.0 | 2026-11 */
+:root{--mel-deep:#103b20;--mel-green:#17602c;--mel-lime:#a6d827;--mel-gold:#ffb900;--mel-soft:#f3f8e9}
+html{scroll-behavior:smooth}
+body{color:#17392b}
+:where(a,button,input,select):focus-visible{outline:3px solid #e9a800;outline-offset:3px}
+main>.shell.section,main>.atlasPage .atlasBody{max-width:1320px}
+main>.shell.section{padding-top:clamp(38px,5vw,74px)}
+main>.shell.section>.eyebrow{display:flex;align-items:center;gap:14px;color:#286c37;font-size:13px;letter-spacing:.13em}
+main>.shell.section>.eyebrow:after{content:"";width:94px;height:3px;background:var(--mel-gold);border-radius:12px}
+main>.shell.section>h1{font:500 clamp(38px,4.6vw,62px)/1.12 Georgia,serif;color:var(--mel-deep);letter-spacing:-.035em;margin:10px 0 20px}
+main>.shell.section>h1:after{content:"";display:block;width:min(390px,60%);height:6px;margin-top:15px;background:linear-gradient(90deg,var(--mel-gold),#ffcc36,transparent);border-radius:50%}
+main>.shell.section>.intro{font-size:clamp(16px,1.35vw,19px);max-width:980px;line-height:1.75;color:#486151}
+main .feature,main .panel,main .reference{transition:box-shadow .2s ease,border-color .2s ease,transform .2s ease}
+main .feature{border-radius:20px;border:1px solid #dbe8cf;background:linear-gradient(145deg,#fff,#f6faef);box-shadow:0 5px 18px rgba(18,69,33,.055);position:relative;overflow:hidden}
+main .feature:after{content:"";position:absolute;bottom:-24px;left:-12%;width:125%;height:46px;border-radius:50%;background:rgba(166,216,39,.12);pointer-events:none}
+main a.feature:hover{border-color:#a2c86a;box-shadow:0 12px 26px rgba(18,69,33,.12);transform:translateY(-2px)}
+main .featureIcon{color:#85ac1c}
+main .feature h3{color:#143f25}
+main .panel{border-radius:19px;border-color:#dce8d6;box-shadow:0 5px 16px rgba(18,69,33,.055)}
+main .panel h2{color:var(--mel-deep)}
+main .notice{border-radius:13px;border-left:4px solid var(--mel-gold);background:linear-gradient(110deg,#f2f8e9,#fff8e8);color:#405d48}
+main .button.primary,main .smallButton:hover{background:#155d34;color:white}
+main .button{border-radius:11px;transition:transform .2s ease,box-shadow .2s ease}
+main .button:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(16,60,32,.13)}
+main .taxon{border-radius:10px;transition:background .2s ease}
+main .taxon:hover{background:#f3f8ed}
+main .reference{border-bottom:1px solid #e0e9da;padding:20px 12px}
+main .reference h2{font-family:Georgia,serif;color:#193e29}
+.header .nav nav a[href="/"]{background:transparent}
+.header .nav nav a:hover,.header .nav nav a:focus-visible{background:#e8f2d5;text-decoration:none}
+footer{border-top:2px solid #b9d989;background:linear-gradient(110deg,#f3f8ed,#fffaf0)}
+@media(min-width:1201px){.header .nav nav a[href="/"]{background:transparent}.header .nav nav a{padding:10px 3px}}
+@media(max-width:720px){main>.shell.section{padding-top:34px}main .featureGrid{gap:13px}main .feature{padding:22px}main>.shell.section>h1{font-size:clamp(34px,8vw,46px)}}
