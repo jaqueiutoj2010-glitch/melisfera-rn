@@ -1,0 +1,41 @@
+.indicatorsPage{max-width:1320px;padding-top:64px;padding-bottom:90px}
+.indicatorsHeading{position:relative;padding:10px 0 12px}
+.indicatorsHeading .eyebrow{display:flex;align-items:center;gap:16px;color:#236b38;font-size:13px;letter-spacing:.12em}
+.indicatorRule{display:inline-block;width:110px;height:3px;background:#ffb900;border-radius:10px}
+.indicatorsPage .indicatorsHeading h1{font-family:Georgia,serif;font-size:clamp(36px,4.5vw,62px);font-weight:500;line-height:1.12;letter-spacing:-.035em;color:#123a25;margin:12px 0 18px}
+.indicatorsHeading h1:after{content:"";display:block;width:min(420px,55%);height:6px;border-radius:100%;background:linear-gradient(90deg,#ffb800,#ffc52a,transparent);margin-top:12px}
+.indicatorsHeading .intro{max-width:920px;font-size:17px;color:#445c4b;margin:0 0 12px}
+.indicatorsCaution{max-width:1000px;color:#67736a;font-size:14px;line-height:1.6;margin:0 0 10px}
+.indicatorStats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:25px 0 28px}
+.indicatorStat{position:relative;overflow:hidden;min-height:155px;display:flex;align-items:center;gap:13px;padding:20px 16px 27px;border:1px solid #e1e9d9;border-radius:22px;background:linear-gradient(155deg,#fff 5%,#f2f9e9 100%);box-shadow:0 3px 12px rgba(16,65,28,.055)}
+.indicatorStat:nth-child(even){background:linear-gradient(155deg,#fff 5%,#fff7e0 100%)}
+.indicatorStat:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-27px;height:52px;border-radius:50% 50% 0 0;background:rgba(169,216,84,.23)}
+.indicatorStat:nth-child(even):after{background:rgba(255,194,32,.19)}
+.indicatorStatIcon{font-size:38px;flex:0 0 52px;text-align:center;color:#7aaf13;border-right:2px solid #d9c458;padding-right:10px;line-height:1.1}
+.indicatorStat:nth-child(even) .indicatorStatIcon{color:#e7a400}
+.indicatorStat>div{min-width:0;position:relative;z-index:1}
+.indicatorStat strong{display:block;font-family:Georgia,serif;color:#104b22;font-size:clamp(34px,3.2vw,50px);font-weight:700;line-height:1}
+.indicatorStat div span{display:block;color:#233b2a;font-size:13px;font-weight:600;line-height:1.35;margin-top:10px}
+.indicatorPanels{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.indicatorPanel{overflow:hidden;border:1px solid #d9e4d4;border-radius:22px;box-shadow:0 5px 16px rgba(19,57,31,.07);background:white;min-width:0}
+.indicatorPanel h2{font-family:Arial,Helvetica,sans-serif!important;display:flex;align-items:center;gap:13px;margin:0!important;padding:20px 24px;background:linear-gradient(110deg,#07501a,#0b4216);color:#fff;font-size:clamp(20px,2vw,28px)!important;line-height:1.2;font-weight:750!important;letter-spacing:-.02em!important}
+.indicatorPanel h2 span{color:#ffc400;font-size:30px}
+.indicatorPanelBody{padding:20px 24px 24px}
+.indicatorBarRow{margin:0 0 15px}
+.indicatorBarLabel{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px;font-size:15px;font-weight:600;color:#1e3224}
+.indicatorBarLabel strong{color:#105322}
+.indicatorBarTrack{width:100%;height:12px;border-radius:20px;background:#e7eae7;overflow:hidden}
+.indicatorBarTrack>div{height:100%;border-radius:20px;background:linear-gradient(90deg,#2b8b25,#8fbf1d)}
+.indicatorBarRow:first-child .indicatorBarTrack>div{background:linear-gradient(90deg,#076a20,#0e5a1c)}
+.indicatorPanelNote{border-top:1px solid #e5e9df;padding-top:15px;color:#627064;font-size:13px;line-height:1.5;margin:22px 0 0}
+.indicatorSource{display:grid;grid-template-columns:75px minmax(0,1fr);gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid #e5ebdf}
+.indicatorSource>strong{display:block;text-align:center;background:#e9f6d5;border-radius:24px;padding:4px 8px;font-family:Georgia,serif;font-size:27px;color:#155520;line-height:1.1}
+.indicatorSource>span{font-size:13px;line-height:1.5;color:#3e5142;overflow-wrap:anywhere}
+.indicatorSource>span b{color:#183c24}
+.indicatorSourceNotice{background:#eef6e6;border-radius:14px;padding:13px 15px;display:flex;gap:11px;align-items:center;color:#36533b;font-size:13px;line-height:1.5;margin:18px 0 0}
+.indicatorSourceNotice span{font-size:22px;color:#408a1d}
+.indicatorExplore{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;border-top:1px solid #e2e8dd;margin-top:28px;padding-top:23px;color:#596e5e;font-size:14px}
+.indicatorExplore a{font-weight:700;color:#176335;text-decoration:none}
+.indicatorExplore a:hover{text-decoration:underline}
+@media(max-width:1080px){.indicatorStats{grid-template-columns:repeat(3,minmax(0,1fr))}.indicatorStat{min-height:130px}.indicatorPanels{gap:15px}.indicatorPanelBody{padding:18px}}
+@media(max-width:720px){.indicatorsPage{padding-top:38px}.indicatorStats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.indicatorStat{padding:16px 12px 25px;min-height:115px;gap:8px;border-radius:16px}.indicatorStatIcon{font-size:27px;flex-basis:38px;padding-right:6px}.indicatorStat strong{font-size:35px}.indicatorStat div span{font-size:12px}.indicatorPanels{grid-template-columns:1fr}.indicatorPanel h2{padding:17px 20px}.indicatorPanelBody{padding:18px 20px}.indicatorSource{grid-template-columns:65px 1fr}.indicatorSource>strong{font-size:23px}}
