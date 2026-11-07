@@ -24,7 +24,7 @@ export default function Species(){
       <p>Na Caatinga e nos demais ambientes do estado, solos adequados, árvores maduras, madeira morta e micro-hábitats naturais podem oferecer recursos essenciais à nidificação. A manutenção dessa variedade de substratos favorece a persistência das populações de abelhas e dos serviços ecossistêmicos associados à polinização.</p>
     </div>
     <figure className="catalogNestingFigure" style={{margin:'28px 0 42px',maxWidth:'100%'}}>
-      <img src="/images/abelhas/Ninhos%20de%20abelhas%20do%20RN.png" alt="Infográfico MELISFERA RN sobre a diversidade de locais de nidificação das abelhas, incluindo ninhos no solo, em madeira e em cavidades de árvores." style={{display:'block',width:'100%',height:'auto',borderRadius:18,border:'1px solid #dce7d5'}} loading="lazy"/>
+      <img src="/images/abelhas/Estrat%C3%A9gias%20de%20Nidifica%C3%A7%C3%A3o%20das%20Abelhas%20no%20RN%20(1).png" alt="Infográfico MELISFERA RN sobre a diversidade de locais de nidificação das abelhas, incluindo ninhos no solo, em madeira e em cavidades de árvores." style={{display:'block',width:'100%',height:'auto',borderRadius:18,border:'1px solid #dce7d5'}} loading="lazy"/>
       <figcaption style={{fontSize:'.87rem',lineHeight:1.6,color:'#486251',marginTop:12}}>Estratégias de nidificação de abelhas do Rio Grande do Norte: escavação no solo e uso de madeira e cavidades naturais. Fotografias de campo ilustram exemplos de substratos e estruturas de nidificação; os comportamentos e a identificação taxonômica devem ser confirmados para cada registro.</figcaption>
     </figure>
     <CatalogClient taxa={taxa} families={families}/>
