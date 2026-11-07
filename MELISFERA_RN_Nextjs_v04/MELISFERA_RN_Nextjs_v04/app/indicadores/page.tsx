@@ -18,11 +18,13 @@ export default function Indicators(){
   const values=[taxa.length,namedFamilies.length,countLinks,taxaWithLocality,ecologyRecords.length];
   const unassigned=unassignedFamilies.reduce((a,[,n])=>a+n,0);
   return <section className="shell section indicatorsPage">
-    <div className="indicatorsHeading">
+    <div className="indicatorsHero"><div className="indicatorsHeading">
       <p className="eyebrow">PAINEL CIENTÍFICO <span className="indicatorRule" aria-hidden="true"/></p>
       <h1>Indicadores da biodiversidade</h1>
       <p className="intro">Um retrato da diversidade de abelhas documentada para o Rio Grande do Norte. Explore a composição taxonômica e a cobertura das fontes que sustentam o catálogo.</p>
       <p className="indicatorsCaution">Os números representam entradas e vínculos documentais da base atual. Não correspondem necessariamente a espécies distintas validadas, espécimes ou ocorrências únicas.</p>
+    </div>
+      <div className="indicatorsHeroPhoto" role="img" aria-label="Fotografia original de abelha visitando flor de maracujá"/></div>
     </div>
     <div className="indicatorStats">
       {metrics.map((m,i)=><article className={'indicatorStat indicatorStat'+i} key={m.kind}>
@@ -51,6 +53,6 @@ export default function Indicators(){
         </div>
       </article>
     </div>
-    <div className="indicatorExplore">Continue explorando os dados: <Link href="/distribuicao">Distribuição geográfica →</Link><Link href="/ecologia">Ecologia e serviços →</Link><Link href="/especies">Catálogo de abelhas →</Link></div>
+    <section className="indicatorExploreSection"><h2>Explore também <span aria-hidden="true"/></h2><div className="indicatorExploreCards"><Link href="/especies"><span className="exploreIcon">✿</span><span><strong>Espécies</strong><small>Catálogo de abelhas do RN</small></span><b aria-hidden="true">›</b></Link><Link href="/distribuicao"><span className="exploreIcon">⌖</span><span><strong>Distribuição</strong><small>Atlas e registros territoriais</small></span><b aria-hidden="true">›</b></Link><Link href="/ecologia"><span className="exploreIcon">❀</span><span><strong>Ecologia e serviços</strong><small>Interações e polinização</small></span><b aria-hidden="true">›</b></Link><Link href="/ameacas"><span className="exploreIcon">♧</span><span><strong>Ameaças</strong><small>Riscos e conservação</small></span><b aria-hidden="true">›</b></Link></div></section>
   </section>;
 }
