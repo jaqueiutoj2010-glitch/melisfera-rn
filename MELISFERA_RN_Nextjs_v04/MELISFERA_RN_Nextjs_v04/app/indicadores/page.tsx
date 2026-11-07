@@ -25,7 +25,6 @@ export default function Indicators(){
       <p className="indicatorsCaution">Os números representam entradas e vínculos documentais da base atual. Não correspondem necessariamente a espécies distintas validadas, espécimes ou ocorrências únicas.</p>
     </div>
       <div className="indicatorsHeroPhoto" role="img" aria-label="Fotografia original de abelha visitando flor de maracujá"/></div>
-    </div>
     <div className="indicatorStats">
       {metrics.map((m,i)=><article className={'indicatorStat indicatorStat'+i} key={m.kind}>
         <span className="indicatorStatIcon" aria-hidden="true">{m.icon}</span>
