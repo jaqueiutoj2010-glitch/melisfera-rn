@@ -1,3 +1,56 @@
-import Link from 'next/link';import {taxa} from '@/lib/catalog';import {familyCounts,namedFamilies,unassignedFamilies,sourceCounts,ecologyRecords,taxaWithLocality,countLinks} from '@/lib/insights';
+import Link from 'next/link';
+import {taxa} from '@/lib/catalog';
+import {familyCounts,namedFamilies,unassignedFamilies,sourceCounts,ecologyRecords,taxaWithLocality,countLinks} from '@/lib/insights';
+import './indicadores.css';
+
 export const metadata={title:'Indicadores de biodiversidade'};
-export default function Indicators(){const max=familyCounts[0]?.[1]||1;return <section className="shell section"><p className="eyebrow">PAINEL CIENTÍFICO</p><h1>Indicadores da biodiversidade</h1><p className="intro">Retrato descritivo da base atual. Quantidades de vínculos não devem ser interpretadas como número de espécimes ou de ocorrências únicas.</p><div className="statGrid">{[[taxa.length,'Espécies na base'],[namedFamilies.length,'Famílias identificadas'],[countLinks,'Vínculos com fontes'],[taxaWithLocality,'Espécies com município declarado'],[ecologyRecords.length,'Táxons com dados de visitas florais']].map(([v,l])=><div className="statCard" key={String(l)}><strong>{v}</strong><span>{l}</span></div>)}</div><div className="twoCol"><article className="panel"><h2>Composição por família</h2>{familyCounts.map(([f,n])=><div className="barRow" key={f}><div className="barLabel"><span>{f}</span><strong>{n}</strong></div><div className="barTrack"><div style={{width:`${n/max*100}%`}}/></div></div>)}<p className="note">{unassignedFamilies.reduce((a,[,n])=>a+n,0)} entradas sem família identificada; não representam uma sexta família biológica.</p></article><article className="panel"><h2>Cobertura por fonte</h2>{sourceCounts.filter(s=>s.n>0).map(s=><div className="sourceMetric" key={s.id}><strong>{s.n}</strong><span>{s.id} · {s.label}</span></div>)}<p className="note">Uma espécie pode estar associada a várias fontes; os totais se sobrepõem.</p></article></div><div className="notice">Para análise espacial, consulte <Link href="/distribuicao">Distribuição</Link>. Para as observações ecológicas publicadas, consulte <Link href="/ecologia">Ecologia e serviços</Link>.</div></section>}
+
+const metrics=[
+  {label:'Entradas taxonômicas',icon:'✿',kind:'taxa'},
+  {label:'Famílias identificadas',icon:'⬡',kind:'families'},
+  {label:'Vínculos com fontes',icon:'▤',kind:'links'},
+  {label:'Entradas com município declarado',icon:'⌖',kind:'locality'},
+  {label:'Táxons com dados de visitas florais',icon:'❀',kind:'flowers'}
+];
+
+export default function Indicators(){
+  const max=familyCounts[0]?.[1]||1;
+  const values=[taxa.length,namedFamilies.length,countLinks,taxaWithLocality,ecologyRecords.length];
+  const unassigned=unassignedFamilies.reduce((a,[,n])=>a+n,0);
+  return <section className="shell section indicatorsPage">
+    <div className="indicatorsHeading">
+      <p className="eyebrow">PAINEL CIENTÍFICO <span className="indicatorRule" aria-hidden="true"/></p>
+      <h1>Indicadores da biodiversidade</h1>
+      <p className="intro">Um retrato da diversidade de abelhas documentada para o Rio Grande do Norte. Explore a composição taxonômica e a cobertura das fontes que sustentam o catálogo.</p>
+      <p className="indicatorsCaution">Os números representam entradas e vínculos documentais da base atual. Não correspondem necessariamente a espécies distintas validadas, espécimes ou ocorrências únicas.</p>
+    </div>
+    <div className="indicatorStats">
+      {metrics.map((m,i)=><article className={'indicatorStat indicatorStat'+i} key={m.kind}>
+        <span className="indicatorStatIcon" aria-hidden="true">{m.icon}</span>
+        <div><strong>{values[i]}</strong><span>{m.label}</span></div>
+      </article>)}
+    </div>
+    <div className="indicatorPanels">
+      <article className="indicatorPanel">
+        <h2><span aria-hidden="true">⬡</span> Composição por família</h2>
+        <div className="indicatorPanelBody">
+          {familyCounts.map(([f,n])=><div className="indicatorBarRow" key={f}>
+            <div className="indicatorBarLabel"><span>{f}</span><strong>{n}</strong></div>
+            <div className="indicatorBarTrack" role="img" aria-label={f+': '+n+' entradas'}><div style={{width:`${n/max*100}%`}}/></div>
+          </div>)}
+          <p className="indicatorPanelNote">{unassigned} {unassigned===1?'entrada sem família identificada':'entradas sem família identificada'}. “Não determinada” é uma categoria de classificação pendente, não uma família biológica.</p>
+        </div>
+      </article>
+      <article className="indicatorPanel">
+        <h2><span aria-hidden="true">▤</span> Cobertura por fonte</h2>
+        <div className="indicatorPanelBody">
+          {sourceCounts.filter(s=>s.n>0).map(s=><div className="indicatorSource" key={s.id}>
+            <strong>{s.n}</strong><span><b>{s.id}</b> · {s.label}</span>
+          </div>)}
+          <p className="indicatorSourceNotice"><span aria-hidden="true">ⓘ</span> Uma entrada pode estar vinculada a várias fontes. Portanto, os totais se sobrepõem.</p>
+        </div>
+      </article>
+    </div>
+    <div className="indicatorExplore">Continue explorando os dados: <Link href="/distribuicao">Distribuição geográfica →</Link><Link href="/ecologia">Ecologia e serviços →</Link><Link href="/especies">Catálogo de abelhas →</Link></div>
+  </section>;
+}
