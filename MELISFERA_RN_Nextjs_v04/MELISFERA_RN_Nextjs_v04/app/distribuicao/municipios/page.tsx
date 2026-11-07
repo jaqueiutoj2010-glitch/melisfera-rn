@@ -86,5 +86,5 @@ return <section id={municipioId(m)} key={m} style={{border:'1px solid #d7e3d8',b
 <h2>Fontes estaduais sem município individualizado</h2>
 <p>As referências abaixo estão disponíveis para a próxima etapa de extração. Não foram convertidas em ocorrências municipais.</p>
 <div className="taxaList">{fontes.filter(f=>f.municipios.length===0).map(f=><article className="reference" key={f.id}><h3>{f.title}</h3><p>{f.nota}</p>{f.url&&<a href={f.url} target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a>}</article>)}</div>
-<p style={{marginTop:30}}><Link href="/distribuicao">← Voltar ao atlas</Link> · <Link href="/fontes">Todas as fontes</Link></p>
+<p style={{marginTop:30}}><Link href="/distribuicao">← Voltar ao atlas</Link> · <Link href="/fontes">Todas as fontes</Link> · <Link href="/instituicoes">Meliponários, associações e coleções</Link></p>
 </main>}
