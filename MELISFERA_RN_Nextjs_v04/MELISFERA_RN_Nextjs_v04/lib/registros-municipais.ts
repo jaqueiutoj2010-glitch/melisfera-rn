@@ -362,4 +362,14 @@ export const registrosMunicipais:RegistroMunicipal[]=[
     "url": "https://abelha.cria.org.br/list?RN+Martins=",
     "ano": "catálogo consultado em 2026"
   }
+,
+{"municipio":"Serra Negra do Norte","taxon":"Centris tarsata","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":21,"individuos":43},
+{"municipio":"Serra Negra do Norte","taxon":"Centris trigonoides","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":1,"individuos":1},
+{"municipio":"Serra Negra do Norte","taxon":"Dicranthidium arenarium","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":3,"individuos":9},
+{"municipio":"Serra Negra do Norte","taxon":"Epanthidium tigrinum","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":4,"individuos":17},
+{"municipio":"Serra Negra do Norte","taxon":"Euglossa cordata","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":2,"individuos":6},
+{"municipio":"Serra Negra do Norte","taxon":"Hylaeus sp.","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":3,"individuos":8},
+{"municipio":"Serra Negra do Norte","taxon":"Megachile (Chrysosarus) sp. 1","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":2,"individuos":6},
+{"municipio":"Serra Negra do Norte","taxon":"Megachile (Sayapis) dentipes","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":7,"individuos":18},
+{"municipio":"Serra Negra do Norte","taxon":"Megachile (Pseudocentron) sp. 3","fonte":"Melo & Zanella (2012), Tabela 1, ESEC-Seridó","tipo":"inventário primário · ninhos-armadilha","status":"primario_documentado","url":"https://doi.org/10.5039/agraria.v7i4a1966","ano":"2004–2006","ninhos":3,"individuos":3}
 ];
