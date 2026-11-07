@@ -13,6 +13,32 @@ export default function About(){return <main className="shell section">
 
  <div className="notice"><strong>Vinculação institucional:</strong> a ideia do MELISFERA RN foi concebida inicialmente por <strong>Jaqueiuto Jorge</strong> e começou a ser desenvolvida por meio de uma parceria entre o <strong>Projeto Macambiras</strong> e o <strong>Projeto CyanoServices</strong>, em colaboração com pesquisadores do <strong>Departamento de Ecologia (DECOL/UFRN)</strong> e da <strong>Escola Agrícola de Jundiaí (EAJ/UFRN)</strong>. O CyanoServices conta com financiamento do <strong>CNPq</strong>. A plataforma está em fase experimental de consolidação, auditoria bibliográfica e revisão científica.</div>
 
+ <section aria-labelledby="logos-parceiros" style={{margin:'34px 0 38px'}}>
+  <p className="eyebrow">RECONHECIMENTO INSTITUCIONAL</p>
+  <h2 id="logos-parceiros" style={{marginBottom:10}}>Projetos e apoio institucional</h2>
+  <p style={{maxWidth:850,lineHeight:1.75}}>O desenvolvimento inicial do MELISFERA RN reúne os projetos Macambiras e CyanoServices, em colaboração com pesquisadores do DECOL/UFRN e da EAJ/UFRN. O CNPq é reconhecido pelo financiamento ao Projeto CyanoServices.</p>
+  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginTop:20}}>
+   <figure style={{margin:0,border:'1px solid #d9e6d5',borderRadius:16,padding:'24px 17px',background:'#fff',textAlign:'center'}}>
+    <div style={{height:115,display:'flex',alignItems:'center',justifyContent:'center'}}>
+     <img src="/images/abelhas/Logo_Prpjeto_Macambiras.png" alt="Logomarca do Projeto Macambiras — Bromélias do Semiárido" style={{maxWidth:'100%',maxHeight:'100%',width:'auto',height:'auto',objectFit:'contain'}}/>
+    </div>
+    <figcaption style={{fontSize:14,marginTop:16,lineHeight:1.5}}><strong>Projeto Macambiras</strong><br/>Projeto de desenvolvimento inicial</figcaption>
+   </figure>
+   <figure style={{margin:0,border:'1px solid #d9e6d5',borderRadius:16,padding:'24px 17px',background:'#fff',textAlign:'center'}}>
+    <div style={{height:115,display:'flex',alignItems:'center',justifyContent:'center'}}>
+     <img src="/images/abelhas/CyaNoServices.jpeg" alt="Logomarca do Projeto CyanoServices" style={{maxWidth:'100%',maxHeight:'100%',width:'auto',height:'auto',objectFit:'contain'}}/>
+    </div>
+    <figcaption style={{fontSize:14,marginTop:16,lineHeight:1.5}}><strong>Projeto CyanoServices</strong><br/>Projeto de desenvolvimento inicial</figcaption>
+   </figure>
+   <figure style={{margin:0,border:'1px solid #d9e6d5',borderRadius:16,padding:'24px 17px',background:'#fff',textAlign:'center'}}>
+    <div style={{height:115,display:'flex',alignItems:'center',justifyContent:'center'}}>
+     <img src="/images/abelhas/logobitmap.jpg" alt="Logomarca do Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq" style={{maxWidth:'100%',maxHeight:'100%',width:'auto',height:'auto',objectFit:'contain'}}/>
+    </div>
+    <figcaption style={{fontSize:14,marginTop:16,lineHeight:1.5}}><strong>CNPq</strong><br/>Financiamento do Projeto CyanoServices</figcaption>
+   </figure>
+  </div>
+  <p style={{fontSize:13,color:'#597062',marginTop:15}}>A seção poderá incorporar novas instituições parceiras, conforme a confirmação de suas contribuições ao observatório.</p>
+ </section>
  <div className="twoCol">\n <article className="panel"><h2>Origem e desenvolvimento</h2><p>O MELISFERA RN nasceu de uma ideia inicialmente concebida por <strong>Jaqueiuto Jorge</strong>, com a proposta de reunir e tornar acessível o conhecimento científico sobre as abelhas do Rio Grande do Norte.</p><p>Sua implementação inicial resulta da colaboração entre os projetos <strong>Macambiras</strong> e <strong>CyanoServices</strong>, com a participação de pesquisadores do <strong>DECOL/UFRN</strong> e da <strong>EAJ/UFRN</strong>. A plataforma permanece aberta à ampliação de sua rede de colaboradores e à futura inclusão de outras instituições parceiras, mediante confirmação de sua participação.</p></article>
  <article className="panel">
  <h2>Objetivos e abrangência</h2>
