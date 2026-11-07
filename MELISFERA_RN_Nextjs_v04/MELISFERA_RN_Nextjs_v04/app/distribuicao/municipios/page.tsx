@@ -25,6 +25,12 @@ const especiesMacambira=['Apis mellifera','Centris sp.','Melipona mandacaia','Me
 const norm=(v:string)=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase();
 const municipiosCatalogo=taxa.flatMap(t=>t.sources.map(s=>(s.municipality||'').trim())).filter(v=>v&&v!=='Não informado'&&!v.startsWith('RN;'));
 const municipios=Array.from(new Set([...municipiosCatalogo,...fontes.flatMap(f=>f.municipios),...registrosMunicipais.map(r=>r.municipio)])).sort((a,b)=>a.localeCompare(b,'pt-BR'));
+const municipioId=(m:string)=>'municipio-'+encodeURIComponent(m);
+const referenciasMunicipais=Array.from(new Map([
+ ...fontes.flatMap(f=>f.municipios.map(m=>({municipio:m,titulo:f.title,url:f.url,tipo:f.tipo,nota:f.status}))),
+ ...registrosMunicipais.map(r=>({municipio:r.municipio,titulo:r.fonte,url:r.url,tipo:r.tipo,nota:r.status}))
+].map((f)=>[f.municipio+'|'+f.titulo+'|'+f.url,f])).values()).sort((a,b)=>a.municipio.localeCompare(b.municipio,'pt-BR')||a.titulo.localeCompare(b.titulo,'pt-BR'));
+
 const situacao:Record<string,string>={
  primario_documentado:'EIA · dado primário',
  autoral_a_documentar:'Observação autoral · metadados a complementar',
@@ -47,7 +53,7 @@ const estudos=fontes.filter(f=>f.municipios.some(v=>norm(v)===norm(m)));
 const candidatos=taxa.filter(t=>t.sources.some(s=>norm(s.municipality||'')===norm(m)));
 const sede=coordenadasSede[m];
 const macambira=m==='Santa Maria'||m==='João Câmara';
-return <section key={m} style={{border:'1px solid #d7e3d8',borderRadius:18,padding:'22px 25px',background:'#fbfcf8'}}>
+return <section id={municipioId(m)} key={m} style={{border:'1px solid #d7e3d8',borderRadius:18,padding:'22px 25px',background:'#fbfcf8'}}>
 <details open={macambira}>
 <summary style={{cursor:'pointer',fontSize:23,fontFamily:'Georgia,serif',color:'#194a30',fontWeight:600}}>{m} <span style={{fontFamily:'Arial,sans-serif',fontSize:13,fontWeight:400,color:'#587061'}}>· {especies.length} táxons individualizados</span></summary>
 <div style={{marginTop:17}}>
@@ -67,6 +73,16 @@ return <section key={m} style={{border:'1px solid #d7e3d8',borderRadius:18,paddi
 <p style={{fontSize:13,color:'#617468',marginTop:18}}>{candidatos.length} entradas candidatas vinculadas ao município no catálogo geral, ainda sujeitas à auditoria de fonte e duplicatas.</p>
 </div></details></section>})}
 </div>
+<h2>Índice de referências por município</h2>
+<p>Cada referência está associada somente aos municípios explicitamente informados pelo estudo, catálogo ou documento de origem. O vínculo bibliográfico não equivale, por si só, a ocorrência de cada espécie. Clique no município para consultar sua ficha e os táxons individualizados.</p>
+<div className="taxaList">{Array.from(new Set(referenciasMunicipais.map(r=>r.titulo+'|'+r.url))).map(k=>{
+ const refs=referenciasMunicipais.filter(r=>r.titulo+'|'+r.url===k);
+ const fonte=refs[0];
+ return <article className="reference" key={k}>
+ <h3>{fonte.url?<a href={fonte.url} target="_blank" rel="noopener noreferrer">{fonte.titulo} ↗</a>:fonte.titulo}</h3>
+ <p style={{fontSize:13}}><strong>Tipo:</strong> {fonte.tipo}</p>
+ <p><strong>Municípios vinculados:</strong> {refs.map((r,i)=><span key={r.municipio}>{i>0?', ':''}<a href={'#'+municipioId(r.municipio)}>{r.municipio}</a></span>)}</p>
+ </article>})}</div>
 <h2>Fontes estaduais sem município individualizado</h2>
 <p>As referências abaixo estão disponíveis para a próxima etapa de extração. Não foram convertidas em ocorrências municipais.</p>
 <div className="taxaList">{fontes.filter(f=>f.municipios.length===0).map(f=><article className="reference" key={f.id}><h3>{f.title}</h3><p>{f.nota}</p>{f.url&&<a href={f.url} target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a>}</article>)}</div>
