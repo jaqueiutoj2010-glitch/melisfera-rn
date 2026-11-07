@@ -14,6 +14,10 @@ export default function Species(){
       <p>A <strong>MELISFERA RN</strong> reúne, nesta etapa, <strong>cerca de 150 entradas taxonômicas de abelhas</strong> provenientes de literatura e fontes documentais. Esse número descreve o conjunto atualmente organizado na plataforma, não uma estimativa definitiva da riqueza estadual nem 150 ocorrências individualmente validadas. À medida que os dados forem revisados, o catálogo poderá ampliar a compreensão da distribuição, dos atributos funcionais e das interações ecológicas dessas abelhas.</p>
       <p><strong>Conhecer essa diversidade é também compreender os serviços ecossistêmicos que ela sustenta e as ameaças à sua conservação.</strong> Por isso, o catálogo articula taxonomia, distribuição geográfica, história natural e serviços ecossistêmicos, distinguindo informações documentadas, ocorrências informadas e evidências ainda pendentes de validação.</p>
     </div>
+    <figure className="catalogDiversityFigure" style={{margin:'32px 0 42px',maxWidth:'100%'}}>
+      <img src="/images/abelhas/Diversidade%20de%20Abelhas%20do%20RN.png" alt="Infográfico MELISFERA RN: diversidade funcional das abelhas, com fotografias reais de Scaptotrigona sp. (canudo) e Xylocopa sp. (mamangava), contrastando tamanho, organização social, nidificação e funções ecológicas." style={{display:'block',width:'100%',height:'auto',borderRadius:18,border:'1px solid #dce7d5'}} loading="lazy" />
+      <figcaption style={{fontSize:'.87rem',lineHeight:1.6,color:'#486251',marginTop:12}}>Diversidade funcional de abelhas do Rio Grande do Norte. Fotografias reais de <em>Scaptotrigona</em> sp. e <em>Xylocopa</em> sp. Os tamanhos indicados na arte são aproximados e não representam medições dos indivíduos fotografados. As cerca de 150 entradas taxonômicas do catálogo não equivalem a uma estimativa definitiva da riqueza de espécies do estado.</figcaption>
+    </figure>
     <CatalogClient taxa={taxa} families={families}/>
   </section>;
 }
