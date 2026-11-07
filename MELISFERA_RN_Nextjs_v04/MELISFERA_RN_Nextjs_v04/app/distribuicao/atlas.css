@@ -11,3 +11,27 @@
 
 /* Etiquetas cartográficas dos municípios informados */
 .atlasMapLabel text{font:700 13px system-ui,-apple-system,sans-serif;fill:#19475c;stroke:#f7faf7;stroke-width:3.5px;stroke-linejoin:round;paint-order:stroke fill}.atlasMapLabel circle{filter:drop-shadow(0 1px 2px #ffffffaa)}.atlasLegendTop{margin-bottom:3px}.atlasSvgWrap svg{overflow:visible}@media(max-width:600px){.atlasMapLabel text{font-size:15px}}
+
+
+/* Atlas MELISFERA — hero editorial com fotografia de campo original */
+.atlasHero{position:relative;overflow:hidden;isolation:isolate;padding:clamp(46px,5.2vw,84px) 0;background:radial-gradient(ellipse at 70% 5%,#eff7d9,transparent 58%),linear-gradient(110deg,#f2f8ec 0%,#fffdf4 85%)}
+.atlasHero:after{content:"";position:absolute;z-index:-1;left:-5%;right:-5%;bottom:-55px;height:90px;background:linear-gradient(95deg,#8abf16,#b9e33d,#4d8e1b);border-radius:55% 55% 0 0;transform:rotate(-1deg)}
+.atlasHeroGrid{max-width:1580px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr);gap:clamp(28px,3vw,58px);align-items:center}
+.atlasHeroCopy{position:relative;z-index:1;min-width:0}
+.atlasHero .eyebrow{display:flex;align-items:center;gap:15px;color:#236a34;letter-spacing:.12em}
+.atlasHero .eyebrow:after{content:"";height:3px;width:105px;background:#ffb900;border-radius:10px}
+.atlasHero h1{font:600 clamp(40px,4.4vw,74px)/1.09 Georgia,serif;max-width:900px;color:#103e23;letter-spacing:-.045em;margin:0 0 23px}
+.atlasHero h1:after{content:"";display:block;width:min(440px,62%);height:7px;border-radius:50%;background:linear-gradient(90deg,#ffa900,#ffc400,transparent);margin-top:17px}
+.atlasHero p:not(.eyebrow){max-width:850px;font-size:clamp(16px,1.3vw,19px);line-height:1.65;color:#465e4d}
+.atlasHeroPills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px}
+.atlasHeroPills span{min-height:103px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px;background:linear-gradient(140deg,#fff,#eff8df);border:1px solid #dcebc9;border-radius:18px;padding:16px 18px;color:#23442d;font-size:13px;line-height:1.35;box-shadow:0 4px 15px rgba(26,76,28,.055)}
+.atlasHeroPills span:nth-child(2){background:linear-gradient(140deg,#fff,#fff3d4)}
+.atlasHeroPills b{font-family:Georgia,serif;font-size:35px;line-height:1;color:#125123}
+.atlasHeroPhoto{min-height:480px;align-self:stretch;position:relative;border-radius:48% 24px 24px 48%;border:8px solid #a1d227;background:#dbeac7 url('/images/abelhas/abelha-maracuja.jpg') center/cover no-repeat;box-shadow:0 20px 36px rgba(20,62,29,.13)}
+.atlasHeroPhoto:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);pointer-events:none}
+.atlasBody .atlasIntro h2,.atlasBody .atlasMethod h2,.atlasBody .atlasNext h2{color:#143f24}
+.atlasLayout{border-radius:22px;box-shadow:0 9px 25px rgba(18,60,28,.07)}
+.atlasSidebar{background:linear-gradient(160deg,#f5f9f0,#fffdf7)}
+.atlasMethodGrid article{border:1px solid #dbe8ce;border-radius:18px;background:linear-gradient(140deg,#f2f8e9,#fffaf0)}
+@media(max-width:1050px){.atlasHeroGrid{grid-template-columns:1fr}.atlasHeroPhoto{min-height:340px;max-height:440px;border-radius:90px 24px 24px 90px}.atlasHeroPills{max-width:850px}}
+@media(max-width:650px){.atlasHero{padding:38px 0 52px}.atlasHero h1{font-size:clamp(37px,9vw,51px)}.atlasHeroPills{grid-template-columns:1fr}.atlasHeroPills span{min-height:0;flex-direction:row;align-items:center;gap:12px;padding:12px 15px}.atlasHeroPills b{font-size:29px}.atlasHeroPhoto{min-height:245px;border-width:5px;border-radius:75px 20px 20px 75px}}
