@@ -18,6 +18,15 @@ export default function Species(){
       <img src="/images/abelhas/Diversidade%20de%20Abelhas%20do%20RN.png" alt="Infográfico MELISFERA RN: diversidade funcional das abelhas, com fotografias reais de Scaptotrigona sp. (canudo) e Xylocopa sp. (mamangava), contrastando tamanho, organização social, nidificação e funções ecológicas." style={{display:'block',width:'100%',height:'auto',borderRadius:18,border:'1px solid #dce7d5'}} loading="lazy" />
       <figcaption style={{fontSize:'.87rem',lineHeight:1.6,color:'#486251',marginTop:12}}>Diversidade funcional de abelhas do Rio Grande do Norte. Fotografias reais de <em>Scaptotrigona</em> sp. e <em>Xylocopa</em> sp. Os tamanhos indicados na arte são aproximados e não representam medições dos indivíduos fotografados. As cerca de 150 entradas taxonômicas do catálogo não equivalem a uma estimativa definitiva da riqueza de espécies do estado.</figcaption>
     </figure>
+    <div className="catalogIntroEditorial" style={{marginTop:24}}>
+      <h2 style={{fontFamily:'Georgia,serif',fontSize:'clamp(28px,3.6vw,40px)',fontWeight:500,marginBottom:14}}>Onde as abelhas constroem seus ninhos?</h2>
+      <p>A diversidade de abelhas do Rio Grande do Norte também se revela nas diferentes estratégias de nidificação. Algumas espécies escavam túneis no solo, enquanto outras utilizam galerias na madeira, ocos de árvores e cavidades naturais preexistentes. Essas diferenças refletem necessidades ecológicas distintas e demonstram que conservar os polinizadores exige proteger não apenas as flores, mas também os locais onde se reproduzem.</p>
+      <p>Na Caatinga e nos demais ambientes do estado, solos adequados, árvores maduras, madeira morta e micro-hábitats naturais podem oferecer recursos essenciais à nidificação. A manutenção dessa variedade de substratos favorece a persistência das populações de abelhas e dos serviços ecossistêmicos associados à polinização.</p>
+    </div>
+    <figure className="catalogNestingFigure" style={{margin:'28px 0 42px',maxWidth:'100%'}}>
+      <img src="/images/abelhas/Ninhos%20de%20abelhas%20do%20RN.png" alt="Infográfico MELISFERA RN sobre a diversidade de locais de nidificação das abelhas, incluindo ninhos no solo, em madeira e em cavidades de árvores." style={{display:'block',width:'100%',height:'auto',borderRadius:18,border:'1px solid #dce7d5'}} loading="lazy"/>
+      <figcaption style={{fontSize:'.87rem',lineHeight:1.6,color:'#486251',marginTop:12}}>Estratégias de nidificação de abelhas do Rio Grande do Norte: escavação no solo e uso de madeira e cavidades naturais. Fotografias de campo ilustram exemplos de substratos e estruturas de nidificação; os comportamentos e a identificação taxonômica devem ser confirmados para cada registro.</figcaption>
+    </figure>
     <CatalogClient taxa={taxa} families={families}/>
   </section>;
 }
