@@ -1,5 +1,5 @@
-import EditorialBeeGallery from '@/components/EditorialBeeGallery';
 'use client';
+import EditorialBeeGallery from '@/components/EditorialBeeGallery';
 import {useEffect,useState} from 'react';
 import Link from 'next/link';
 import {DetectiveGame,GuardianGame} from './new-games';
