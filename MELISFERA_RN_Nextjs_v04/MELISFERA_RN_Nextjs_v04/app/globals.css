@@ -354,3 +354,14 @@ footer{border-top:2px solid #b9d989;background:linear-gradient(110deg,#f3f8ed,#f
 .melisferaUnifiedPage .atlasHero h1:after{content:"";display:block;width:min(420px,55%);height:6px;border-radius:100%;background:linear-gradient(90deg,#ffb800,#ffc52a,transparent);margin-top:12px}
 .melisferaUnifiedPage .atlasHeroPhoto{border-left:10px solid #a2d52b;border-radius:45% 14px 14px 45%}
 @media(max-width:760px){.melisferaStandardPage{padding-top:38px;padding-bottom:58px}.melisferaStandardPage>h1{font-size:clamp(36px,8vw,52px)}}
+
+/* Abertura editorial compartilhada, inspirada na página inicial */
+.melisferaEditorialHero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);gap:clamp(26px,4vw,64px);align-items:center;margin-bottom:clamp(34px,5vw,72px)}
+.melisferaEditorialCopy{min-width:0}
+.melisferaEditorialCopy .eyebrow{color:#236b38;letter-spacing:.13em}
+.melisferaStandardPage .melisferaEditorialCopy h1{font:500 clamp(42px,4.5vw,72px)/1.1 Georgia,serif;letter-spacing:-.04em;color:#123a25;margin:12px 0 22px;max-width:800px}
+.melisferaStandardPage .melisferaEditorialCopy .intro{font-size:clamp(16px,1.3vw,19px);line-height:1.65;max-width:750px;color:#445c4b}
+.melisferaEditorialGallery{width:100%;min-height:360px;max-height:485px;align-self:stretch}
+.melisferaEditorialGallery .heroPhotoFallback{display:none}
+@media(max-width:880px){.melisferaEditorialHero{grid-template-columns:1fr}.melisferaEditorialGallery{min-height:300px;max-height:440px}}
+@media(max-width:520px){.melisferaEditorialGallery{min-height:230px}.melisferaStandardPage .melisferaEditorialCopy h1{font-size:clamp(37px,9vw,52px)}}
