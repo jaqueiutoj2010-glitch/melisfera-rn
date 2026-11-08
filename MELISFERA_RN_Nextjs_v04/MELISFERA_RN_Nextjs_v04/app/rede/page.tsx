@@ -11,8 +11,8 @@ const grupos=[
 ];
 const municipios=Array.from(new Set(registrosInstitucionais.map(r=>r.municipio)));
 export default function Network(){return <main className="shell section melisferaStandardPage">
-<p className="eyebrow">PESSOAS · INSTITUIÇÕES · CIÊNCIA</p><h1>Rede das Abelhas</h1>
-<p className="intro">Conheça os criadores, meliponários institucionais, associações, cooperativas, coleções e projetos documentados no Rio Grande do Norte. Este diretório reúne evidências públicas e está aberto à ampliação e à revisão de seus cadastros.</p>
+<div className="melisferaEditorialHero"><div className="melisferaEditorialCopy"><p className="eyebrow">PESSOAS · INSTITUIÇÕES · CIÊNCIA</p><h1>Rede das Abelhas</h1>
+<p className="intro">Conheça os criadores, meliponários institucionais, associações, cooperativas, coleções e projetos documentados no Rio Grande do Norte. Este diretório reúne evidências públicas e está aberto à ampliação e à revisão de seus cadastros.</p></div><div className="heroGallery melisferaEditorialGallery" aria-label="Fotografias de abelhas em flores"><div className="heroPhoto heroPhotoOne" role="img" aria-label="Abelha em flor de maracujá"/><div className="heroPhoto heroPhotoTwo" role="img" aria-label="Abelhas em inflorescência amarela"/></div></div>
 <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:15,margin:'28px 0'}}>
  <div className="panel"><strong style={{fontSize:30,color:'#174a2f'}}>{registrosInstitucionais.length}</strong><p>Iniciativas e organizações cadastradas</p></div>
  <div className="panel"><strong style={{fontSize:30,color:'#174a2f'}}>{municipios.length}</strong><p>Municípios de referência</p></div>
