@@ -6,13 +6,22 @@ const tasks:{id:Task;title:string;icon:string;detail:string;note:string}[]=[
 {id:'brood',title:'Cuidar da cria',icon:'🥚',detail:'Observe as células de cria próximas à área central.',note:'A criação de novas operárias depende da rainha e dos processos sociais da colônia.'},
 {id:'guard',title:'Proteger a entrada',icon:'🛡️',detail:'Mantenha a entrada do ninho protegida.',note:'A defesa e manutenção do ninho envolvem comportamentos sociais; este desafio é ilustrativo.'}
 ];
+type Challenge={question:string;answers:[string,string,string];correct:number;explanation:string};
+const challenges:Record<Task,Challenge>={
+food:{question:'Onde guardar o alimento coletado pelas operárias?',answers:['Em potes de cerume no interior do ninho','Em folhas soltas fora do ninho','Em células de cria já ocupadas'],correct:0,explanation:'Muitas abelhas sem ferrão armazenam mel e pólen em potes de cerume. A organização varia entre espécies.'},
+brood:{question:'Qual é uma condição essencial para o desenvolvimento da cria?',answers:['Uma operária isolada produzir toda a colônia','A presença da rainha e a organização social da colônia','Aumentar a chuva artificialmente dentro do ninho'],correct:1,explanation:'A rainha e as operárias participam de processos reprodutivos e de cuidado da cria. A simulação simplifica esses processos.'},
+guard:{question:'Qual atitude favorece a proteção de uma colônia?',answers:['Remover árvores com cavidades','Aplicar inseticidas na entrada do ninho','Conservar o local de nidificação e reduzir perturbações'],correct:2,explanation:'Proteger o habitat e evitar perturbações ajuda a reduzir riscos à colônia.'}
+};
 export function NestWorkshop({phase,onFinished}:{phase:number;onFinished:()=>void}){
 const [done,setDone]=useState<Task[]>([]);
 const [selected,setSelected]=useState<Task|null>(null);
+const [feedback,setFeedback]=useState<{ok:boolean;text:string}|null>(null);
+const [attempts,setAttempts]=useState(0);
 const complete=done.length===3;
-function perform(id:Task){if(done.includes(id))return;setSelected(id);setDone(d=>[...d,id])}
+function openTask(id:Task){if(done.includes(id))return;setSelected(id);setFeedback(null)}
+function answer(index:number){if(!selected||done.includes(selected))return;const challenge=challenges[selected];if(index===challenge.correct){setDone(d=>[...d,selected]);setFeedback({ok:true,text:challenge.explanation})}else{setAttempts(n=>n+1);setFeedback({ok:false,text:'Essa escolha não é adequada. Tente novamente e considere a ecologia das abelhas sem ferrão.'})}}
 return <section className="nestWorkshop" aria-label="Interior interativo da colônia">
-<div className="nestHeader"><div><span className="nestKicker">MISSÃO EXTRA · INTERIOR DO NINHO</span><h3>🏡 A casa de Janda</h3><p>Depois do voo, ajude as operárias com três atividades no ninho antes de seguir viagem.</p></div><span className="nestProgress">{done.length}/3 tarefas</span></div>
+<div className="nestHeader"><div><span className="nestKicker">MISSÃO EXTRA · INTERIOR DO NINHO</span><h3>🏡 A casa de Janda</h3><p>Explore o interior ilustrado e resolva três desafios ecológicos para seguir viagem.</p></div><span className="nestProgress">{done.length}/3 desafios</span></div>
 <div className="nestScene">
 <svg viewBox="0 0 760 360" role="img" aria-label="Corte ilustrado do ninho com potes de alimento, células de cria e entrada; selecione as atividades nos botões abaixo">
 <defs><radialGradient id="nestBg"><stop stopColor="#ac7849"/><stop offset="1" stopColor="#68452e"/></radialGradient><linearGradient id="nestHoney" x1="0" x2="0" y1="0" y2="1"><stop stopColor="#ffdb77"/><stop offset="1" stopColor="#bc7d2b"/></linearGradient></defs>
@@ -27,8 +36,9 @@ return <section className="nestWorkshop" aria-label="Interior interativo da col�
 <g fill="#fff3cf" fontFamily="system-ui" fontWeight="700" fontSize="17"><text x="143" y="116">Potes</text><text x="380" y="100">Cria</text><text x="612" y="120">Entrada</text></g>
 </svg>
 </div>
-<div className="nestTasks">{tasks.map(t=><button key={t.id} type="button" onClick={()=>perform(t.id)} disabled={done.includes(t.id)} className={'nestTask '+(done.includes(t.id)?'done':'')}><span className="nestTaskIcon">{t.icon}</span><strong>{t.title}</strong><small>{done.includes(t.id)?'✓ Concluída':t.detail}</small></button>)}</div>
-{selected&&<p className="nestFeedback" role="status"><strong>💡 {tasks.find(t=>t.id===selected)?.title}:</strong> {tasks.find(t=>t.id===selected)?.note}</p>}
-{complete&&<div className="nestFinished" role="status"><strong>🎉 Trabalho em equipe!</strong><p>Janda ajudou sua colônia na etapa {phase+1}. A organização mostrada é didática, não uma planta anatômica fiel de um ninho real.</p><button className="playBtn primary" onClick={onFinished}>Continuar aventura →</button></div>}
+<div className="nestTasks">{tasks.map(t=><button key={t.id} type="button" onClick={()=>openTask(t.id)} disabled={done.includes(t.id)} aria-pressed={selected===t.id} className={'nestTask '+(done.includes(t.id)?'done':'')+(selected===t.id?' selected':'')}><span className="nestTaskIcon">{t.icon}</span><strong>{t.title}</strong><small>{done.includes(t.id)?'✓ Concluído':t.detail}</small></button>)}</div>
+{selected&&!done.includes(selected)&&<div className="nestChallenge"><h4>🧠 Desafio: {tasks.find(t=>t.id===selected)?.title}</h4><p>{challenges[selected].question}</p><div className="nestAnswers">{challenges[selected].answers.map((a,i)=><button key={i} type="button" onClick={()=>answer(i)}>{a}</button>)}</div></div>}
+{feedback&&<p className={'nestFeedback '+(feedback.ok?'correct':'incorrect')} role="status"><strong>{feedback.ok?'✓ Resposta correta!':'↻ Tente novamente.'}</strong> {feedback.text}</p>}
+{complete&&<div className="nestFinished" role="status"><strong>🎉 Trabalho em equipe!</strong><p>Janda completou os três desafios da etapa {phase+1}. Tentativas para aprender: {attempts}. A organização mostrada é didática, não uma planta anatômica fiel de um ninho real.</p><button className="playBtn primary" onClick={onFinished}>Continuar aventura →</button></div>}
 </section>
 }
