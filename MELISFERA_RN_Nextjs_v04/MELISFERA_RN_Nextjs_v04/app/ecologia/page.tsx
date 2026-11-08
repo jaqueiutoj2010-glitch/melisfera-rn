@@ -1,3 +1,4 @@
+import EditorialBeeGallery from '@/components/EditorialBeeGallery';
 import Link from 'next/link';
 import EcologyExplorer from '@/components/EcologyExplorer';
 import {ecologyRecords} from '@/lib/insights';
@@ -63,7 +64,7 @@ export default function Ecology(){return <main className="shell section melisfer
 `}</style>
 <div className="melisferaEditorialHero"><div className="melisferaEditorialCopy"><p className="eyebrow">ECOLOGIA FUNCIONAL · MELISFERA RN</p>
 <h1>As abelhas e os serviços ecossistêmicos no Rio Grande do Norte</h1>
-<p className="intro" style={{maxWidth:990}}>Muito além da produção de mel, as abelhas participam de processos ecológicos que conectam plantas, paisagens e comunidades humanas. Entenda o que já foi observado na Caatinga potiguar, quais benefícios podem decorrer dessas interações e o que ainda precisa ser demonstrado.</p></div><div className="heroGallery melisferaEditorialGallery" aria-label="Abelhas e flores ilustrando serviços ecossistêmicos"><div className="heroPhoto heroPhotoOne" role="img" aria-label="Flor de maracujá"/><div className="heroPhoto heroPhotoTwo" role="img" aria-label="Abelha visitando flores"/></div></div><div className="notice"><strong>Explore o catálogo completo:</strong> seis fichas sobre polinização da flora nativa, agricultura, segurança alimentar, produtos da colmeia, cultura e economia. <Link href="/ecologia/servicos">Abrir catálogo de serviços →</Link></div>
+<p className="intro" style={{maxWidth:990}}>Muito além da produção de mel, as abelhas participam de processos ecológicos que conectam plantas, paisagens e comunidades humanas. Entenda o que já foi observado na Caatinga potiguar, quais benefícios podem decorrer dessas interações e o que ainda precisa ser demonstrado.</p></div><EditorialBeeGallery label="Abelhas e flores ilustrando serviços ecossistêmicos"/></div><div className="notice"><strong>Explore o catálogo completo:</strong> seis fichas sobre polinização da flora nativa, agricultura, segurança alimentar, produtos da colmeia, cultura e economia. <Link href="/ecologia/servicos">Abrir catálogo de serviços →</Link></div>
 <nav aria-label="Navegação nesta página" className="jumpLinks"><a href="#macambiras">Estudo de caso</a><a href="#servicos-rn">Serviços no RN</a><a href="#evidencias">Níveis de evidência</a><a href="#dados">Dados de campo</a><a href="#conservacao">Conservação</a><a href="#referencias">Referências</a></nav>
 <section id="macambiras" style={{margin:'44px 0'}}>
 <p className="eyebrow">CIÊNCIA PRODUZIDA NO SEMIÁRIDO POTIGUAR</p><h2>Macambiras: um exemplo de como o habitat sustenta interações ecológicas</h2>
