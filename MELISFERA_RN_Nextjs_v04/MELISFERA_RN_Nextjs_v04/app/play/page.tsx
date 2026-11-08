@@ -158,18 +158,19 @@ return <main className="shell section playPage">
 .memoryCard small{font-size:clamp(10px,1.3vw,14px);font-weight:700}
 @media(max-width:480px){.memoryBoard{gap:7px}.memoryCard{border-radius:10px}}
 .jandaAdventure{display:grid;gap:18px}
-.jandaHero{background:linear-gradient(115deg,#214f3a,#4e8053);color:white;border-radius:22px;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.jandaHero{background:radial-gradient(circle at 85% 15%,rgba(244,221,146,.24),transparent 35%),linear-gradient(115deg,#214f3a,#4e8053);color:white;border-radius:22px;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .jandaHero h2{font:700 clamp(25px,3vw,37px) Georgia,serif;margin:6px 0 10px;color:white}
 .jandaHero p{font-size:17px;line-height:1.5;max-width:680px;margin:0;color:#e6f2e4}
 .jandaEyebrow{font-size:12px;letter-spacing:.12em;font-weight:800;color:#d6edc1}
-.jandaPortrait{font-size:74px;filter:drop-shadow(0 5px 8px #1b372b)}
+.jandaPortrait{animation:jandaFloat 3s ease-in-out infinite;font-size:74px;filter:drop-shadow(0 5px 8px #1b372b)}
 .jandaPhases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
 .jandaPhase{display:flex;flex-direction:column;gap:5px;background:#f2f6ee;border:1px solid #d5e1ce;border-radius:14px;padding:13px;opacity:.56}
 .jandaPhase span{font-size:25px}.jandaPhase strong{font-size:14px;line-height:1.25}.jandaPhase small{font-size:12px}
 .jandaPhase.current{background:#e1f2d9;border:2px solid #3e8454;opacity:1}.jandaPhase.passed{opacity:1}
 .jandaHud{display:flex;flex-wrap:wrap;gap:9px}.jandaHud span{background:#edf5e9;border:1px solid #d0e1c8;padding:9px 12px;border-radius:12px;font-size:14px}
 .jandaEnergy{height:10px;background:#e3e8df;border-radius:10px;overflow:hidden;margin-top:-12px}.jandaEnergy span{display:block;height:100%;background:linear-gradient(90deg,#e3ad49,#58a466);transition:width .15s}
-.jandaCanvas{width:100%;height:auto;display:block;border-radius:20px;border:2px solid #b6d3ae;touch-action:none;background:#e8f0d6}
+.jandaPhase.current{box-shadow:0 4px 18px rgba(48,112,63,.17);transform:translateY(-2px)}
+.jandaCanvas{box-shadow:0 16px 36px rgba(33,66,42,.16);width:100%;height:auto;display:block;border-radius:20px;border:2px solid #b6d3ae;touch-action:none;background:#e8f0d6}
 .jandaBottom{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f3f8ef;border-radius:18px;padding:20px}
 .jandaBottom h3{font-size:22px;margin:0 0 7px}.jandaBottom p{margin:0 0 7px;font-size:15px;line-height:1.5}
 .jandaHint{font-weight:700;color:#276b45}.jandaActions{display:flex;gap:9px;flex-wrap:wrap;flex-shrink:0}
@@ -196,6 +197,8 @@ return <main className="shell section playPage">
 .nestFeedback,.nestFinished{background:#f3e5c8;border-radius:14px;padding:16px;margin:0;font-size:15px;line-height:1.5}
 .nestFinished{background:#e2f0d9}.nestFinished p{margin:7px 0 14px}
 @media(max-width:650px){.nestTasks{grid-template-columns:1fr}.nestHeader{flex-wrap:wrap}.nestWorkshop{padding:13px}}
+@keyframes jandaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(prefers-reduced-motion:reduce){.jandaPortrait{animation:none}.jandaPhase.current{transform:none}}
 .jandaColony{display:grid;grid-template-columns:minmax(190px,1fr) minmax(180px,2fr);gap:12px;align-items:center;background:linear-gradient(115deg,#f8edd2,#f2e1b6);border:1px solid #dfc88e;border-radius:18px;padding:20px}
 .jandaColony strong{font-size:20px;color:#604a25}.jandaColony p{font-size:14px;line-height:1.5;margin:7px 0}
 .jandaColonyCells{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
