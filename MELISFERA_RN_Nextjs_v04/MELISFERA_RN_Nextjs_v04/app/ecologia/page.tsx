@@ -11,8 +11,34 @@ const pilares=[
 {icon:'🎓',title:'Educação, cultura e conhecimento',text:'Abelhas, flores e meliponários oferecem oportunidades de educação ambiental, pesquisa participativa e valorização dos saberes locais sobre a Caatinga e outros ambientes do RN.',limite:'Valores culturais devem ser documentados com participação das comunidades.',link:'socioculturais'},
 {icon:'📈',title:'Economia e segurança alimentar',text:'Polinização e produtos apícolas podem contribuir para cadeias produtivas e meios de vida. Avaliações econômicas exigem dados locais de produção, dependência de polinizadores, preços, custos e incerteza.',limite:'Potencial econômico não equivale a benefício já medido.',link:'economia-rural'}];
 const steps=[['01','Visita floral','A abelha utiliza néctar ou pólen; observação comportamental.'],['02','Transporte de pólen','Identificação de pólen aderido e sua compatibilidade com a planta.'],['03','Polinização efetiva','Deposição de pólen compatível ou resultado reprodutivo atribuível ao visitante.'],['04','Benefício mensurado','Frutos, sementes, qualidade, estabilidade ou valor econômico avaliados experimentalmente.']];
-export default function Ecology(){return <main className="shell section">
+export default function Ecology(){return <main className="shell section melisferaEcologyPage">
 <style>{`
+.melisferaEcologyPage{font-size:17px;line-height:1.7}
+.melisferaEcologyPage>h1{font-size:clamp(34px,3.3vw,46px);line-height:1.14;letter-spacing:-.025em;max-width:1050px}
+.melisferaEcologyPage>section>h2{font-size:clamp(27px,2.6vw,36px);line-height:1.2;margin-bottom:20px}
+.melisferaEcologyPage .intro{font-size:clamp(18px,1.5vw,20px);line-height:1.75}
+.melisferaEcologyPage .eyebrow{font-size:13px;letter-spacing:.09em;font-weight:700}
+.melisferaEcologyPage .notice{font-size:16px;line-height:1.65}
+.melisferaEcologyPage .jumpLinks{font-size:15px;line-height:1.5;gap:10px}
+.melisferaEcologyPage .melisferaCaseStudy p{font-size:17px;line-height:1.8}
+.melisferaEcologyPage .melisferaCaseStudy figcaption{font-size:14px;line-height:1.55}
+.melisferaEcologyPage .melisferaServiceBody h3{font-size:clamp(23px,1.85vw,28px);line-height:1.22}
+.melisferaEcologyPage .melisferaServiceBody>p:not(.melisferaEvidence){font-size:17px;line-height:1.7}
+.melisferaEcologyPage .melisferaEvidence{font-size:14px;line-height:1.6}
+.melisferaEcologyPage .melisferaServiceBody>a{font-size:16px;line-height:1.5}
+.melisferaEcologyPage .melisferaServicePhoto figcaption{font-size:14px;line-height:1.4}
+.melisferaEcologyPage .melisferaServiceIllustration small{font-size:14px}
+.melisferaEcologyPage .twoCol .panel h3{font-size:clamp(21px,1.7vw,25px);line-height:1.3}
+.melisferaEcologyPage .twoCol .panel p{font-size:16px;line-height:1.75}
+.melisferaEcologyPage .statCard span{font-size:15px;line-height:1.5}
+.melisferaEcologyPage .note{font-size:14px;line-height:1.6}
+.melisferaEcologyPage .sourceItem{font-size:15px;line-height:1.65}
+.melisferaEcologyPage #evidencias h3{font-size:19px;line-height:1.35}
+.melisferaEcologyPage #evidencias div[style] p{font-size:15px!important;line-height:1.65}
+.melisferaEcologyPage #dados{font-size:16px;line-height:1.65}
+.melisferaEcologyPage #dados input,.melisferaEcologyPage #dados select{font-size:16px;min-height:44px}
+@media(max-width:570px){.melisferaEcologyPage{font-size:16px}.melisferaEcologyPage .melisferaServiceBody{padding:20px}.melisferaEcologyPage .melisferaCaseStudy p{font-size:16px}.melisferaEcologyPage .melisferaServiceBody>p:not(.melisferaEvidence){font-size:16px}}
+
 .melisferaCaseStudy{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px;align-items:center;background:#f5f8f1;border:1px solid #dce8d8;border-radius:22px;padding:clamp(18px,3vw,34px);margin-top:22px}
 .melisferaCaseStudy p{line-height:1.75}
 .melisferaCaseStudy figure{margin:0;min-width:0}
