@@ -1,0 +1,79 @@
+'use client';
+import {useCallback,useEffect,useRef,useState} from 'react';
+
+const WIDTH=900,HEIGHT=440;
+type Point={x:number;y:number};
+type Flower=Point&{taken:boolean};
+type Phase={name:string;season:string;goal:number;description:string;lesson:string;leaf:number;rain:number;flowers:Point[];hazards:Point[];nest?:Point};
+const phases:Phase[]=[
+{name:'A floresta resiste',season:'Pico da seca',goal:3,description:'Encontre três flores dispersas na floresta seca. A Caatinga continua viva mesmo quando muitas árvores estão sem folhas.',lesson:'Na seca, a deciduidade reduz a perda de água em muitas árvores. A disponibilidade de flores varia entre espécies.',leaf:.08,rain:0,flowers:[{x:205,y:125},{x:435,y:310},{x:720,y:150}],hazards:[{x:320,y:230},{x:595,y:245}]},
+{name:'Em busca de abrigo',season:'Final da seca',goal:3,description:'Reúna recursos e encontre uma cavidade adequada. Janda ajuda a reconhecer um local potencial para a colônia.',lesson:'Cavidades em árvores podem ser importantes para a nidificação de abelhas sem ferrão. A fundação de uma colônia envolve processos sociais e não ocorre por uma operária isolada.',leaf:.16,rain:0,flowers:[{x:160,y:300},{x:390,y:125},{x:660,y:315}],hazards:[{x:290,y:210},{x:530,y:200}],nest:{x:805,y:210}},
+{name:'As primeiras chuvas',season:'Transição seca–chuva',goal:4,description:'A paisagem começa a rebrotar. Visite quatro flores para contribuir com as reservas da colônia.',lesson:'O rebrotamento após as primeiras chuvas pode ser rápido, mas não ocorre simultaneamente em todas as plantas.',leaf:.52,rain:.48,flowers:[{x:180,y:120},{x:330,y:325},{x:530,y:145},{x:730,y:310}],hazards:[{x:420,y:215},{x:640,y:225}]},
+{name:'A floresta verdeja',season:'Estação chuvosa',goal:5,description:'A vegetação ganha folhas em muitos trechos. Visite cinco flores e retorne à colônia com os recursos.',lesson:'A Caatinga é uma floresta tropical sazonalmente seca. Folhagem, floração e frutificação têm calendários que variam entre espécies.',leaf:.95,rain:.8,flowers:[{x:155,y:135},{x:300,y:315},{x:455,y:125},{x:610,y:315},{x:760,y:150}],hazards:[{x:370,y:220},{x:675,y:220}]},
+{name:'Uma colônia fortalecida',season:'Ciclo sazonal',goal:5,description:'Complete o último voo, reúna recursos e retorne ao ninho. A aventura mostra como a conservação ajuda a sustentar habitats ao longo do ano.',lesson:'O crescimento real de colônias depende de muitos fatores, incluindo rainha, operárias, cria, recursos e condições ambientais. Os números deste jogo são fictícios.',leaf:.7,rain:.4,flowers:[{x:180,y:305},{x:285,y:115},{x:460,y:310},{x:610,y:120},{x:770,y:305}],hazards:[{x:365,y:205},{x:550,y:220},{x:715,y:215}]}
+];
+type Mode='ready'|'playing'|'complete'|'failed'|'victory';
+type Game={phase:number;mode:Mode;bee:Point;energy:number;flowers:Flower[];hitTimer:number;resources:number;colony:number;nestFound:boolean;time:number;message:string};
+const start=(phase:number,resources:number,colony:number,nestFound:boolean):Game=>({phase,mode:'ready',bee:{x:90,y:215},energy:100,flowers:phases[phase].flowers.map(f=>({...f,taken:false})),hitTimer:0,resources,colony,nestFound,time:0,message:'Prepare-se para voar'});
+const clamp=(n:number,a:number,b:number)=>Math.max(a,Math.min(b,n));
+function drawTree(ctx:CanvasRenderingContext2D,x:number,y:number,scale:number,leaf:number,index:number){
+ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.strokeStyle='#79583c';ctx.lineWidth=13;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(0,5);ctx.lineTo(0,-105);ctx.lineTo(-37,-150);ctx.moveTo(0,-105);ctx.lineTo(45,-156);ctx.moveTo(0,-70);ctx.lineTo(-59,-105);ctx.moveTo(0,-74);ctx.lineTo(60,-118);ctx.stroke();
+const positions:[number,number,number][]=[[-38,-151,39],[42,-158,42],[-57,-109,32],[56,-121,34],[0,-176,47]];
+for(let i=0;i<Math.round(positions.length*leaf);i++){const [px,py,r]=positions[i];ctx.fillStyle=['#598d50','#76a45b','#89b965','#477c49'][((index+i)%4)];ctx.beginPath();ctx.ellipse(px,py,r,r*.76,0,0,Math.PI*2);ctx.fill()}ctx.restore()
+}
+function drawBee(ctx:CanvasRenderingContext2D,x:number,y:number,t:number,blink:boolean){
+if(blink)return;ctx.save();ctx.translate(x,y);ctx.fillStyle='#d8f3f0';ctx.strokeStyle='#7eafac';ctx.lineWidth=1.5;
+for(const side of [-1,1]){ctx.save();ctx.rotate(side*.26);ctx.beginPath();ctx.ellipse(side*10,-15+Math.sin(t*26)*3,18,11,side*.3,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.restore()}
+ctx.fillStyle='#a96a36';ctx.beginPath();ctx.ellipse(-4,3,24,15,0,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#473326';ctx.lineWidth=5;for(const offset of [-12,1]){ctx.beginPath();ctx.moveTo(offset,-9);ctx.lineTo(offset+3,16);ctx.stroke()}
+ctx.fillStyle='#5b3827';ctx.beginPath();ctx.arc(19,0,11,0,Math.PI*2);ctx.fill();ctx.fillStyle='white';ctx.beginPath();ctx.arc(23,-3,2.8,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#5b3827';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(17,-10);ctx.quadraticCurveTo(16,-19,12,-20);ctx.moveTo(24,-10);ctx.quadraticCurveTo(28,-19,31,-19);ctx.stroke();ctx.restore()
+}
+function paint(ctx:CanvasRenderingContext2D,g:Game,t:number){
+const p=phases[g.phase],green=p.leaf>.6;
+const sky=ctx.createLinearGradient(0,0,0,HEIGHT);sky.addColorStop(0,p.rain>.4?'#a7d3d8':'#b7dce7');sky.addColorStop(1,p.rain>.4?'#e4f0d8':'#f7e6bf');ctx.fillStyle=sky;ctx.fillRect(0,0,WIDTH,HEIGHT);
+ctx.fillStyle=p.rain>.5?'#f8e3a2':'#ffdc8b';ctx.beginPath();ctx.arc(790,76,34,0,Math.PI*2);ctx.fill();
+if(p.rain>.2){ctx.fillStyle='#e5f0ef';for(const [x,y] of [[150,72],[470,55],[715,96]]){ctx.beginPath();ctx.ellipse(x,y,70,23,0,0,Math.PI*2);ctx.fill()}}
+ctx.fillStyle=green?'#9abf7d':'#cbb48a';ctx.beginPath();ctx.moveTo(0,305);ctx.quadraticCurveTo(190,215,390,310);ctx.quadraticCurveTo(620,240,900,310);ctx.lineTo(900,440);ctx.lineTo(0,440);ctx.fill();
+ctx.fillStyle=green?'#6b9e60':'#b89c70';ctx.beginPath();ctx.moveTo(0,370);ctx.quadraticCurveTo(230,320,430,370);ctx.quadraticCurveTo(710,325,900,360);ctx.lineTo(900,440);ctx.lineTo(0,440);ctx.fill();
+for(let i=0;i<7;i++)drawTree(ctx,65+i*137,337+(i%2)*20,.65+(i%3)*.12,p.leaf,i);
+ctx.fillStyle='#6d5036';ctx.fillRect(32,175,76,92);ctx.fillStyle='#4e3528';ctx.beginPath();ctx.ellipse(84,217,18,23,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff5e3';ctx.font='bold 15px system-ui';ctx.fillText('COLÔNIA',27,287);
+if(p.nest){ctx.strokeStyle='#805b3b';ctx.lineWidth=17;ctx.beginPath();ctx.moveTo(p.nest.x,p.nest.y+75);ctx.lineTo(p.nest.x,p.nest.y-62);ctx.stroke();ctx.fillStyle='#4c3426';ctx.beginPath();ctx.ellipse(p.nest.x+8,p.nest.y,21,27,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff6dc';ctx.font='bold 15px system-ui';ctx.fillText('CAVIDADE',p.nest.x-43,p.nest.y-83)}
+for(const f of g.flowers){if(f.taken)continue;ctx.save();ctx.translate(f.x,f.y);ctx.strokeStyle='#478553';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(0,9);ctx.lineTo(0,39);ctx.stroke();for(let i=0;i<6;i++){const a=i*Math.PI/3;ctx.fillStyle=i%2?'#f4bfd1':'#f6d56c';ctx.beginPath();ctx.ellipse(Math.cos(a)*14,Math.sin(a)*14,11,16,a,0,Math.PI*2);ctx.fill()}ctx.fillStyle='#9b6433';ctx.beginPath();ctx.arc(0,0,9,0,Math.PI*2);ctx.fill();ctx.restore()}
+for(const h of p.hazards){ctx.fillStyle='#e4b95b';ctx.fillRect(h.x-19,h.y-21,38,42);ctx.fillStyle='#4e382b';ctx.font='bold 27px system-ui';ctx.fillText('☠',h.x-14,h.y+10)}
+if(p.rain>.2){ctx.strokeStyle='#5d9db8';ctx.lineWidth=1.8;ctx.globalAlpha=.48;for(let i=0;i<Math.round(p.rain*35);i++){const x=(i*91+t*48)%WIDTH,y=(i*49+t*95)%HEIGHT;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-6,y+15);ctx.stroke()}ctx.globalAlpha=1}
+drawBee(ctx,g.bee.x,g.bee.y,t,g.hitTimer>0&&Math.floor(t*9)%2===0);
+ctx.fillStyle='#204e35';ctx.font='bold 17px system-ui';ctx.fillText('CAATINGA · FLORESTA TROPICAL SAZONALMENTE SECA',18,29);
+if(g.flowers.every(f=>f.taken)){ctx.fillStyle='#1e6340';ctx.font='bold 21px system-ui';ctx.fillText(p.nest&&!g.nestFound?'Encontre a cavidade na árvore →':'Retorne à colônia ←',WIDTH/2-160,62)}
+}
+export function JandaAdventure(){
+const canvas=useRef<HTMLCanvasElement>(null),keys=useRef<Set<string>>(new Set()),pointer=useRef<Point|null>(null),game=useRef<Game>(start(0,0,3,false));
+const [ui,setUi]=useState(()=>({...game.current,flowers:game.current.flowers.map(f=>({...f}))}));
+const [muted,setMuted]=useState(true);
+const sync=useCallback(()=>{const g=game.current;setUi({...g,bee:{...g.bee},flowers:g.flowers.map(f=>({...f}))})},[]);
+const advance=useCallback(()=>{const g=game.current;if(g.phase===phases.length-1){g.mode='victory';sync();return}game.current=start(g.phase+1,g.resources,g.colony,g.nestFound);sync()},[sync]);
+const restart=useCallback(()=>{game.current=start(0,0,3,false);sync()},[sync]);
+useEffect(()=>{const down=(e:KeyboardEvent)=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key)){if(e.key.startsWith('Arrow'))e.preventDefault();keys.current.add(e.key.toLowerCase())}};const up=(e:KeyboardEvent)=>keys.current.delete(e.key.toLowerCase());window.addEventListener('keydown',down);window.addEventListener('keyup',up);return()=>{window.removeEventListener('keydown',down);window.removeEventListener('keyup',up)}},[]);
+useEffect(()=>{const c=canvas.current,ctx=c?.getContext('2d');if(!c||!ctx)return;let raf=0,last=0,frames=0;
+const tick=(now:number)=>{const dt=Math.min((now-last)/1000||0,.04);last=now;const g=game.current,p=phases[g.phase];g.time+=dt;
+if(g.mode==='playing'){let dx=0,dy=0;const k=keys.current;if(k.has('arrowleft')||k.has('a'))dx--;if(k.has('arrowright')||k.has('d'))dx++;if(k.has('arrowup')||k.has('w'))dy--;if(k.has('arrowdown')||k.has('s'))dy++;
+if(pointer.current){dx=pointer.current.x-g.bee.x;dy=pointer.current.y-g.bee.y;const d=Math.hypot(dx,dy);if(d<10){dx=0;dy=0}else{dx/=d;dy/=d}}
+const norm=Math.hypot(dx,dy)||1;g.bee.x=clamp(g.bee.x+dx/norm*220*dt,23,WIDTH-23);g.bee.y=clamp(g.bee.y+dy/norm*220*dt,45,HEIGHT-28);
+g.energy=clamp(g.energy-2.2*dt,0,100);g.hitTimer=Math.max(0,g.hitTimer-dt);
+for(const f of g.flowers){if(!f.taken&&Math.hypot(f.x-g.bee.x,f.y-g.bee.y)<34){f.taken=true;g.energy=clamp(g.energy+15,0,100);g.resources+=1;g.message='Flor visitada! Recurso educativo coletado.'}}
+for(const h of p.hazards){if(g.hitTimer===0&&Math.hypot(h.x-g.bee.x,h.y-g.bee.y)<34){g.energy=clamp(g.energy-24,0,100);g.hitTimer=1.4;g.message='Obstáculo! Evite a área de risco.'}}
+if(g.flowers.every(f=>f.taken)){if(p.nest&&!g.nestFound&&Math.hypot(p.nest.x+8-g.bee.x,p.nest.y-g.bee.y)<49){g.nestFound=true;g.message='Cavidade encontrada! Uma colônia social requer rainha e outras operárias.'}
+if((!p.nest||g.nestFound)&&Math.hypot(84-g.bee.x,217-g.bee.y)<50){g.mode='complete';g.colony+=g.phase===0?0:g.phase===1?2:3;g.message='Fase concluída! A colônia fictícia ganhou novas operárias.'}}
+if(g.energy===0){g.mode='failed';g.message='Janda ficou sem energia. Experimente uma rota diferente.'}
+if(frames%8===0||g.mode!=='playing')sync()}
+paint(ctx,g,now/1000);frames++;raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf)},[sync]);
+const phase=phases[ui.phase],taken=ui.flowers.filter(f=>f.taken).length;
+const handlePointer=(e:React.PointerEvent<HTMLCanvasElement>)=>{const r=e.currentTarget.getBoundingClientRect();pointer.current={x:(e.clientX-r.left)*WIDTH/r.width,y:(e.clientY-r.top)*HEIGHT/r.height}};
+return <div className="jandaAdventure"><div className="jandaHero"><div><span className="jandaEyebrow">MELISFERA PLAY · AVENTURA PRINCIPAL</span><h2>🐝 Janda — Uma Jornada pela Caatinga</h2><p>Da seca às chuvas: descubra flores, encontre um abrigo e ajude uma colônia de abelhas sem ferrão a crescer.</p></div><div className="jandaPortrait" aria-hidden="true">🐝</div></div>
+<div className="jandaPhases" aria-label="Progresso da aventura">{phases.map((p,i)=><div key={p.name} className={'jandaPhase '+(i===ui.phase?'current':i<ui.phase?'passed':'locked')}><span>{['☀️','🌳','🌦️','🌧️','🏡'][i]}</span><strong>{i+1}. {p.name}</strong><small>{p.season}</small></div>)}</div>
+<div className="jandaHud"><span>🌼 Flores: <strong>{taken}/{phase.goal}</strong></span><span>⚡ Energia: <strong>{Math.round(ui.energy)}%</strong></span><span>🍯 Recursos: <strong>{ui.resources}</strong></span><span>🐝 Colônia: <strong>{ui.colony} operárias fictícias</strong></span><span>🏡 Abrigo: <strong>{ui.nestFound?'Encontrado':'Em busca'}</strong></span></div>
+<div className="jandaEnergy"><span style={{width:ui.energy+'%'}}/></div>
+<canvas ref={canvas} width={WIDTH} height={HEIGHT} className="jandaCanvas" aria-label="Jogo de aventura com Janda, flores, árvores da Caatinga, ninho e obstáculos. Mova a abelha com setas, WASD ou arrastando o dedo." onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);handlePointer(e)}} onPointerMove={e=>{if(pointer.current)handlePointer(e)}} onPointerUp={()=>{pointer.current=null}} onPointerCancel={()=>{pointer.current=null}}/>
+<div className="jandaBottom"><div><h3>{phase.season} · {phase.name}</h3><p>{phase.description}</p><p className="jandaHint" role="status">{ui.message}</p></div><div className="jandaActions">{ui.mode==='ready'&&<button className="playBtn primary" onClick={()=>{game.current.mode='playing';game.current.message='Voe até as flores e conserve energia!';sync()}}>▶ Iniciar fase</button>}{ui.mode==='complete'&&<button className="playBtn primary" onClick={advance}>Próxima fase →</button>}{ui.mode==='failed'&&<button className="playBtn primary" onClick={()=>{const g=game.current;game.current=start(g.phase,g.resources-taken,g.colony,g.nestFound&&g.phase!==1);sync()}}>↻ Tentar novamente</button>}{ui.mode==='victory'&&<button className="playBtn primary" onClick={restart}>↻ Nova aventura</button>}{ui.mode==='playing'&&<button className="playBtn" onClick={()=>{game.current.mode='ready';game.current.message='Jogo pausado';sync()}}>⏸ Pausar</button>}<button className="playBtn" onClick={()=>{const g=game.current;game.current=start(g.phase,Math.max(0,g.resources-taken),g.colony,g.nestFound&&g.phase!==1);sync()}}>Reiniciar fase</button></div></div>
+{ui.mode==='complete'&&<div className="jandaLesson" role="status"><strong>🏅 Fase concluída!</strong><p>{phase.lesson}</p></div>}
+{ui.mode==='victory'&&<div className="jandaLesson" role="status"><strong>🏆 Janda completou a jornada!</strong><p>Você atravessou a seca, encontrou recursos, descobriu uma cavidade e acompanhou o crescimento ilustrativo da colônia até a estação chuvosa.</p><p>{phase.lesson}</p></div>}
+<div className="jandaScience"><h3>🌿 Diário científico de Janda</h3><p>{phase.lesson}</p><p><strong>Importante:</strong> Janda representa uma operária de <em>Melipona subnitida</em>. Uma colônia real depende de rainha, operárias e cria; a formação de novas colônias envolve processos sociais. Os números de operárias, recursos, obstáculos e o calendário do jogo são ficcionais e não representam dados de campo.</p><p>Use as setas ou WASD no computador; em celulares, toque e arraste para guiar Janda. A trilha não pressupõe que todas as espécies floresçam ao mesmo tempo.</p></div></div>
+}
