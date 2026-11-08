@@ -13,6 +13,13 @@ const pilares=[
 const steps=[['01','Visita floral','A abelha utiliza néctar ou pólen; observação comportamental.'],['02','Transporte de pólen','Identificação de pólen aderido e sua compatibilidade com a planta.'],['03','Polinização efetiva','Deposição de pólen compatível ou resultado reprodutivo atribuível ao visitante.'],['04','Benefício mensurado','Frutos, sementes, qualidade, estabilidade ou valor econômico avaliados experimentalmente.']];
 export default function Ecology(){return <main className="shell section">
 <style>{`
+.melisferaCaseStudy{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px;align-items:center;background:#f5f8f1;border:1px solid #dce8d8;border-radius:22px;padding:clamp(18px,3vw,34px);margin-top:22px}
+.melisferaCaseStudy p{line-height:1.75}
+.melisferaCaseStudy figure{margin:0;min-width:0}
+.melisferaCaseStudy img{display:block;width:100%;height:clamp(280px,32vw,440px);object-fit:cover;object-position:center;border-radius:16px}
+.melisferaCaseStudy figcaption{font-size:12px;color:#526c59;margin-top:10px;line-height:1.5}
+.melisferaCaseStudy a{font-weight:650}
+@media(max-width:740px){.melisferaCaseStudy{grid-template-columns:1fr}.melisferaCaseStudy img{height:300px}}
 .melisferaServicesGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
 .melisferaServiceCard{margin:0!important;padding:0!important;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .melisferaServicePhoto{margin:0;position:relative;aspect-ratio:4/3;overflow:hidden;background:#eaf0e7}
@@ -35,11 +42,11 @@ export default function Ecology(){return <main className="shell section">
 <nav aria-label="Navegação nesta página" className="jumpLinks"><a href="#macambiras">Estudo de caso</a><a href="#servicos-rn">Serviços no RN</a><a href="#evidencias">Níveis de evidência</a><a href="#dados">Dados de campo</a><a href="#conservacao">Conservação</a><a href="#referencias">Referências</a></nav>
 <section id="macambiras" style={{margin:'44px 0'}}>
 <p className="eyebrow">CIÊNCIA PRODUZIDA NO SEMIÁRIDO POTIGUAR</p><h2>Macambiras: um exemplo de como o habitat sustenta interações ecológicas</h2>
-<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:26,alignItems:'start'}}>
+<div className="melisferaCaseStudy">
 <div><p>Em <strong>Jorge et al. (2024)</strong>, publicado na <em>Neotropical Entomology</em>, a bromélia rupícola <em>Encholirium spectabile</em> foi investigada como estrutura ecológica associada a himenópteros em afloramentos rochosos da Caatinga. O trabalho discute como a bromélia oferece recursos e habitat e como abelhas, formigas e vespas se relacionam a diferentes funções e serviços ecossistêmicos.</p>
 <p>O estudo destaca a relevância das interações para <strong>polinização potencial, produção de mel, controle biológico, valores culturais e educação</strong>, considerando a sazonalidade. Esses serviços não foram todos quantificados experimentalmente, e os resultados sobre o conjunto de Hymenoptera não devem ser atribuídos exclusivamente às abelhas.</p>
 <p><a href="https://doi.org/10.1007/s13744-024-01152-7" target="_blank" rel="noopener noreferrer">Ler Jorge et al. (2024) · DOI ↗</a></p></div>
-<figure style={{margin:0}}><img src="/images/abelhas/abelhas-inflorescencia.jpg" alt="Fotografia de abelhas associadas a inflorescências, acervo de imagens da MELISFERA RN" style={{width:'100%',maxHeight:340,objectFit:'cover',borderRadius:16}}/><figcaption style={{fontSize:12,color:'#607366',marginTop:9}}>Imagem do acervo visual da plataforma. Não representa, isoladamente, comprovação de polinização efetiva.</figcaption></figure>
+<figure><img src="/images/abelhas/abelhas-inflorescencia.jpg" alt="Abelha visitando uma inflorescência; registro de interação floral na plataforma MELISFERA RN"/><figcaption>Registro de visitação floral do acervo MELISFERA RN. A visita, por si só, não comprova polinização efetiva.</figcaption></figure>
 </div>
 <div className="statGrid"><div className="statCard"><strong>{ecologyRecords.length}</strong><span>Táxons de abelhas na tabela de interações utilizada pela plataforma</span></div><div className="statCard"><strong>{ecologyRecords.reduce((a,x)=>a+x.total,0).toLocaleString('pt-BR')}</strong><span>Registros somados na tabela de referência; não são indivíduos únicos nem estimativa estadual</span></div></div>
 <p className="note">A tabela de abelhas é um recorte do levantamento de Hymenoptera; os totais não representam riqueza, abundância ou volume de polinização para todo o Rio Grande do Norte.</p>
@@ -54,8 +61,8 @@ const photos=[
 {src:'/images/abelhas/abelhas-inflorescencia.jpg',alt:'Abelha visitando flores; registro de visitação floral',caption:'Visitação floral documentada'},
 null,
 null,
-{src:'/images/abelhas/'+encodeURIComponent('WhatsApp Image 2026-11-04 at 00.46.47 (1).jpeg'),alt:'Colônia de abelhas em estrutura natural de nidificação',caption:'Estrutura de colônia em campo'},
-{src:'/images/abelhas/'+encodeURIComponent('WhatsApp Image 2026-11-04 at 00.46.47.jpeg'),alt:'Interior de colônia de abelhas sem ferrão com indivíduos e estruturas de cria',caption:'Organização social e criação'},
+{src:'/images/abelhas/'+encodeURIComponent('WhatsApp Image 2026-11-04 at 00.46.47 (1).jpeg'),alt:'Estruturas de colônia de abelhas observadas em campo',caption:'Estruturas de nidificação'},
+{src:'/images/abelhas/'+encodeURIComponent('WhatsApp Image 2026-11-04 at 00.46.47.jpeg'),alt:'Abelhas e estruturas de uma colônia manejada',caption:'Colônia e organização social'},
 {src:'/images/abelhas/'+encodeURIComponent('WhatsApp Image 2026-11-04 at 00.46.42.jpeg'),alt:'Pessoas com vestimentas de proteção realizando manejo de colmeia',caption:'Manejo apícola em campo'}
 ];
 const photo=photos[i];
