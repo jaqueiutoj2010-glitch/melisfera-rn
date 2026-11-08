@@ -11,3 +11,12 @@
 .threatEvidence{background:#f3f6e9;border-left:5px solid #83a35c;border-radius:8px;padding:22px 25px;line-height:1.7;margin-bottom:30px}
 .threatDetailPage .cyanoEvidence{margin-bottom:30px}
 @media(max-width:760px){.threatDetailGrid{grid-template-columns:1fr}.threatDetailGrid article{padding:22px}}
+
+.threatsGameBridge{scroll-margin-top:28px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.75fr);gap:35px;align-items:center;background:linear-gradient(130deg,#e6eee2,#f8f2df);border:1px solid #cddcc7;border-radius:20px;padding:clamp(24px,4vw,48px);margin:0 0 65px}
+.threatsGameBridge p:not(.threatsKicker){line-height:1.75;font-size:16px;color:#405b4a}
+.threatsPlayLink{display:inline-flex;background:#245d43;color:white;text-decoration:none;font-weight:750;padding:13px 19px;border-radius:11px;margin-top:9px}
+.threatsPlayLink:hover,.threatsPlayLink:focus-visible{background:#17452f}
+.threatsGameStages{display:grid;gap:11px}
+.threatsGameStages span{background:rgba(255,255,255,.84);border:1px solid #d5e1d0;border-radius:12px;padding:14px 16px;font-size:15px;font-weight:700;color:#31553d}
+@media(max-width:800px){.threatsGameBridge{grid-template-columns:1fr;gap:18px}.threatsGameStages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.threatsGameStages{grid-template-columns:1fr}}
