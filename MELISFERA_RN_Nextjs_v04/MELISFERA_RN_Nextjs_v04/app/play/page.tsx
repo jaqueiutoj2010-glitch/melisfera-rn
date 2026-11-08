@@ -92,7 +92,7 @@ function move(dx:number,dy:number){
 function answer(i:number){if(chosen!==null||finished)return;setChosen(i);if(i===questions[q].ok)setPoints(p=>p+10)}
 function nextQuestion(){if(q===questions.length-1){setFinished(true)}else{setQ(v=>v+1);setChosen(null)}}
 function resetQuiz(){setQ(0);setChosen(null);setPoints(0);setFinished(false)}
-return <main className="shell section playPage">
+return <main className="shell section playPage melisferaStandardPage">
 <style>{`
 .playPage{--green:#24563a;color:#173a2a;font-size:17px;line-height:1.6}
 .playHero{background:linear-gradient(120deg,#e6f3d8,#fdf4cf);border:1px solid #d3e3c4;border-radius:28px;padding:clamp(24px,5vw,54px);margin-bottom:24px;position:relative;overflow:hidden}
