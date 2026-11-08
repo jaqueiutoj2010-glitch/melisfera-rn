@@ -35,3 +35,16 @@
 .atlasMethodGrid article{border:1px solid #dbe8ce;border-radius:18px;background:linear-gradient(140deg,#f2f8e9,#fffaf0)}
 @media(max-width:1050px){.atlasHeroGrid{grid-template-columns:1fr}.atlasHeroPhoto{min-height:340px;max-height:440px;border-radius:90px 24px 24px 90px}.atlasHeroPills{max-width:850px}}
 @media(max-width:650px){.atlasHero{padding:38px 0 52px}.atlasHero h1{font-size:clamp(37px,9vw,51px)}.atlasHeroPills{grid-template-columns:1fr}.atlasHeroPills span{min-height:0;flex-direction:row;align-items:center;gap:12px;padding:12px 15px}.atlasHeroPills b{font-size:29px}.atlasHeroPhoto{min-height:245px;border-width:5px;border-radius:75px 20px 20px 75px}}
+
+/* Abertura no mesmo sistema editorial de Indicadores */
+.atlasPage .atlasHero{background:#fff;padding:64px 0 28px}
+.atlasPage .atlasHeroGrid{max-width:1320px;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:clamp(30px,4vw,60px);align-items:center}
+.atlasPage .atlasHeroCopy .eyebrow{display:flex;align-items:center;gap:16px;color:#236b38;font-size:13px;letter-spacing:.12em}
+.atlasPage .atlasHeroCopy .eyebrow:after{content:"";display:inline-block;width:110px;height:3px;background:#ffb900;border-radius:10px}
+.atlasPage .atlasHeroCopy h1{font:600 clamp(36px,4.5vw,62px)/1.12 Georgia,serif;color:#123a25;letter-spacing:-.035em;margin:12px 0 18px}
+.atlasPage .atlasHeroCopy h1:after{content:"";display:block;width:min(420px,55%);height:5px;background:linear-gradient(90deg,#ffb900,#ffcc35,transparent);margin-top:14px}
+.atlasPage .atlasHeroCopy p:not(.eyebrow){font-size:17px;line-height:1.65;color:#445c4b}
+.atlasPage .atlasHeroPhoto{min-height:410px;max-height:none;border-left:9px solid #9bcf29;border-radius:45% 14px 14px 45%}
+.atlasPage .atlasBody{max-width:1320px}
+@media(max-width:1080px){.atlasPage .atlasHeroGrid{grid-template-columns:1fr}.atlasPage .atlasHeroPhoto{min-height:320px;max-height:400px}}
+@media(max-width:720px){.atlasPage .atlasHero{padding:22px 0 28px}.atlasPage .atlasHeroCopy h1{font-size:clamp(37px,9vw,52px)}.atlasPage .atlasHeroPhoto{min-height:230px;border-left-width:6px;border-radius:75px 12px 12px 75px}}
