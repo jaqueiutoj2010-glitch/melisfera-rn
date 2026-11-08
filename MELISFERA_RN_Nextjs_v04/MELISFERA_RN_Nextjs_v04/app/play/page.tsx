@@ -174,6 +174,20 @@ return <main className="shell section playPage">
 .jandaBottom h3{font-size:22px;margin:0 0 7px}.jandaBottom p{margin:0 0 7px;font-size:15px;line-height:1.5}
 .jandaHint{font-weight:700;color:#276b45}.jandaActions{display:flex;gap:9px;flex-wrap:wrap;flex-shrink:0}
 .jandaLesson{background:#e2f2da;border:1px solid #bbd9b0;border-radius:16px;padding:18px;font-size:16px}.jandaLesson p{margin:7px 0 0}
+.nestWorkshop{background:#f8f1e5;border:1px solid #d8c29e;border-radius:20px;padding:22px;display:grid;gap:18px}
+.nestHeader{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.nestHeader h3{font-size:26px;margin:6px 0}.nestHeader p{margin:0;font-size:15px}
+.nestKicker{color:#8a6036;font-weight:800;font-size:12px;letter-spacing:.08em}
+.nestProgress{border-radius:50px;background:#ead6ad;padding:9px 14px;white-space:nowrap;font-weight:700}
+.nestScene svg{width:100%;height:auto;display:block;border-radius:18px}
+.nestTasks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.nestTask{background:#fffaf1;border:2px solid #d8c29e;border-radius:15px;padding:15px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;text-align:center;color:#62482f}
+.nestTask:focus-visible{outline:3px solid #397a50;outline-offset:3px}
+.nestTask.done{background:#e3f1d9;border-color:#72a574;cursor:default}
+.nestTaskIcon{font-size:32px}.nestTask strong{font-size:16px}.nestTask small{font-size:13px;line-height:1.4}
+.nestFeedback,.nestFinished{background:#f3e5c8;border-radius:14px;padding:16px;margin:0;font-size:15px;line-height:1.5}
+.nestFinished{background:#e2f0d9}.nestFinished p{margin:7px 0 14px}
+@media(max-width:650px){.nestTasks{grid-template-columns:1fr}.nestHeader{flex-wrap:wrap}.nestWorkshop{padding:13px}}
 .jandaColony{display:grid;grid-template-columns:minmax(190px,1fr) minmax(180px,2fr);gap:12px;align-items:center;background:linear-gradient(115deg,#f8edd2,#f2e1b6);border:1px solid #dfc88e;border-radius:18px;padding:20px}
 .jandaColony strong{font-size:20px;color:#604a25}.jandaColony p{font-size:14px;line-height:1.5;margin:7px 0}
 .jandaColonyCells{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
