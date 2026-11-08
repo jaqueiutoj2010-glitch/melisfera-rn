@@ -20,3 +20,20 @@
 .threatsGameStages span{background:rgba(255,255,255,.84);border:1px solid #d5e1d0;border-radius:12px;padding:14px 16px;font-size:15px;font-weight:700;color:#31553d}
 @media(max-width:800px){.threatsGameBridge{grid-template-columns:1fr;gap:18px}.threatsGameStages{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.threatsGameStages{grid-template-columns:1fr}}
+
+/* Padrão visual do painel Indicadores: abertura editorial, fotografia e conteúdo contido */
+.threatsPage .threatsHero{background:#fff;padding:62px 0 24px}
+.threatsPage .threatsHero>.shell{max-width:1320px;position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(350px,.92fr);column-gap:clamp(24px,3vw,55px);align-items:center}
+.threatsPage .threatsHero>.shell:after{content:"";grid-column:2;grid-row:1 / span 6;align-self:stretch;min-height:365px;max-height:485px;border-left:10px solid #a2d52b;border-radius:45% 14px 14px 45%;background:#e9f1d6 url('/images/abelhas/abelha-maracuja.jpg') center/cover no-repeat;box-shadow:0 16px 30px rgba(19,68,28,.1)}
+.threatsPage .threatsHero>.shell>*{grid-column:1;min-width:0}
+.threatsPage .threatsKicker{color:#236b38;letter-spacing:.12em}
+.threatsPage .threatsHero h1{font:600 clamp(42px,4.6vw,74px)/1.08 Georgia,serif;letter-spacing:-.035em;color:#123a25;margin:12px 0 18px}
+.threatsPage .threatsHero h1:after{content:"";display:block;width:min(420px,65%);height:6px;border-radius:100%;background:linear-gradient(90deg,#ffb800,#ffc52a,transparent);margin-top:12px}
+.threatsPage .threatsHero h1 em{color:#4d7b56}
+.threatsPage .threatsHero p:not(.threatsKicker){font-size:clamp(16px,1.35vw,19px);line-height:1.65;color:#445c4b}
+.threatsPage .threatsContent{max-width:1320px;padding-top:28px}
+.threatsPage .threatCard{border-color:#d9e4d4;border-radius:22px;box-shadow:0 5px 16px rgba(19,57,31,.055)}
+.threatsPage .threatCard:nth-child(even){background:linear-gradient(150deg,#fff,#fffaf0)}
+.threatsPage .threatAction{border-radius:13px}
+.threatsPage .threatsJump a{background:#edf6e8;border:1px solid #d9e8d0}
+@media(max-width:850px){.threatsPage .threatsHero>.shell{grid-template-columns:1fr}.threatsPage .threatsHero>.shell:after{grid-column:1;grid-row:auto;min-height:260px;max-height:340px;border-radius:26px 26px 12px 12px;border-left-width:7px;margin-top:24px}.threatsPage .threatsHero>.shell>*{grid-column:1}.threatsPage .threatsHero{padding-top:38px}}
