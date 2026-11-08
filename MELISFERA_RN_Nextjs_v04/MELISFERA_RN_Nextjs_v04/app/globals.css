@@ -337,3 +337,20 @@ main .reference h2{font-family:Georgia,serif;color:#193e29}
 footer{border-top:2px solid #b9d989;background:linear-gradient(110deg,#f3f8ed,#fffaf0)}
 @media(min-width:1201px){.header .nav nav a[href="/"]{background:transparent}.header .nav nav a{padding:10px 3px}}
 @media(max-width:720px){main>.shell.section{padding-top:34px}main .featureGrid{gap:13px}main .feature{padding:22px}main>.shell.section>h1{font-size:clamp(34px,8vw,46px)}}
+
+/* Linguagem visual unificada: referência editorial do painel Indicadores */
+.melisferaStandardPage{max-width:1320px;padding-top:64px;padding-bottom:90px}
+.melisferaStandardPage>.eyebrow{display:flex;align-items:center;gap:16px;color:#236b38;font-size:13px;letter-spacing:.12em}
+.melisferaStandardPage>.eyebrow:first-child:after{content:"";display:inline-block;width:110px;height:3px;background:#ffb900;border-radius:10px}
+.melisferaStandardPage>h1{font-family:Georgia,serif;font-size:clamp(42px,4.6vw,74px);font-weight:600;line-height:1.08;letter-spacing:-.035em;color:#123a25;max-width:1000px;margin:12px 0 18px}
+.melisferaStandardPage>h1:after{content:"";display:block;width:min(420px,55%);height:6px;border-radius:100%;background:linear-gradient(90deg,#ffb800,#ffc52a,transparent);margin-top:12px}
+.melisferaStandardPage>.intro{font-size:clamp(16px,1.35vw,19px);line-height:1.65;color:#445c4b;max-width:960px}
+.melisferaStandardPage>.panel,.melisferaStandardPage .panel{border-radius:20px;border-color:#d9e4d4}
+.melisferaStandardPage>.notice{border-radius:12px}
+.melisferaStandardPage>h2{font-family:Georgia,serif;color:#104421}
+.melisferaStandardPage a:focus-visible{outline:3px solid #e8a900;outline-offset:3px}
+.melisferaUnifiedPage .atlasHero{background:#fff}
+.melisferaUnifiedPage .atlasHero h1{font-family:Georgia,serif;color:#123a25;font-weight:600;letter-spacing:-.035em}
+.melisferaUnifiedPage .atlasHero h1:after{content:"";display:block;width:min(420px,55%);height:6px;border-radius:100%;background:linear-gradient(90deg,#ffb800,#ffc52a,transparent);margin-top:12px}
+.melisferaUnifiedPage .atlasHeroPhoto{border-left:10px solid #a2d52b;border-radius:45% 14px 14px 45%}
+@media(max-width:760px){.melisferaStandardPage{padding-top:38px;padding-bottom:58px}.melisferaStandardPage>h1{font-size:clamp(36px,8vw,52px)}}
