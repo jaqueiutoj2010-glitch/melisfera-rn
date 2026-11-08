@@ -46,6 +46,13 @@ function flipMemory(i:number){const card=memoryDeck[memoryOrder[i]];if(memoryLoc
 function resetMemory(){setMemoryOpen([]);setMemoryMatched([]);setMemoryMoves(0);setMemoryFact('');setMemoryLocked(false);setMemoryOrder(v=>[...v.slice(3),...v.slice(0,3)])}
 const total=flowers.length;
 const completed=collected.length===total;
+const achievements=[
+{icon:'🌼',title:'Primeiras flores',done:collected.length>=3,desc:'Visite três flores na missão.'},
+{icon:'🏵️',title:'Missão completa',done:completed,desc:'Visite as seis flores.'},
+{icon:'🧭',title:'Explorador da Caatinga',done:level>=1,desc:'Avance para outra rodada.'},
+{icon:'🧠',title:'Conhecimento em flor',done:finished&&points>=40,desc:'Acerte quatro perguntas ou mais.'},
+{icon:'🃏',title:'Guardião da memória',done:memoryMatched.length===6,desc:'Encontre todos os pares.'}
+];
 function resetMission(next=0){setLevel(next);setBee({x:50,y:85});setCollected([]);setHits(0);setStarted(false)}
 function move(dx:number,dy:number){
  if(!started||completed||hits>=3)return;
@@ -72,6 +79,7 @@ return <main className="shell section playPage">
 .playPanel{background:white;border:1px solid #d7e5d5;border-radius:22px;padding:clamp(18px,3vw,30px);box-shadow:0 6px 20px #1b42210c}
 .playPanel h2{font:600 clamp(25px,2.7vw,34px) Georgia,serif;margin:0 0 14px}
 .playField{position:relative;aspect-ratio:16/10;min-height:260px;background:linear-gradient(#d5f0e2,#eff6c6 65%,#b7d99e);border:3px solid #b2d4a9;border-radius:22px;overflow:hidden;touch-action:none;user-select:none}
+.playField:after{content:'';position:absolute;bottom:-6%;left:-8%;width:116%;height:31%;background:radial-gradient(ellipse at 15% 100%,#7ca96a 0 33%,transparent 34%),radial-gradient(ellipse at 65% 110%,#92b979 0 36%,transparent 37%);opacity:.55;pointer-events:none}
 .playField:before{content:'☁️　　　☁️';position:absolute;top:4%;left:10%;font-size:27px;opacity:.6}
 .playField button{position:absolute;transform:translate(-50%,-50%);border:0;background:none;font-size:clamp(28px,4vw,44px);padding:4px;line-height:1;cursor:pointer}
 .playField .bee{font-size:clamp(32px,5vw,49px);z-index:2;transition:left .13s,top .13s;filter:drop-shadow(0 4px 2px #325e3b44)}
@@ -95,6 +103,16 @@ return <main className="shell section playPage">
 .memoryCard svg{width:min(72%,76px);height:auto;max-height:76px}
 .memoryCard small{font-size:clamp(10px,1.3vw,14px);font-weight:700}
 @media(max-width:480px){.memoryBoard{gap:7px}.memoryCard{border-radius:10px}}
+.playAwards{margin-top:30px}
+.playAwards h2{font:600 clamp(26px,3vw,34px) Georgia,serif}
+.playAwardsGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
+.playAward{border:1px solid #d4e3d0;border-radius:16px;padding:17px 13px;background:#f7faf5;display:flex;flex-direction:column;gap:6px;min-height:145px}
+.playAward.locked{filter:grayscale(1);opacity:.55}
+.playAwardIcon{font-size:32px}
+.playAward strong{font-size:15px;line-height:1.3}
+.playAward small{font-size:13px;line-height:1.4}
+@media(max-width:850px){.playAwardsGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:500px){.playAwardsGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .playProgress{height:10px;border-radius:20px;background:#dce8d6;overflow:hidden;margin:18px 0}
 .playProgress>div{height:100%;background:#4b995f;transition:width .2s}
 @media(max-width:780px){.playGrid{grid-template-columns:1fr}.playField{aspect-ratio:4/3}.playHero p{font-size:17px}}
@@ -110,6 +128,7 @@ return <main className="shell section playPage">
 {!started?<button className="playBtn primary" onClick={()=>setStarted(true)}>▶ Começar a missão</button>:completed?<div className="playNote"><strong>🎉 Missão concluída!</strong><p>Você visitou todas as flores. Na natureza, visitar flores não significa necessariamente realizar polinização efetiva.</p><button className="playBtn primary" onClick={()=>resetMission(level+1)}>Próxima rodada →</button></div>:hits>=3?<div className="playNote"><strong>Fim da rodada!</strong><p>As ameaças dificultam a vida das abelhas. Tente outra vez!</p><button className="playBtn primary" onClick={()=>resetMission(level)}>Tentar novamente</button></div>:<button className="playBtn" onClick={()=>resetMission(level)}>Reiniciar missão</button>}
 </section><aside className="playPanel"><h2>🌵 Você sabia?</h2><p>A Caatinga é uma floresta tropical sazonalmente seca, com plantas e animais adaptados à alternância das estações.</p><p>As macambiras, incluindo <em>Encholirium spectabile</em>, podem oferecer recursos e micro-habitats para diferentes organismos.</p><p><strong>Importante:</strong> este é um jogo ilustrativo. A abelha, as flores e os obstáculos são representações lúdicas, não um registro de interação entre espécies.</p><Link href="/ecologia">Descubra os serviços ecossistêmicos →</Link></aside></div>:tab==='quiz'?
 <div className="playGrid"><section className="playPanel"><h2>Desafio das Abelhas</h2>{finished?<><h3>🎉 Você concluiu o desafio!</h3><p style={{fontSize:24,fontWeight:700}}>⭐ {points} de {questions.length*10} pontos</p><p>Continue explorando a MELISFERA RN para conhecer mais sobre as abelhas potiguares.</p><button className="playBtn primary" onClick={resetQuiz}>Jogar novamente</button></>:<><div className="playStats"><span className="playStat">Pergunta {q+1} de {questions.length}</span><span className="playStat">⭐ {points} pontos</span></div><div className="playProgress"><div style={{width:((q+1)/questions.length*100)+'%'}}/></div><h3 style={{fontSize:23,lineHeight:1.4}}>{questions[q].q}</h3><div className="playChoices">{questions[q].a.map((a,i)=><button key={i} disabled={chosen!==null} className={chosen!==null&&i===questions[q].ok?'correct':chosen===i?'wrong':''} onClick={()=>answer(i)}>{a}</button>)}</div>{chosen!==null&&<div className="playNote"><strong>{chosen===questions[q].ok?'✅ Resposta correta!':'💡 Vamos aprender!'}</strong><p>{questions[q].why}</p><button className="playBtn primary" onClick={nextQuestion}>{q===questions.length-1?'Ver resultado':'Próxima pergunta →'}</button></div>}</>}</section><aside className="playPanel"><h2>📚 Ciência e diversão</h2><p>As perguntas abordam biodiversidade, visitação floral, conservação e espécies relacionadas ao Rio Grande do Norte.</p><p>Para conhecer as evidências científicas, explore o catálogo da plataforma.</p><Link href="/especies">Consultar espécies →</Link></aside></div>:<div className="playGrid"><section className="playPanel"><h2>🃏 Memória da Caatinga</h2><p>Encontre seis pares de cartas. Cada acerto revela uma curiosidade sobre as abelhas e a biodiversidade potiguar.</p><div className="playStats"><span className="playStat">🧩 Pares: {memoryMatched.length}/6</span><span className="playStat">🎯 Tentativas: {memoryMoves}</span></div><div className="memoryBoard">{memoryOrder.map((index,i)=>{const card=memoryDeck[index];const visible=memoryOpen.includes(i)||memoryMatched.includes(card.id);return <button key={i} className={'memoryCard '+(visible?'revealed':'')} aria-label={visible?card.name:'Carta virada '+(i+1)} aria-pressed={visible} disabled={visible||memoryLocked} onClick={()=>flipMemory(i)}>{visible?<><NatureIcon kind={card.id}/><small>{card.name}</small></>:<span>❀</span>}</button>})}</div>{memoryFact&&<div className="playNote"><strong>💡 Descoberta!</strong><p>{memoryFact}</p></div>}{memoryMatched.length===6&&<div className="playNote"><strong>🎉 Parabéns, explorador da Caatinga!</strong><p>Você encontrou todos os pares em {memoryMoves} tentativas.</p></div>}<button className="playBtn primary" style={{marginTop:18}} onClick={resetMemory}>🔄 Nova rodada</button></section><aside className="playPanel"><h2>🌿 Conheça e proteja</h2><p>O jogo apresenta conceitos ecológicos de forma lúdica, sem afirmar interações específicas não documentadas.</p><p>Quer aprender mais sobre espécies e ambientes?</p><Link href="/ecologia">Explorar ecologia e serviços →</Link></aside></div>}
+<section className="playAwards" aria-label="Conquistas educativas"><h2>🏆 Seu álbum de conquistas</h2><p>Complete desafios e desbloqueie medalhas durante esta visita. As conquistas são locais e reiniciam ao atualizar a página.</p><div className="playAwardsGrid">{achievements.map(a=><div className={'playAward '+(a.done?'':'locked')} key={a.title}><span className="playAwardIcon" aria-hidden="true">{a.icon}</span><strong>{a.title}</strong><small>{a.done?'✓ Conquista desbloqueada':a.desc}</small></div>)}</div></section>
 <p style={{marginTop:28,fontSize:14,color:'#57715d'}}>MELISFERA PLAY · Protótipo educativo sem coleta de dados pessoais, sem classificação pública e sem publicidade.</p>
 </main>
 }
