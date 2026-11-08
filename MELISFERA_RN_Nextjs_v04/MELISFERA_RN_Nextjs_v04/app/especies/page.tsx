@@ -1,11 +1,10 @@
-import EditorialBeeGallery from '@/components/EditorialBeeGallery';
+import '../indicadores/indicadores.css';
 import CatalogClient from '@/components/CatalogClient';
 import {taxa,families} from '@/lib/catalog';
 
 export default function Species(){
-  return <section className="shell section melisferaStandardPage">
-    <div className="melisferaEditorialHero"><div className="melisferaEditorialCopy"><p className="eyebrow">BIODIVERSIDADE</p>
-    <h1>Catálogo de espécies</h1><p className="intro">Conheça a diversidade de abelhas documentada para o Rio Grande do Norte, suas características e seus ambientes.</p></div><EditorialBeeGallery label="Abelhas e flores da Caatinga"/></div>
+  return <section className="shell section indicatorsPage melisferaSpeciesPage">
+    <div className="indicatorsHero"><div className="indicatorsHeading"><p className="eyebrow">BIODIVERSIDADE <span className="indicatorRule" aria-hidden="true"/></p><h1>Catálogo de espécies</h1><p className="intro">Conheça a diversidade de abelhas documentada para o Rio Grande do Norte, suas características e seus ambientes.</p></div><div className="indicatorsHeroPhoto" role="img" aria-label="Fotografia de flor de maracujá na Caatinga"/></div>
     <div className="catalogIntroEditorial">
       <p className="catalogIntroLead">O Rio Grande do Norte abriga uma diversidade expressiva de abelhas, moldada pela variedade de paisagens, formações vegetais e condições ambientais do estado. Essa riqueza não se manifesta apenas no número de espécies, mas também nas diferentes formas de viver e nas funções ecológicas que desempenham.</p>
       <p>Da Caatinga, uma Floresta Tropical Sazonalmente Seca, aos remanescentes de Mata Atlântica, passando por restingas, manguezais, dunas, áreas serranas e ambientes agrícolas, diferentes ecossistemas oferecem recursos florais, substratos para nidificação e condições para comunidades de polinizadores com características distintas.</p>
