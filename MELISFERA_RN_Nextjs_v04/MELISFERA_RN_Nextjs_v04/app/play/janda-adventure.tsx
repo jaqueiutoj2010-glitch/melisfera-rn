@@ -22,9 +22,9 @@ type Game={phase:number;mode:Mode;bee:Point;energy:number;flowers:Flower[];hitTi
 const start=(phase:number,resources:number,colony:number,nestFound:boolean):Game=>({phase,mode:'ready',bee:{x:90,y:215},energy:100,flowers:phases[phase].flowers.map(f=>({...f,taken:false})),hitTimer:0,resources,colony,nestFound,time:0,message:'Prepare-se para voar'});
 const clamp=(n:number,a:number,b:number)=>Math.max(a,Math.min(b,n));
 function drawTree(ctx:CanvasRenderingContext2D,x:number,y:number,scale:number,leaf:number,index:number){
-ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.strokeStyle='#79583c';ctx.lineWidth=13;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(0,5);ctx.lineTo(0,-105);ctx.lineTo(-37,-150);ctx.moveTo(0,-105);ctx.lineTo(45,-156);ctx.moveTo(0,-70);ctx.lineTo(-59,-105);ctx.moveTo(0,-74);ctx.lineTo(60,-118);ctx.stroke();
+ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.strokeStyle='#79583c';ctx.lineWidth=13;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(0,5);ctx.lineTo(0,-105);ctx.lineTo(-37,-150);ctx.moveTo(0,-105);ctx.lineTo(45,-156);ctx.moveTo(0,-70);ctx.lineTo(-59,-105);ctx.moveTo(0,-74);ctx.lineTo(60,-118);ctx.stroke();ctx.strokeStyle='rgba(235,197,133,.35)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-4,0);ctx.lineTo(-4,-95);ctx.moveTo(-4,-105);ctx.lineTo(-36,-149);ctx.stroke();ctx.strokeStyle='rgba(52,39,26,.3)';ctx.lineWidth=1.5;for(let k=0;k<5;k++){ctx.beginPath();ctx.moveTo(-5,-20-k*16);ctx.lineTo(5,-23-k*16);ctx.stroke()}
 const positions:[number,number,number][]=[[-38,-151,39],[42,-158,42],[-57,-109,32],[56,-121,34],[0,-176,47]];
-for(let i=0;i<Math.round(positions.length*leaf);i++){const [px,py,r]=positions[i];ctx.fillStyle=['#598d50','#76a45b','#89b965','#477c49'][((index+i)%4)];ctx.beginPath();ctx.ellipse(px,py,r,r*.76,0,0,Math.PI*2);ctx.fill()}ctx.restore()
+for(let i=0;i<Math.round(positions.length*leaf);i++){const [px,py,r]=positions[i];ctx.fillStyle=['#598d50','#76a45b','#89b965','#477c49'][((index+i)%4)];ctx.beginPath();ctx.ellipse(px,py,r,r*.76,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='rgba(198,230,150,.12)';ctx.beginPath();ctx.ellipse(px-8,py-9,r*.65,r*.45,0,0,Math.PI*2);ctx.fill()}ctx.restore()
 }
 function drawBee(ctx:CanvasRenderingContext2D,x:number,y:number,t:number,blink:boolean){
 if(blink)return;
