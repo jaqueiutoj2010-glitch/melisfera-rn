@@ -47,3 +47,16 @@
 .threatsPage .threatsHeroCopy .threatBack{display:inline-block;margin-bottom:18px}
 .threatsPage .threatsHeroCopy .threatsLinks{margin-top:24px}
 @media(max-width:850px){.threatsPage .threatsHero>.threatsHeroGrid{grid-template-columns:1fr}.threatsPage .threatsHeroPhoto{min-height:260px;max-height:340px;border-radius:26px 26px 12px 12px;border-left-width:7px;margin-top:10px}}
+
+/* Mesmo padrão da página Indicadores, sem bloco de fundo colorido */
+.threatsPage .threatsHero{background:#fff;padding:64px 0 28px}
+.threatsPage .threatsHero>.threatsHeroGrid{max-width:1320px;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:clamp(30px,4vw,60px)}
+.threatsPage .threatsHeroCopy .threatsKicker{display:flex;align-items:center;gap:16px;font-size:13px;color:#236b38;letter-spacing:.12em}
+.threatsPage .threatsHeroCopy .threatsKicker:after{content:"";display:inline-block;width:110px;height:3px;background:#ffb900;border-radius:10px}
+.threatsPage .threatsHeroCopy h1{font:600 clamp(36px,4.5vw,62px)/1.12 Georgia,serif;letter-spacing:-.035em;color:#123a25;margin:12px 0 18px}
+.threatsPage .threatsHeroCopy h1:after{content:"";display:block;width:min(420px,55%);height:5px;background:linear-gradient(90deg,#ffb900,#ffcc35,transparent);margin-top:14px}
+.threatsPage .threatsHeroCopy p:not(.threatsKicker){font-size:17px;line-height:1.65;color:#445c4b}
+.threatsPage .threatsHeroPhoto{min-height:410px;max-height:none;border-left:9px solid #9bcf29;border-radius:45% 14px 14px 45%}
+.threatsPage .threatsContent{max-width:1320px}
+@media(max-width:1080px){.threatsPage .threatsHero>.threatsHeroGrid{grid-template-columns:1fr}.threatsPage .threatsHeroPhoto{min-height:320px;max-height:400px}}
+@media(max-width:720px){.threatsPage .threatsHero{padding:22px 0 28px}.threatsPage .threatsHeroCopy h1{font-size:clamp(37px,9vw,52px)}.threatsPage .threatsHeroPhoto{min-height:230px;border-left-width:6px;border-radius:75px 12px 12px 75px}}
