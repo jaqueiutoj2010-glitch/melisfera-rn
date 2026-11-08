@@ -2,7 +2,7 @@ import CatalogClient from '@/components/CatalogClient';
 import {taxa,families} from '@/lib/catalog';
 
 export default function Species(){
-  return <section className="shell section">
+  return <section className="shell section melisferaStandardPage">
     <p className="eyebrow">BIODIVERSIDADE</p>
     <h1>Catálogo de espécies</h1>
     <div className="catalogIntroEditorial">
