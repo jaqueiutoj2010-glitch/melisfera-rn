@@ -185,6 +185,14 @@ return <main className="shell section playPage">
 .nestTask:focus-visible{outline:3px solid #397a50;outline-offset:3px}
 .nestTask.done{background:#e3f1d9;border-color:#72a574;cursor:default}
 .nestTaskIcon{font-size:32px}.nestTask strong{font-size:16px}.nestTask small{font-size:13px;line-height:1.4}
+.nestTask.selected{border-color:#438453;background:#e7f2df;box-shadow:0 0 0 2px #b9d7b4}
+.nestChallenge{background:#fffdf6;border:1px solid #d5c29f;border-radius:16px;padding:20px}
+.nestChallenge h4{font-size:19px;margin:0 0 8px}.nestChallenge p{font-size:16px;line-height:1.5;margin:0 0 14px}
+.nestAnswers{display:grid;gap:10px}
+.nestAnswers button{border:1px solid #b6a17b;border-radius:12px;background:#f9efd9;color:#4b3929;padding:13px;text-align:left;cursor:pointer;font:600 15px/1.4 inherit}
+.nestAnswers button:hover{background:#e8f2e0;border-color:#4b8859}
+.nestAnswers button:focus-visible{outline:3px solid #337b4b;outline-offset:2px}
+.nestFeedback.correct{background:#e0efdc}.nestFeedback.incorrect{background:#f7e4d6}
 .nestFeedback,.nestFinished{background:#f3e5c8;border-radius:14px;padding:16px;margin:0;font-size:15px;line-height:1.5}
 .nestFinished{background:#e2f0d9}.nestFinished p{margin:7px 0 14px}
 @media(max-width:650px){.nestTasks{grid-template-columns:1fr}.nestHeader{flex-wrap:wrap}.nestWorkshop{padding:13px}}
