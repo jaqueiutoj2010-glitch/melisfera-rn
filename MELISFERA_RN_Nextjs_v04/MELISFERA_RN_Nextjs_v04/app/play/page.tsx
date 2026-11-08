@@ -163,7 +163,7 @@ return <main className="shell section playPage">
 .jandaHero p{font-size:17px;line-height:1.5;max-width:680px;margin:0;color:#e6f2e4}
 .jandaEyebrow{font-size:12px;letter-spacing:.12em;font-weight:800;color:#d6edc1}
 .jandaPortrait{font-size:74px;filter:drop-shadow(0 5px 8px #1b372b)}
-.jandaPhases{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.jandaPhases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
 .jandaPhase{display:flex;flex-direction:column;gap:5px;background:#f2f6ee;border:1px solid #d5e1ce;border-radius:14px;padding:13px;opacity:.56}
 .jandaPhase span{font-size:25px}.jandaPhase strong{font-size:14px;line-height:1.25}.jandaPhase small{font-size:12px}
 .jandaPhase.current{background:#e1f2d9;border:2px solid #3e8454;opacity:1}.jandaPhase.passed{opacity:1}
@@ -174,6 +174,12 @@ return <main className="shell section playPage">
 .jandaBottom h3{font-size:22px;margin:0 0 7px}.jandaBottom p{margin:0 0 7px;font-size:15px;line-height:1.5}
 .jandaHint{font-weight:700;color:#276b45}.jandaActions{display:flex;gap:9px;flex-wrap:wrap;flex-shrink:0}
 .jandaLesson{background:#e2f2da;border:1px solid #bbd9b0;border-radius:16px;padding:18px;font-size:16px}.jandaLesson p{margin:7px 0 0}
+.jandaColony{display:grid;grid-template-columns:minmax(190px,1fr) minmax(180px,2fr);gap:12px;align-items:center;background:linear-gradient(115deg,#f8edd2,#f2e1b6);border:1px solid #dfc88e;border-radius:18px;padding:20px}
+.jandaColony strong{font-size:20px;color:#604a25}.jandaColony p{font-size:14px;line-height:1.5;margin:7px 0}
+.jandaColonyCells{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+.jandaColonyCells span{font-size:36px;line-height:1;color:#b37c31;text-shadow:1px 1px #f6d991}
+.jandaColonyNote{grid-column:1/-1;color:#755d37;font-size:14px}
+@media(max-width:650px){.jandaColony{grid-template-columns:1fr}.jandaColonyCells{justify-content:flex-start}.jandaPortrait svg{width:92px;height:80px}}
 .jandaScience{background:#f8f6ed;border:1px solid #e5dec6;border-radius:18px;padding:20px}.jandaScience h3{margin:0 0 8px;font-size:21px}.jandaScience p{font-size:15px;line-height:1.6}
 @media(max-width:720px){.jandaPhases{grid-template-columns:repeat(2,minmax(0,1fr))}.jandaBottom{flex-direction:column;align-items:stretch}.jandaHero{padding:18px}.jandaPortrait{font-size:46px}.jandaHud span{font-size:12px}}
 .seasonResourceGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
