@@ -1,3 +1,4 @@
+import EditorialBeeGallery from '@/components/EditorialBeeGallery';
 import Link from 'next/link';
 import type {Metadata} from 'next';
 
@@ -9,7 +10,7 @@ export const metadata:Metadata={
 export default function About(){return <main className="shell section melisferaStandardPage">
  <div className="melisferaEditorialHero"><div className="melisferaEditorialCopy"><p className="eyebrow">TRANSPARÊNCIA CIENTÍFICA</p>
  <h1>Sobre o MELISFERA RN</h1>
- <p className="intro">O MELISFERA RN é um observatório científico em desenvolvimento dedicado ao conhecimento das abelhas do Rio Grande do Norte. A plataforma reúne informações sobre diversidade, distribuição geográfica, interações ecológicas, polinização, serviços ecossistêmicos e conservação, com atenção à origem e à qualidade das evidências.</p></div><div className="heroGallery melisferaEditorialGallery" aria-label="Fotografias de abelhas em flores"><div className="heroPhoto heroPhotoOne" role="img" aria-label="Abelha em flor de maracujá"/><div className="heroPhoto heroPhotoTwo" role="img" aria-label="Abelhas em inflorescência amarela"/></div></div>
+ <p className="intro">O MELISFERA RN é um observatório científico em desenvolvimento dedicado ao conhecimento das abelhas do Rio Grande do Norte. A plataforma reúne informações sobre diversidade, distribuição geográfica, interações ecológicas, polinização, serviços ecossistêmicos e conservação, com atenção à origem e à qualidade das evidências.</p></div><EditorialBeeGallery label="Fotografias de abelhas em flores"/></div>
 
  <div className="notice"><strong>Vinculação institucional:</strong> a ideia do MELISFERA RN foi concebida inicialmente por <strong>Jaqueiuto Jorge</strong> e começou a ser desenvolvida por meio de uma parceria entre o <strong>Projeto Macambiras</strong> e o <strong>Projeto CyanoServices</strong>, em colaboração com pesquisadores do <strong>Departamento de Ecologia (DECOL/UFRN)</strong> e da <strong>Escola Agrícola de Jundiaí (EAJ/UFRN)</strong>. O CyanoServices conta com financiamento do <strong>CNPq</strong>. A plataforma está em fase experimental de consolidação, auditoria bibliográfica e revisão científica.</div>
 
