@@ -374,3 +374,21 @@ footer{border-top:2px solid #b9d989;background:linear-gradient(110deg,#f3f8ed,#f
 .melisferaStandardPage .melisferaPlayHero p{font-size:clamp(16px,1.35vw,19px);line-height:1.7;color:#445c4b;max-width:660px}
 .melisferaPlayHero .melisferaEditorialGallery{min-height:340px}
 @media(max-width:880px){.melisferaStandardPage .melisferaPlayHero{grid-template-columns:1fr}.melisferaPlayHero .melisferaEditorialGallery{min-height:250px}}
+
+/* Padrão editorial unificado — referência: Indicadores da biodiversidade */
+:root{--melisfera-title:#123a25;--melisfera-accent:#ffb900;--melisfera-photo-border:#9bcf29}
+.melisferaStandardPage,.indicatorsPage{max-width:1320px}
+.melisferaStandardPage{padding-top:64px;padding-bottom:90px}
+.melisferaStandardPage .melisferaEditorialHero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);align-items:center;gap:clamp(30px,4vw,60px);margin:0 0 36px}
+.melisferaStandardPage .melisferaEditorialCopy{padding:10px 0 12px}
+.melisferaStandardPage .melisferaEditorialCopy .eyebrow,.melisferaStandardPage .melisferaPlayHero .playEyebrow{display:flex;align-items:center;gap:16px;color:#236b38;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.melisferaStandardPage .melisferaEditorialCopy .eyebrow:after,.melisferaStandardPage .melisferaPlayHero .playEyebrow:after{content:"";display:inline-block;width:110px;height:3px;background:var(--melisfera-accent);border-radius:10px}
+.melisferaStandardPage .melisferaEditorialCopy h1,.melisferaStandardPage .melisferaPlayHero h1{font-family:Georgia,serif;font-size:clamp(36px,4.5vw,62px);font-weight:600;line-height:1.12;letter-spacing:-.035em;color:var(--melisfera-title);margin:12px 0 18px;max-width:850px}
+.melisferaStandardPage .melisferaEditorialCopy h1:after,.melisferaStandardPage .melisferaPlayHero h1:after{content:"";display:block;width:min(420px,55%);height:5px;border-radius:100%;background:linear-gradient(90deg,#ffb900,#ffcc35,transparent);margin-top:14px}
+.melisferaStandardPage .melisferaEditorialCopy .intro,.melisferaStandardPage .melisferaPlayHero p{max-width:720px;font-size:17px;line-height:1.65;color:#445c4b}
+.melisferaStandardPage .melisferaEditorialGallery.melisferaSinglePhoto{display:block;width:100%;min-height:410px;max-height:none;align-self:stretch;background:#e5efda url('/images/abelhas/abelha-maracuja.jpg') center/cover no-repeat;border-left:9px solid var(--melisfera-photo-border);border-radius:45% 14px 14px 45%;box-shadow:0 16px 30px rgba(19,68,28,.1)}
+.melisferaStandardPage .melisferaPlayHero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:clamp(30px,4vw,60px);align-items:center;background:#fff;text-align:left;padding:10px 0 36px}
+.melisferaStandardPage .melisferaPlayHero .melisferaEditorialGallery.melisferaSinglePhoto{min-height:410px}
+.melisferaStandardPage>h2,.melisferaStandardPage>section>h2{font-family:Georgia,serif;color:#143f24}
+@media(max-width:1080px){.melisferaStandardPage .melisferaEditorialHero,.melisferaStandardPage .melisferaPlayHero{grid-template-columns:1fr}.melisferaStandardPage .melisferaEditorialGallery.melisferaSinglePhoto{min-height:320px;max-height:400px}}
+@media(max-width:720px){.melisferaStandardPage{padding-top:22px;padding-bottom:60px}.melisferaStandardPage .melisferaEditorialCopy h1,.melisferaStandardPage .melisferaPlayHero h1{font-size:clamp(37px,9vw,52px)}.melisferaStandardPage .melisferaEditorialGallery.melisferaSinglePhoto{min-height:230px;border-left-width:6px;border-radius:75px 12px 12px 75px}.melisferaStandardPage .melisferaPlayHero .melisferaEditorialGallery.melisferaSinglePhoto{min-height:230px}}
