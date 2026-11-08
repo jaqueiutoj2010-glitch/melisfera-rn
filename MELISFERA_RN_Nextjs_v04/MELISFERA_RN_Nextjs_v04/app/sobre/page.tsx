@@ -6,7 +6,7 @@ export const metadata:Metadata={
  description:'Objetivos, vinculação institucional, escopo e política de evidências do observatório científico de abelhas do Rio Grande do Norte.'
 };
 
-export default function About(){return <main className="shell section">
+export default function About(){return <main className="shell section melisferaStandardPage">
  <p className="eyebrow">TRANSPARÊNCIA CIENTÍFICA</p>
  <h1>Sobre o MELISFERA RN</h1>
  <p className="intro">O MELISFERA RN é um observatório científico em desenvolvimento dedicado ao conhecimento das abelhas do Rio Grande do Norte. A plataforma reúne informações sobre diversidade, distribuição geográfica, interações ecológicas, polinização, serviços ecossistêmicos e conservação, com atenção à origem e à qualidade das evidências.</p>
