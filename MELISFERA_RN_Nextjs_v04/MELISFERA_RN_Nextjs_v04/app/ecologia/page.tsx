@@ -11,7 +11,7 @@ const pilares=[
 {icon:'🎓',title:'Educação, cultura e conhecimento',text:'Abelhas, flores e meliponários oferecem oportunidades de educação ambiental, pesquisa participativa e valorização dos saberes locais sobre a Caatinga e outros ambientes do RN.',limite:'Valores culturais devem ser documentados com participação das comunidades.',link:'socioculturais'},
 {icon:'📈',title:'Economia e segurança alimentar',text:'Polinização e produtos apícolas podem contribuir para cadeias produtivas e meios de vida. Avaliações econômicas exigem dados locais de produção, dependência de polinizadores, preços, custos e incerteza.',limite:'Potencial econômico não equivale a benefício já medido.',link:'economia-rural'}];
 const steps=[['01','Visita floral','A abelha utiliza néctar ou pólen; observação comportamental.'],['02','Transporte de pólen','Identificação de pólen aderido e sua compatibilidade com a planta.'],['03','Polinização efetiva','Deposição de pólen compatível ou resultado reprodutivo atribuível ao visitante.'],['04','Benefício mensurado','Frutos, sementes, qualidade, estabilidade ou valor econômico avaliados experimentalmente.']];
-export default function Ecology(){return <main className="shell section melisferaEcologyPage">
+export default function Ecology(){return <main className="shell section melisferaEcologyPage melisferaStandardPage">
 <style>{`
 .melisferaEcologyPage{font-size:17px;line-height:1.7}
 .melisferaEcologyPage>h1{font-size:clamp(34px,3.3vw,46px);line-height:1.14;letter-spacing:-.025em;max-width:1050px}
