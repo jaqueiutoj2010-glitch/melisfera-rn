@@ -124,6 +124,48 @@ function drawCinematicBackdrop(ctx:CanvasRenderingContext2D,leaf:number,rain:num
  }
  ctx.restore();
 }
+/** Abertura autoral do capítulo da seca: uma paisagem viva, não um deserto. */
+function drawOpeningChapter(ctx:CanvasRenderingContext2D,t:number){
+ ctx.save();
+ // Raios de luz que atravessam a copa; degradês leves para preservar desempenho.
+ for(let i=0;i<5;i++){
+  const x=585+i*54;
+  const ray=ctx.createLinearGradient(x,40,x-140,440);
+  ray.addColorStop(0,'rgba(255,244,190,.15)');ray.addColorStop(1,'rgba(255,231,175,0)');
+  ctx.fillStyle=ray;ctx.beginPath();ctx.moveTo(x,34);ctx.lineTo(x+21,34);
+  ctx.lineTo(x-85,440);ctx.lineTo(x-190,440);ctx.closePath();ctx.fill();
+ }
+ // Umburana antiga com oco; recurso de habitat, não mero elemento decorativo.
+ drawUmburana(ctx,800,374,.12,1.25);
+ ctx.fillStyle='rgba(42,34,23,.17)';ctx.beginPath();ctx.ellipse(795,391,75,12,0,0,Math.PI*2);ctx.fill();
+ // Afloramento e macambiras ilustradas, bromélias rupícolas, sem associação floral presumida.
+ drawRockFormation(ctx,625,405,.57,false);
+ for(const [x,y,a] of [[598,366,-.2],[628,360,.15],[656,377,.4]]){
+  ctx.save();ctx.translate(x,y);ctx.rotate(a);
+  for(let k=-4;k<=4;k++){
+   ctx.strokeStyle=k%2?'#7e9165':'#536c4e';ctx.lineWidth=4;
+   ctx.beginPath();ctx.moveTo(0,8);ctx.quadraticCurveTo(k*4,-20,k*8,-37-Math.abs(k)*2);ctx.stroke();
+  }
+  ctx.restore();
+ }
+ // Vegetação espinhosa, serrapilheira e pedras em planos próximos.
+ for(let i=0;i<11;i++){
+  const x=32+i*79,y=404+(i%3)*10;
+  ctx.strokeStyle=i%2?'#786c4a':'#867650';ctx.lineWidth=2.2;
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-6,y-15-(i%3)*5);
+  ctx.moveTo(x,y);ctx.lineTo(x+8,y-10);ctx.stroke();
+  ctx.fillStyle=i%2?'#aa916f':'#dbc19a';ctx.beginPath();
+  ctx.ellipse(x+22,y+4,6+(i%3)*3,2.8,i*.4,0,Math.PI*2);ctx.fill();
+ }
+ // Pontos de luz suspensos, com cintilação discreta.
+ for(let i=0;i<14;i++){
+  const x=100+(i*137)%700,y=82+(i*53)%245;
+  const a=.18+.15*(1+Math.sin(t*1.7+i*2))/2;
+  ctx.fillStyle='rgba(255,231,153,'+a.toFixed(3)+')';
+  ctx.beginPath();ctx.arc(x,y,1.4+(i%3)*.5,0,Math.PI*2);ctx.fill();
+ }
+ ctx.restore();
+}
 function drawMountainRange(ctx:CanvasRenderingContext2D,green:boolean,t:number){
 ctx.save();ctx.globalAlpha=.48;const haze=ctx.createLinearGradient(0,170,0,360);haze.addColorStop(0,green?'#648c81':'#a28a78');haze.addColorStop(1,green?'#a4c1a0':'#d8b78a');ctx.fillStyle=haze;ctx.beginPath();ctx.moveTo(0,292);ctx.lineTo(0,252);for(let x=0;x<=WIDTH;x+=18){const y=238+Math.sin(x*.012)*23+Math.cos(x*.027)*13;ctx.lineTo(x,y)}ctx.lineTo(WIDTH,355);ctx.lineTo(0,355);ctx.fill();ctx.restore();
 ctx.save();ctx.globalAlpha=.15;ctx.fillStyle='#fff5d5';ctx.fillRect(0,245+Math.sin(t*.3)*2,WIDTH,64);ctx.restore()
@@ -155,6 +197,7 @@ ctx.fillStyle=green?'#9abf7d':'#cbb48a';ctx.beginPath();ctx.moveTo(0,305);ctx.qu
 ctx.fillStyle=green?'#6b9e60':'#b89c70';ctx.beginPath();ctx.moveTo(0,370);ctx.quadraticCurveTo(230,320,430,370);ctx.quadraticCurveTo(710,325,900,360);ctx.lineTo(900,440);ctx.lineTo(0,440);ctx.fill();
 for(let i=0;i<7;i++){ctx.save();ctx.globalAlpha=.42;drawTree(ctx,35+i*153,302+(i%2)*13,.43+(i%3)*.09,p.leaf,i);ctx.restore()}for(let i=0;i<7;i++)drawTree(ctx,65+i*137,337+(i%2)*20,.65+(i%3)*.12,p.leaf,i);drawLandscapeDetails(ctx,p.leaf,t);if(p.umburana){drawUmburana(ctx,745,350,p.leaf,.82);drawUmburana(ctx,190,355,p.leaf,.64)}if(p.threat)drawEnergyInfrastructure(ctx,p.threat,t);if(p.rocks){drawRockFormation(ctx,135,372,1.1,green);drawRockFormation(ctx,435,385,.8,green);drawRockFormation(ctx,725,375,1.05,green)}else{drawRockFormation(ctx,540,396,.38,green);drawRockFormation(ctx,285,411,.28,green)}
 if(p.rocks){for(const [x,y] of [[140,365],[410,377],[680,370]]){ctx.fillStyle='#8b8b7b';ctx.beginPath();ctx.moveTo(x-85,y+30);ctx.lineTo(x-53,y-31);ctx.lineTo(x+12,y-56);ctx.lineTo(x+80,y+25);ctx.closePath();ctx.fill();ctx.strokeStyle='#6b746a';ctx.lineWidth=3;ctx.stroke();for(let k=0;k<5;k++){ctx.save();ctx.translate(x+(k-2)*17,y-37-(k%2)*6);ctx.rotate((k-2)*.28);ctx.fillStyle='#608d54';ctx.beginPath();ctx.ellipse(0,-19,5,31,0,0,Math.PI*2);ctx.fill();ctx.restore()}ctx.strokeStyle='#b69b46';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x,y-34);ctx.lineTo(x,y-76);ctx.stroke();for(let j=0;j<5;j++){ctx.fillStyle='#e7cc66';ctx.beginPath();ctx.arc(x+(j%2?5:-5),y-76+j*8,3,0,Math.PI*2);ctx.fill()}}}
+if(g.phase===0)drawOpeningChapter(ctx,t);
 if(p.wind){ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.globalAlpha=.6;for(let i=0;i<9;i++){const x=(i*137+t*90)%WIDTH,y=65+(i*47)%250;ctx.beginPath();ctx.moveTo(x,y);ctx.quadraticCurveTo(x+30,y-9,x+70,y);ctx.stroke()}ctx.globalAlpha=1}
 
 ctx.fillStyle='#6d5036';ctx.fillRect(32,175,76,92);ctx.fillStyle='#4e3528';ctx.beginPath();ctx.ellipse(84,217,18,23,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff5e3';ctx.font='bold 15px system-ui';ctx.fillText('COLÔNIA',27,287);
@@ -164,7 +207,7 @@ for(const f of g.flowers){if(!f.taken)drawFlower(ctx,f.x,f.y,t)}
 for(const h of p.hazards){ctx.save();ctx.translate(h.x,h.y);ctx.shadowColor='rgba(64,35,22,.35)';ctx.shadowBlur=12;ctx.fillStyle='#b78b4d';ctx.beginPath();ctx.roundRect(-19,-21,38,42,5);ctx.fill();ctx.shadowBlur=0;ctx.fillStyle='#eee3be';ctx.fillRect(-16,-13,32,26);ctx.fillStyle='#694b35';ctx.font='bold 25px system-ui';ctx.fillText('!',-4,9);ctx.restore()}
 if(p.rain>.2){ctx.strokeStyle='#5d9db8';ctx.lineWidth=1.8;ctx.globalAlpha=.48;for(let i=0;i<Math.round(p.rain*35);i++){const x=(i*91+t*48)%WIDTH,y=(i*49+t*95)%HEIGHT;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-6,y+15);ctx.stroke()}ctx.globalAlpha=1}
 if(restored&&p.threat)drawConservationOutcome(ctx,p.threat,t);drawParticles(ctx,particles);drawBee(ctx,g.bee.x,g.bee.y,t,g.hitTimer>0&&Math.floor(t*9)%2===0);drawForeground(ctx,p.leaf,t);
-if(g.mode==='ready'||g.mode==='complete'||g.mode==='failed'||g.mode==='victory'){ctx.save();ctx.fillStyle=restored?'rgba(19,46,35,.24)':'rgba(19,46,35,.65)';ctx.fillRect(0,0,WIDTH,HEIGHT);ctx.textAlign='center';ctx.fillStyle='#fff6df';ctx.font='bold 32px system-ui';ctx.fillText(g.mode==='ready'?'JANDA · PRONTA PARA VOAR':g.mode==='failed'?'ENERGIA ESGOTADA':g.mode==='victory'?'JORNADA CONCLUÍDA!':restored?'HABITAT PROTEGIDO!':'MISSÃO CUMPRIDA!',WIDTH/2,HEIGHT/2-14);ctx.font='17px system-ui';ctx.fillText(g.mode==='ready'?'Explore a Caatinga e descubra seus recursos':g.mode==='failed'?'Recomece e experimente outra rota':g.mode==='victory'?'Você acompanhou um ciclo sazonal':restored?'Sua decisão mudou a paisagem':'Agora é hora de cuidar do ninho',WIDTH/2,HEIGHT/2+22);ctx.restore()}
+if(g.mode==='ready'||g.mode==='complete'||g.mode==='failed'||g.mode==='victory'){ctx.save();ctx.fillStyle=restored?'rgba(19,46,35,.24)':'rgba(19,46,35,.65)';ctx.fillRect(0,0,WIDTH,HEIGHT);ctx.textAlign='center';ctx.fillStyle='#fff6df';ctx.font='bold 32px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'CAPÍTULO I · A FLORESTA RESISTE':'JANDA · PRONTA PARA VOAR'):g.mode==='failed'?'ENERGIA ESGOTADA':g.mode==='victory'?'JORNADA CONCLUÍDA!':restored?'HABITAT PROTEGIDO!':'MISSÃO CUMPRIDA!',WIDTH/2,HEIGHT/2-14);ctx.font='17px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'Mesmo na seca, a Caatinga permanece viva':'Explore a Caatinga e descubra seus recursos'):g.mode==='failed'?'Recomece e experimente outra rota':g.mode==='victory'?'Você acompanhou um ciclo sazonal':restored?'Sua decisão mudou a paisagem':'Agora é hora de cuidar do ninho',WIDTH/2,HEIGHT/2+22);ctx.restore()}
 ctx.fillStyle='#204e35';ctx.font='bold 17px system-ui';ctx.fillText('CAATINGA · FLORESTA TROPICAL SAZONALMENTE SECA',18,29);
 if(g.flowers.every(f=>f.taken)){ctx.fillStyle='#1e6340';ctx.font='bold 21px system-ui';ctx.fillText(p.nest&&!g.nestFound?'Encontre a cavidade na árvore →':'Retorne à colônia ←',WIDTH/2-160,62)}
 }
