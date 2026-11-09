@@ -13,7 +13,7 @@ export default function JandaWelcome() {
         <p>Vamos descobrir como vivem, quais flores visitam e por que conservar seus habitats é tão importante?</p>
         <div className="actions">
           <Link className="button primary" href="/especies">Explorar espécies ↗</Link>
-          <Link className="button ghost" href="/aventuras-de-janda">Ler os quadrinhos</Link>
+          <Link className="button ghost" href="/servicos-ecossistemicos">Serviços ecossistêmicos</Link>
         </div>
         <p className="jandaWelcomeNote">Janda é uma personagem educativa inspirada nas abelhas nativas; as informações científicas são apresentadas nas fichas e fontes da plataforma.</p>
       </div>
