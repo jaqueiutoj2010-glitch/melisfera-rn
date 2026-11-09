@@ -83,6 +83,47 @@ if(kind==='solar'){for(let row=0;row<3;row++){for(let col=0;col<5;col++){const x
 if(kind==='clearing'){for(const [x,y] of [[220,350],[450,350],[655,360]]){ctx.fillStyle='#78553b';ctx.fillRect(x-15,y-35,30,45);ctx.fillStyle='#ad8460';ctx.beginPath();ctx.ellipse(x,y-35,15,6,0,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#70513c';ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(x,y-35,15,6,0,0,Math.PI*2);ctx.stroke()}ctx.fillStyle='rgba(166,129,91,.3)';ctx.fillRect(100,350,700,90)}
 ctx.restore()
 }
+/** Camadas atmosféricas originais: silhuetas, serras, poeira e luz do sertão. */
+function drawCinematicBackdrop(ctx:CanvasRenderingContext2D,leaf:number,rain:number,t:number){
+ const wet=leaf>.55;
+ ctx.save();
+ // Horizonte com profundidade cromática e perspectiva atmosférica.
+ for(let layer=0;layer<3;layer++){
+  const base=200+layer*34,amp=12+layer*8;
+  const gradient=ctx.createLinearGradient(0,base-85,0,base+110);
+  gradient.addColorStop(0,wet?['#89ada2','#6c9485','#547e64'][layer]:['#c6b39e','#a99483','#8f7b66'][layer]);
+  gradient.addColorStop(1,wet?['#9cbea6','#779f7e','#6c925f'][layer]:['#d6bea0','#c5a47f','#a98b6a'][layer]);
+  ctx.globalAlpha=[.42,.53,.63][layer];ctx.fillStyle=gradient;
+  ctx.beginPath();ctx.moveTo(0,HEIGHT);ctx.lineTo(0,base);
+  for(let x=0;x<=WIDTH+10;x+=10){
+   const y=base+Math.sin(x*.009+layer*1.8)*amp+Math.cos(x*.023+layer)*amp*.45;
+   ctx.lineTo(x,y);
+  }
+  ctx.lineTo(WIDTH,HEIGHT);ctx.closePath();ctx.fill();
+ }
+ ctx.globalAlpha=1;
+ // Escarpas distantes, com fissuras suaves e iluminação lateral.
+ for(const [x,y,w,h] of [[80,255,100,57],[385,258,125,78],[700,259,112,64]]){
+  ctx.fillStyle=wet?'rgba(75,101,80,.35)':'rgba(126,101,81,.38)';
+  ctx.beginPath();ctx.moveTo(x-w,y+35);ctx.lineTo(x-w*.68,y-h*.3);
+  ctx.lineTo(x-w*.22,y-h);ctx.lineTo(x+w*.15,y-h*.88);
+  ctx.lineTo(x+w*.62,y-h*.2);ctx.lineTo(x+w,y+35);ctx.closePath();ctx.fill();
+  ctx.strokeStyle='rgba(255,230,190,.18)';ctx.lineWidth=2;ctx.beginPath();
+  ctx.moveTo(x-w*.22,y-h);ctx.lineTo(x-w*.12,y-h*.34);ctx.lineTo(x+w*.13,y+8);ctx.stroke();
+ }
+ // Névoa quente e poeira: movimento lento, sem prejudicar a leitura.
+ const haze=ctx.createLinearGradient(0,185,0,330);
+ haze.addColorStop(0,'rgba(255,244,211,0)');haze.addColorStop(.55,wet?'rgba(226,241,218,.11)':'rgba(255,230,182,.2)');
+ haze.addColorStop(1,'rgba(255,244,211,0)');ctx.fillStyle=haze;ctx.fillRect(0,180,WIDTH,170);
+ for(let i=0;i<20;i++){
+  const x=(i*109+t*(rain>.4?3:8))%(WIDTH+50)-25;
+  const y=70+(i*71)%215+Math.sin(t*.6+i)*5;
+  ctx.globalAlpha=rain>.4?.12:.24;
+  ctx.fillStyle=i%3?'#fff2c5':'#f6d8a1';ctx.beginPath();
+  ctx.ellipse(x,y,1.2+(i%3)*.6,.9,0,0,Math.PI*2);ctx.fill();
+ }
+ ctx.restore();
+}
 function drawMountainRange(ctx:CanvasRenderingContext2D,green:boolean,t:number){
 ctx.save();ctx.globalAlpha=.48;const haze=ctx.createLinearGradient(0,170,0,360);haze.addColorStop(0,green?'#648c81':'#a28a78');haze.addColorStop(1,green?'#a4c1a0':'#d8b78a');ctx.fillStyle=haze;ctx.beginPath();ctx.moveTo(0,292);ctx.lineTo(0,252);for(let x=0;x<=WIDTH;x+=18){const y=238+Math.sin(x*.012)*23+Math.cos(x*.027)*13;ctx.lineTo(x,y)}ctx.lineTo(WIDTH,355);ctx.lineTo(0,355);ctx.fill();ctx.restore();
 ctx.save();ctx.globalAlpha=.15;ctx.fillStyle='#fff5d5';ctx.fillRect(0,245+Math.sin(t*.3)*2,WIDTH,64);ctx.restore()
@@ -109,7 +150,7 @@ const p=phases[g.phase],green=p.leaf>.6;
 const sky=ctx.createLinearGradient(0,0,0,HEIGHT);sky.addColorStop(0,p.rain>.4?'#a7d3d8':'#b7dce7');sky.addColorStop(1,p.rain>.4?'#e4f0d8':'#f7e6bf');ctx.fillStyle=sky;ctx.fillRect(0,0,WIDTH,HEIGHT);
 const glow=ctx.createRadialGradient(790,76,6,790,76,110);glow.addColorStop(0,'rgba(255,244,184,.8)');glow.addColorStop(1,'rgba(255,244,184,0)');ctx.fillStyle=glow;ctx.fillRect(675,0,225,190);ctx.fillStyle=p.rain>.5?'#f6e3b3':'#ffdf98';ctx.beginPath();ctx.arc(790,76,29,0,Math.PI*2);ctx.fill();
 if(p.rain>.2){ctx.fillStyle='#e5f0ef';for(const [x,y] of [[150,72],[470,55],[715,96]]){ctx.beginPath();ctx.ellipse(x,y,70,23,0,0,Math.PI*2);ctx.fill()}}
-drawMountainRange(ctx,green,t);
+drawCinematicBackdrop(ctx,p.leaf,p.rain,t);
 ctx.fillStyle=green?'#9abf7d':'#cbb48a';ctx.beginPath();ctx.moveTo(0,305);ctx.quadraticCurveTo(190,215,390,310);ctx.quadraticCurveTo(620,240,900,310);ctx.lineTo(900,440);ctx.lineTo(0,440);ctx.fill();
 ctx.fillStyle=green?'#6b9e60':'#b89c70';ctx.beginPath();ctx.moveTo(0,370);ctx.quadraticCurveTo(230,320,430,370);ctx.quadraticCurveTo(710,325,900,360);ctx.lineTo(900,440);ctx.lineTo(0,440);ctx.fill();
 for(let i=0;i<7;i++){ctx.save();ctx.globalAlpha=.42;drawTree(ctx,35+i*153,302+(i%2)*13,.43+(i%3)*.09,p.leaf,i);ctx.restore()}for(let i=0;i<7;i++)drawTree(ctx,65+i*137,337+(i%2)*20,.65+(i%3)*.12,p.leaf,i);drawLandscapeDetails(ctx,p.leaf,t);if(p.umburana){drawUmburana(ctx,745,350,p.leaf,.82);drawUmburana(ctx,190,355,p.leaf,.64)}if(p.threat)drawEnergyInfrastructure(ctx,p.threat,t);if(p.rocks){drawRockFormation(ctx,135,372,1.1,green);drawRockFormation(ctx,435,385,.8,green);drawRockFormation(ctx,725,375,1.05,green)}else{drawRockFormation(ctx,540,396,.38,green);drawRockFormation(ctx,285,411,.28,green)}
