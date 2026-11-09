@@ -114,6 +114,21 @@ function hitsSolarPanel(bee:Point){
  }
  return false;
 }
+function drawProximityWarning(ctx:CanvasRenderingContext2D,g:Game,t:number){
+ const p=phases[g.phase];
+ if(g.mode!=='playing'||(p.threat!=='solar'&&p.threat!=='windfarm'))return;
+ const near=p.threat==='solar'
+  ?[[-22,0],[22,0],[0,-22],[0,22]].some(([dx,dy])=>hitsSolarPanel({x:g.bee.x+dx,y:g.bee.y+dy}))
+  :[[-30,0],[30,0],[0,-30],[0,30]].some(([dx,dy])=>hitsTurbine({x:g.bee.x+dx,y:g.bee.y+dy},t));
+ if(!near)return;
+ ctx.save();
+ const a=.5+.3*Math.sin(t*8);
+ ctx.strokeStyle='rgba(202,59,31,'+a+')';ctx.lineWidth=3;
+ ctx.beginPath();ctx.arc(g.bee.x,g.bee.y,29+Math.sin(t*8)*3,0,Math.PI*2);ctx.stroke();
+ ctx.fillStyle='#813a21';ctx.beginPath();ctx.roundRect(g.bee.x-35,g.bee.y-55,70,22,6);ctx.fill();
+ ctx.fillStyle='#fff9e7';ctx.font='bold 12px system-ui';ctx.textAlign='center';ctx.fillText('⚠ DESVIE',g.bee.x,g.bee.y-39);
+ ctx.restore();
+}
 function drawEnergyInfrastructure(ctx:CanvasRenderingContext2D,kind:'windfarm'|'solar'|'clearing',t:number){
 ctx.save();
 ctx.fillStyle='rgba(157,115,77,.34)';ctx.beginPath();ctx.moveTo(150,440);ctx.lineTo(385,290);ctx.lineTo(570,290);ctx.lineTo(750,440);ctx.fill();
@@ -280,7 +295,8 @@ if(p.rain>.2){ctx.strokeStyle='#5d9db8';ctx.lineWidth=1.8;ctx.globalAlpha=.48;fo
 if(restored&&p.threat)drawConservationOutcome(ctx,p.threat,t);
 if(restored&&isDryDiscovery(g))drawOpeningRestoration(ctx,t);drawParticles(ctx,particles);
 ctx.save();for(const point of trail){ctx.globalAlpha=point.life/.36*.42;ctx.fillStyle='#fff4c9';ctx.beginPath();ctx.arc(point.x,point.y,2.5+point.life*3,0,Math.PI*2);ctx.fill()}ctx.restore();
-ctx.save();ctx.translate(g.bee.x,g.bee.y);ctx.rotate(tilt);drawBee(ctx,0,0,t,g.hitTimer>0&&Math.floor(t*9)%2===0);ctx.restore();drawForeground(ctx,p.leaf,t);
+ctx.save();ctx.translate(g.bee.x,g.bee.y);ctx.rotate(tilt);drawBee(ctx,0,0,t,g.hitTimer>0&&Math.floor(t*9)%2===0);ctx.restore();
+drawProximityWarning(ctx,g,t);drawForeground(ctx,p.leaf,t);
 if(g.mode==='ready'||g.mode==='complete'||g.mode==='failed'||g.mode==='victory'){ctx.save();ctx.fillStyle=restored?'rgba(19,46,35,.24)':'rgba(19,46,35,.65)';ctx.fillRect(0,0,WIDTH,HEIGHT);ctx.textAlign='center';ctx.fillStyle='#fff6df';ctx.font='bold 32px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'CAPÍTULO I · A CAATINGA VERDEJA':'JANDA · PRONTA PARA VOAR'):g.mode==='failed'?'ENERGIA ESGOTADA':g.mode==='victory'?'JORNADA CONCLUÍDA!':restored?'HABITAT PROTEGIDO!':'MISSÃO CUMPRIDA!',WIDTH/2,HEIGHT/2-14);ctx.font='17px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'A jornada começa na estação chuvosa':'Explore a Caatinga e descubra seus recursos'):g.mode==='failed'?'Recomece e experimente outra rota':g.mode==='victory'?'Você acompanhou um ciclo sazonal':restored?'Sua decisão mudou a paisagem':'Agora é hora de cuidar do ninho',WIDTH/2,HEIGHT/2+22);ctx.restore()}
 ctx.fillStyle='#204e35';ctx.font='bold 17px system-ui';ctx.fillText('CAATINGA · FLORESTA TROPICAL SAZONALMENTE SECA',18,29);
 if(g.flowers.every(f=>f.taken)){ctx.fillStyle='#1e6340';ctx.font='bold 21px system-ui';ctx.fillText(p.nest&&!g.nestFound?'Encontre a cavidade na árvore →':'Retorne à colônia ←',WIDTH/2-160,62)}
