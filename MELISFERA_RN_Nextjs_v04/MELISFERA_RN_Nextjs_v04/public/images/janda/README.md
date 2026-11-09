@@ -1,5 +1,7 @@
-# Janda — mascote oficial
+# Janda — mascote oficial da MELISFERA RN
 
-Adicionar aqui a ilustração aprovada pelo projeto com o nome `janda-oficial.webp`, preferencialmente com transparência, mantendo a identidade visual e a anatomia da personagem. O arquivo binário ainda não foi incluído nesta proposta.
+Imagem aprovada pelo usuário: `Janda_Mascote.jpeg` (1024 × 1536), convertida sem redesenho para WebP otimizado. O fundo preto original foi preservado para não danificar contornos e detalhes escuros.
 
-A seção da página inicial referencia `/images/janda/janda-oficial.webp`. Antes de publicar, anexar o arquivo e conferir a renderização em dispositivos móveis.
+**Upload pendente:** adicionar `janda-oficial.webp` nesta pasta. O componente `JandaWelcome.tsx` já referencia `/images/janda/janda-oficial.webp`.
+
+A imagem ainda não está versionada no repositório. Conferir visualização e build antes de publicar.
