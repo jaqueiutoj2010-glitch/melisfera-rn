@@ -4,7 +4,7 @@ export default function JandaWelcome() {
   return (
     <section className="shell jandaWelcome" aria-labelledby="janda-title">
       <div className="jandaWelcomeArt">
-        <img src="/images/abelhas/Janda_Mascote.jpeg" alt="Janda, mascote da MELISFERA RN: abelha jandaíra exploradora com chapéu de couro nordestino, lupa, caderno de campo e dois pares de braços." loading="lazy" />
+        <picture><source media="(prefers-reduced-motion: reduce)" srcSet="/images/abelhas/janda-sem-fundo.png"/><img src="/images/abelhas/janda-acenando.gif" alt="Janda, mascote da MELISFERA RN: abelha jandaíra exploradora com chapéu de couro nordestino, lupa, caderno de campo e dois pares de braços." loading="lazy" /></picture>
       </div>
       <div className="jandaWelcomeCopy">
         <p className="eyebrow">CONHEÇA NOSSA GUIA · GUARDIÃ DA CAATINGA</p>
