@@ -187,7 +187,7 @@ if(kind==='clearing'){drawUmburana(ctx,390,360,.65,.85);drawUmburana(ctx,630,365
 ctx.fillStyle='rgba(21,67,39,.84)';ctx.beginPath();ctx.roundRect(265,35,370,43,12);ctx.fill();ctx.textAlign='center';ctx.fillStyle='#fff6dc';ctx.font='bold 17px system-ui';ctx.fillText('✓ PAISAGEM PROTEGIDA',450,62);
 for(let i=0;i<12;i++){const x=100+i*71,y=110+(i%4)*50+Math.sin(t*2+i)*4;ctx.fillStyle='rgba(242,218,124,.55)';ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fill()}ctx.restore()
 }
-function paint(ctx:CanvasRenderingContext2D,g:Game,t:number,particles:Particle[],restored:boolean){
+function paint(ctx:CanvasRenderingContext2D,g:Game,t:number,particles:Particle[],restored:boolean,trail:{x:number;y:number;life:number}[],tilt:number){
 const p=phases[g.phase],green=p.leaf>.6;
 const sky=ctx.createLinearGradient(0,0,0,HEIGHT);sky.addColorStop(0,p.rain>.4?'#a7d3d8':'#b7dce7');sky.addColorStop(1,p.rain>.4?'#e4f0d8':'#f7e6bf');ctx.fillStyle=sky;ctx.fillRect(0,0,WIDTH,HEIGHT);
 const glow=ctx.createRadialGradient(790,76,6,790,76,110);glow.addColorStop(0,'rgba(255,244,184,.8)');glow.addColorStop(1,'rgba(255,244,184,0)');ctx.fillStyle=glow;ctx.fillRect(675,0,225,190);ctx.fillStyle=p.rain>.5?'#f6e3b3':'#ffdf98';ctx.beginPath();ctx.arc(790,76,29,0,Math.PI*2);ctx.fill();
@@ -206,7 +206,9 @@ if(p.nest){ctx.strokeStyle='#805b3b';ctx.lineWidth=17;ctx.beginPath();ctx.moveTo
 for(const f of g.flowers){if(!f.taken)drawFlower(ctx,f.x,f.y,t)}
 for(const h of p.hazards){ctx.save();ctx.translate(h.x,h.y);ctx.shadowColor='rgba(64,35,22,.35)';ctx.shadowBlur=12;ctx.fillStyle='#b78b4d';ctx.beginPath();ctx.roundRect(-19,-21,38,42,5);ctx.fill();ctx.shadowBlur=0;ctx.fillStyle='#eee3be';ctx.fillRect(-16,-13,32,26);ctx.fillStyle='#694b35';ctx.font='bold 25px system-ui';ctx.fillText('!',-4,9);ctx.restore()}
 if(p.rain>.2){ctx.strokeStyle='#5d9db8';ctx.lineWidth=1.8;ctx.globalAlpha=.48;for(let i=0;i<Math.round(p.rain*35);i++){const x=(i*91+t*48)%WIDTH,y=(i*49+t*95)%HEIGHT;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-6,y+15);ctx.stroke()}ctx.globalAlpha=1}
-if(restored&&p.threat)drawConservationOutcome(ctx,p.threat,t);drawParticles(ctx,particles);drawBee(ctx,g.bee.x,g.bee.y,t,g.hitTimer>0&&Math.floor(t*9)%2===0);drawForeground(ctx,p.leaf,t);
+if(restored&&p.threat)drawConservationOutcome(ctx,p.threat,t);drawParticles(ctx,particles);
+ctx.save();for(const point of trail){ctx.globalAlpha=point.life/.36*.42;ctx.fillStyle='#fff4c9';ctx.beginPath();ctx.arc(point.x,point.y,2.5+point.life*3,0,Math.PI*2);ctx.fill()}ctx.restore();
+ctx.save();ctx.translate(g.bee.x,g.bee.y);ctx.rotate(tilt);drawBee(ctx,0,0,t,g.hitTimer>0&&Math.floor(t*9)%2===0);ctx.restore();drawForeground(ctx,p.leaf,t);
 if(g.mode==='ready'||g.mode==='complete'||g.mode==='failed'||g.mode==='victory'){ctx.save();ctx.fillStyle=restored?'rgba(19,46,35,.24)':'rgba(19,46,35,.65)';ctx.fillRect(0,0,WIDTH,HEIGHT);ctx.textAlign='center';ctx.fillStyle='#fff6df';ctx.font='bold 32px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'CAPÍTULO I · A FLORESTA RESISTE':'JANDA · PRONTA PARA VOAR'):g.mode==='failed'?'ENERGIA ESGOTADA':g.mode==='victory'?'JORNADA CONCLUÍDA!':restored?'HABITAT PROTEGIDO!':'MISSÃO CUMPRIDA!',WIDTH/2,HEIGHT/2-14);ctx.font='17px system-ui';ctx.fillText(g.mode==='ready'?(g.phase===0?'Mesmo na seca, a Caatinga permanece viva':'Explore a Caatinga e descubra seus recursos'):g.mode==='failed'?'Recomece e experimente outra rota':g.mode==='victory'?'Você acompanhou um ciclo sazonal':restored?'Sua decisão mudou a paisagem':'Agora é hora de cuidar do ninho',WIDTH/2,HEIGHT/2+22);ctx.restore()}
 ctx.fillStyle='#204e35';ctx.font='bold 17px system-ui';ctx.fillText('CAATINGA · FLORESTA TROPICAL SAZONALMENTE SECA',18,29);
 if(g.flowers.every(f=>f.taken)){ctx.fillStyle='#1e6340';ctx.font='bold 21px system-ui';ctx.fillText(p.nest&&!g.nestFound?'Encontre a cavidade na árvore →':'Retorne à colônia ←',WIDTH/2-160,62)}
@@ -214,6 +216,8 @@ if(g.flowers.every(f=>f.taken)){ctx.fillStyle='#1e6340';ctx.font='bold 21px syst
 export function JandaAdventure(){
 const canvas=useRef<HTMLCanvasElement>(null),keys=useRef<Set<string>>(new Set()),pointer=useRef<Point|null>(null),game=useRef<Game>(start(0,0,3,false)),particles=useRef<Particle[]>([]);
 const [ui,setUi]=useState(()=>({...game.current,flowers:game.current.flowers.map(f=>({...f}))}));
+const flight=useRef({vx:0,vy:0,tilt:0});
+const flightTrail=useRef<{x:number;y:number;life:number}[]>([]);
 const [nestStep,setNestStep]=useState(false);
 const [choiceResolved,setChoiceResolved]=useState(false);
 const restoredScene=useRef(false);
@@ -221,16 +225,24 @@ const [choiceFeedback,setChoiceFeedback]=useState('');
 const [choiceAttempts,setChoiceAttempts]=useState(0);
 
 const sync=useCallback(()=>{const g=game.current;setUi({...g,bee:{...g.bee},flowers:g.flowers.map(f=>({...f}))})},[]);
-const advance=useCallback(()=>{particles.current=[];restoredScene.current=false;setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);const g=game.current;if(g.phase===phases.length-1){g.mode='victory';sync();return}game.current=start(g.phase+1,g.resources,g.colony,g.nestFound);sync()},[sync]);
-const retry=useCallback(()=>{particles.current=[];setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);const g=game.current;game.current=start(g.phase,Math.max(0,g.resources-g.flowers.filter(f=>f.taken).length),g.colony,g.nestFound);sync()},[sync]);
-const restart=useCallback(()=>{particles.current=[];setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);game.current=start(0,0,3,false);sync()},[sync]);
+const advance=useCallback(()=>{flight.current={vx:0,vy:0,tilt:0};flightTrail.current=[];particles.current=[];restoredScene.current=false;setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);const g=game.current;if(g.phase===phases.length-1){g.mode='victory';sync();return}game.current=start(g.phase+1,g.resources,g.colony,g.nestFound);sync()},[sync]);
+const retry=useCallback(()=>{flight.current={vx:0,vy:0,tilt:0};flightTrail.current=[];particles.current=[];setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);const g=game.current;game.current=start(g.phase,Math.max(0,g.resources-g.flowers.filter(f=>f.taken).length),g.colony,g.nestFound);sync()},[sync]);
+const restart=useCallback(()=>{flight.current={vx:0,vy:0,tilt:0};flightTrail.current=[];particles.current=[];setNestStep(false);setChoiceResolved(false);setChoiceFeedback('');setChoiceAttempts(0);game.current=start(0,0,3,false);sync()},[sync]);
 useEffect(()=>{const down=(e:KeyboardEvent)=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key)){if(e.key.startsWith('Arrow'))e.preventDefault();keys.current.add(e.key.toLowerCase())}};const up=(e:KeyboardEvent)=>keys.current.delete(e.key.toLowerCase());window.addEventListener('keydown',down);window.addEventListener('keyup',up);return()=>{window.removeEventListener('keydown',down);window.removeEventListener('keyup',up)}},[]);
 useEffect(()=>{const c=canvas.current,ctx=c?.getContext('2d');if(!c||!ctx)return;let raf=0,last=0,frames=0;
 const burst=(x:number,y:number,kind:Particle['kind'])=>{for(let i=0;i<14;i++){const a=i*Math.PI*2/14,speed=38+(i%5)*20;particles.current.push({x,y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed-20,life:.6,maxLife:.6,kind})}};
 const tick=(now:number)=>{const dt=Math.min((now-last)/1000||0,.04);last=now;const g=game.current,p=phases[g.phase];g.time+=dt;
 if(g.mode==='playing'){let dx=0,dy=0;const k=keys.current;if(k.has('arrowleft')||k.has('a'))dx--;if(k.has('arrowright')||k.has('d'))dx++;if(k.has('arrowup')||k.has('w'))dy--;if(k.has('arrowdown')||k.has('s'))dy++;
 if(pointer.current){dx=pointer.current.x-g.bee.x;dy=pointer.current.y-g.bee.y;const d=Math.hypot(dx,dy);if(d<10){dx=0;dy=0}else{dx/=d;dy/=d}}
-const norm=Math.hypot(dx,dy)||1;g.bee.x=clamp(g.bee.x+(dx/norm*220+(p.wind||0))*dt,23,WIDTH-23);g.bee.y=clamp(g.bee.y+dy/norm*220*dt,45,HEIGHT-28);
+const norm=Math.hypot(dx,dy)||1;
+const targetX=dx/norm*220+(p.wind||0),targetY=dy/norm*220;
+const ease=1-Math.exp(-dt*7.5);
+flight.current.vx+=(targetX-flight.current.vx)*ease;
+flight.current.vy+=(targetY-flight.current.vy)*ease;
+flight.current.tilt+=(clamp(flight.current.vy/400,-.28,.28)-flight.current.tilt)*ease;
+g.bee.x=clamp(g.bee.x+flight.current.vx*dt,23,WIDTH-23);
+g.bee.y=clamp(g.bee.y+flight.current.vy*dt,45,HEIGHT-28);
+if(frames%3===0&&Math.hypot(flight.current.vx,flight.current.vy)>35)flightTrail.current.push({x:g.bee.x-18,y:g.bee.y+6,life:.36});
 g.energy=clamp(g.energy-2.2*dt,0,100);g.hitTimer=Math.max(0,g.hitTimer-dt);
 for(const f of g.flowers){if(!f.taken&&Math.hypot(f.x-g.bee.x,f.y-g.bee.y)<34){f.taken=true;g.energy=clamp(g.energy+15,0,100);g.resources+=1;g.message='Flor visitada! Recurso educativo coletado.';burst(f.x,f.y,'pollen')}}
 for(const h of p.hazards){if(g.hitTimer===0&&Math.hypot(h.x-g.bee.x,h.y-g.bee.y)<34){g.energy=clamp(g.energy-24,0,100);g.hitTimer=1.4;g.message='Obstáculo! Evite a área de risco.';burst(g.bee.x,g.bee.y,'danger')}}
@@ -238,7 +250,8 @@ if(g.flowers.every(f=>f.taken)){if(p.nest&&!g.nestFound&&Math.hypot(p.nest.x+8-g
 if((!p.nest||g.nestFound)&&Math.hypot(84-g.bee.x,217-g.bee.y)<50){g.mode='complete';g.colony+=g.phase===0?0:g.phase===1?2:3;g.message='Fase concluída! Recursos entregues à colônia ilustrativa.';burst(84,217,'spark')}}
 if(g.energy===0){g.mode='failed';g.message='Janda ficou sem energia. Experimente uma rota diferente.'}
 if(frames%8===0||g.mode!=='playing')sync()}
-particles.current=particles.current.filter(p=>p.life>0);for(const p of particles.current){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=65*dt;p.life-=dt}paint(ctx,g,now/1000,particles.current,restoredScene.current);frames++;raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf)},[sync]);
+flightTrail.current=flightTrail.current.filter(p=>(p.life-=dt)>0);
+particles.current=particles.current.filter(p=>p.life>0);for(const p of particles.current){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=65*dt;p.life-=dt}paint(ctx,g,now/1000,particles.current,restoredScene.current,flightTrail.current,flight.current.tilt);frames++;raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf)},[sync]);
 const phase=phases[ui.phase],taken=ui.flowers.filter(f=>f.taken).length;
 const conservation=phase.threat?conservationChoices[phase.threat]:undefined;
 const handlePointer=(e:ReactPointerEvent<HTMLCanvasElement>)=>{const r=e.currentTarget.getBoundingClientRect();pointer.current={x:(e.clientX-r.left)*WIDTH/r.width,y:(e.clientY-r.top)*HEIGHT/r.height}};
