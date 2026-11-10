@@ -1,0 +1,83 @@
+/* MELISFERA RN — design system v1. Shared accessible presentation layer.
+   Imported AFTER legacy and module styles to progressively consolidate the interface. */
+:root {
+  --mf-ink:#19342c;
+  --mf-ink-strong:#123a25;
+  --mf-muted:#43584b;
+  --mf-brand:#20583e;
+  --mf-brand-hover:#16412e;
+  --mf-accent:#b56b00;
+  --mf-surface:#ffffff;
+  --mf-surface-soft:#f5f7f3;
+  --mf-border:#bdcfc0;
+  --mf-focus:#b56b00;
+  --mf-radius-sm:.5rem;
+  --mf-radius-md:.875rem;
+  --mf-radius-lg:1.5rem;
+  --mf-space-1:.5rem;
+  --mf-space-2:1rem;
+  --mf-space-3:1.5rem;
+  --mf-space-4:2rem;
+  --mf-space-5:3rem;
+  --mf-text-small:1rem;
+  --mf-text-body:1.125rem;
+  --mf-text-lead:1.25rem;
+}
+html {text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body {color:var(--mf-ink);background:var(--mf-surface);font-size:var(--mf-text-body)}
+main {min-width:0}
+.shell {width:100%;max-width:82.5rem}
+:is(.section,.melisferaStandardPage,.indicatorsPage) {min-width:0}
+:is(.intro,.lead,.sectionHead>p:last-child) {font-size:var(--mf-text-body);line-height:1.7;color:var(--mf-muted)}
+:is(.feature,.panel,.statCard,.ecologyResult) {border-radius:var(--mf-radius-md)}
+:is(.feature,.panel,.ecologyResult) {border-color:var(--mf-border)}
+:is(.feature p,.featureLink,.notice,.coming,.statCard span,.sourceMetric span,.reference p,.sourceItem p,.sourceItem a,.sourceMeta,.note,.taxonId,.pill,.resultbar,.taxonRight,.panel dt,.panel dd,.barLabel,.dataTable,.jumpLinks a,.imagePlaceholder,.ecologyResult p,.ecologyControls label,.filters label,.filters input,.filters select) {font-size:var(--mf-text-small)!important;line-height:1.6}
+:is(.feature h3,.featureGrid4 .feature h3) {font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.3}
+:is(.button,.smallButton,.jumpLinks a,.nav nav a) {min-height:44px}
+:is(.button,.smallButton) {font-size:1rem;line-height:1.4}
+:is(.button,.smallButton,.feature,.taxon,.jumpLinks a) {transition:background-color .12s ease,border-color .12s ease}
+:is(a,button,input,select,textarea,[role="button"],[tabindex]):focus-visible {outline:3px solid var(--mf-focus)!important;outline-offset:3px!important}
+:is(.feature,.taxon,.jumpLinks a):focus-visible {border-radius:var(--mf-radius-sm)}
+:is(.primary,.button.primary) {background:var(--mf-brand);color:#fff}
+:is(.primary,.button.primary):hover {background:var(--mf-brand-hover)}
+:is(.ghost,.button.ghost) {border-color:var(--mf-brand);color:var(--mf-brand)}
+:is(.nav nav a,.header .nav nav a) {font-size:1rem;line-height:1.4;white-space:normal}
+:is(.eyebrow,.playEyebrow) {font-size:.875rem!important;line-height:1.5}
+:is(.metrics span,.statCard span) {color:var(--mf-muted)}
+:is(.notice,.sourceItem,.reference) {line-height:1.65}
+footer,footer p,footer a {font-size:1rem;line-height:1.65}
+footer p {opacity:1}
+img,svg,video,canvas {max-width:100%}
+table {border-collapse:collapse}
+.dataTable th,.dataTable td {vertical-align:top}
+:is(.tableScroll,[role="region"][tabindex="0"]) {scrollbar-width:auto}
+@media(max-width:1100px) {
+  .header .nav nav {flex-wrap:wrap;justify-content:flex-start;gap:.35rem 1rem}
+  .header .nav nav a {white-space:normal}
+}
+@media(max-width:720px) {
+  .shell {padding-inline:1rem}
+  .section {padding-block:2.5rem}
+  .featureGrid4,.featureGrid,.twoCol,.detailGrid,.ecologyResults {grid-template-columns:minmax(0,1fr)}
+  .actions {gap:.75rem}
+  .metrics {grid-template-columns:minmax(0,1fr)}
+  .metrics div {flex-wrap:wrap}
+  .melisferaStandardPage .melisferaEditorialHero,
+  .melisferaStandardPage .melisferaPlayHero {grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:400px) {
+  .actions>.button {width:100%}
+  .statGrid {grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-contrast:more) {
+  :root {--mf-muted:#233d2e;--mf-border:#385b44;--mf-brand:#12442d}
+  .feature,.panel,.statCard {border-width:2px}
+  .button.ghost {border-width:2px}
+}
+@media(forced-colors:active) {
+  :is(.button,.feature,.panel,.smallButton) {border:1px solid CanvasText}
+  :is(a,button,input,select):focus-visible {outline:3px solid Highlight!important}
+}
+@media(prefers-reduced-motion:reduce) {
+  :is(.button,.smallButton,.feature,.taxon,.jumpLinks a) {transition:none}
+}
