@@ -432,3 +432,10 @@ footer p{opacity:1}
 @media(max-width:780px){.shell{padding-left:1rem;padding-right:1rem}.hero{padding:3rem 0}.section{padding-top:3rem;padding-bottom:3rem}.metrics{grid-template-columns:1fr}.metrics div{flex-wrap:wrap}.featureGrid,.featureGrid4{grid-template-columns:1fr}.nav nav a,.header .nav nav a{font-size:1rem}.taxonRight{white-space:normal}}
 @media(max-width:480px){.hero h1{font-size:clamp(2.25rem,10vw,3.5rem)}.sectionHead h2{font-size:2rem}.brandName{white-space:normal}.brandSubtitle,.brandLocation{white-space:normal}.statGrid{grid-template-columns:1fr}.actions>.button{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* Official Janda mascot in MELISFERA PLAY: consistent proportions and motion accessibility */
+.jandaHero .jandaPortrait{flex:0 0 auto;display:flex;align-items:center;justify-content:center;animation:none;filter:none;min-width:clamp(140px,20vw,230px)}
+.jandaHero .jandaOfficialPortrait{display:block;width:clamp(140px,20vw,230px);max-height:270px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(16,45,30,.22))}
+@media(max-width:700px){.jandaHero{flex-wrap:wrap}.jandaHero .jandaPortrait{margin-inline:auto}.jandaHero .jandaOfficialPortrait{width:min(48vw,200px);max-height:235px}}
+@media(prefers-reduced-motion:reduce){.jandaHero .jandaPortrait,.jandaHero .jandaOfficialPortrait{animation:none!important;transition:none!important}}
