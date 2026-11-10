@@ -48,3 +48,11 @@
 .atlasPage .atlasBody{max-width:1320px}
 @media(max-width:1080px){.atlasPage .atlasHeroGrid{grid-template-columns:1fr}.atlasPage .atlasHeroPhoto{min-height:320px;max-height:400px}}
 @media(max-width:720px){.atlasPage .atlasHero{padding:22px 0 28px}.atlasPage .atlasHeroCopy h1{font-size:clamp(37px,9vw,52px)}.atlasPage .atlasHeroPhoto{min-height:230px;border-left-width:6px;border-radius:75px 12px 12px 75px}}
+
+/* Keyboard and low-vision alternative to geographic SVG selection */
+.atlasAccessibleSelect{display:grid;gap:.5rem;padding:1rem 1.25rem;background:#f4f8f3;border:1px solid #bdcfc0;border-radius:.875rem;margin:1rem 0}
+.atlasAccessibleSelect label{font-size:1rem;font-weight:700;color:#19342c}
+.atlasAccessibleSelect select{width:100%;max-width:30rem;min-height:48px;padding:.65rem .85rem;font:inherit;font-size:1rem;color:#19342c;background:#fff;border:2px solid #53775d;border-radius:.5rem}
+.atlasAccessibleSelect select:focus-visible{outline:3px solid #b56b00;outline-offset:3px}
+.atlasMunicipalityInfo{font-size:1rem;line-height:1.65}
+.atlasMunicipality:focus-visible{stroke:#a14c00;stroke-width:3.5px;outline:none}
