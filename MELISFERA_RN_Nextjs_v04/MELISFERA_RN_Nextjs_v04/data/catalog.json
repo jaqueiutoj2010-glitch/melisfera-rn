@@ -3189,7 +3189,16 @@
           "scope": "Mata Atlântica, sul da Bahia; não é registro de ocorrência do RN",
           "note": "Estudo de dieta polínica com 61 tipos polínicos; destaque para Miconia/Melastomataceae. Não demonstra por si só polinização efetiva nem interação local no RN."
         }
-      ]
+      ],
+      "municipalAudit": {
+        "status": "Pendente de validação municipal",
+        "reviewedOn": "2026-11-15",
+        "sourceLinksReviewed": 3,
+        "individualizedMunicipalities": 0,
+        "primaryOccurrenceIdentifiers": 0,
+        "vouchers": 0,
+        "nextAction": "Conferir registros primários e metadados (município, data, coordenadas, voucher/ocorrência) antes de atualizar mapas; não inferir ocorrência a partir de checklists estaduais."
+      }
     },
     {
       "id": "ARN-0092",
@@ -3256,7 +3265,16 @@
           "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
           "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
-      ]
+      ],
+      "municipalAudit": {
+        "status": "Pendente de validação municipal",
+        "reviewedOn": "2026-11-15",
+        "sourceLinksReviewed": 4,
+        "individualizedMunicipalities": 0,
+        "primaryOccurrenceIdentifiers": 0,
+        "vouchers": 0,
+        "nextAction": "Conferir registros primários e metadados (município, data, coordenadas, voucher/ocorrência) antes de atualizar mapas; não inferir ocorrência a partir de checklists estaduais."
+      }
     },
     {
       "id": "ARN-0093",
@@ -4025,7 +4043,16 @@
           "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
           "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
-      ]
+      ],
+      "municipalAudit": {
+        "status": "Pendente de validação municipal",
+        "reviewedOn": "2026-11-15",
+        "sourceLinksReviewed": 3,
+        "individualizedMunicipalities": 0,
+        "primaryOccurrenceIdentifiers": 0,
+        "vouchers": 0,
+        "nextAction": "Conferir registros primários e metadados (município, data, coordenadas, voucher/ocorrência) antes de atualizar mapas; não inferir ocorrência a partir de checklists estaduais."
+      }
     },
     {
       "id": "ARN-0116",
