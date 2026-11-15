@@ -3,7 +3,8 @@
     "version": "0.4",
     "baseline": 150,
     "assumption": "150 entradas adotadas como válidas para o projeto; documentação individual em revisão",
-    "source": "MELISFERA_RN_dados_v03.json"
+    "source": "MELISFERA_RN_dados_v03.json",
+    "supplementaryEvidenceNote": "Conferência nominal de 10 Meliponini do guia Jardim do Mel, sem inclusão de novas espécies ou ocorrências; Bastos et al. (2026) vinculado a Melipona scutellaris apenas como evidência ecológica da Bahia."
   },
   "taxa": [
     {
@@ -2047,6 +2048,14 @@
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
         }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
+        }
       ]
     },
     {
@@ -2092,6 +2101,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
@@ -3059,6 +3076,14 @@
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
         }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
+        }
       ]
     },
     {
@@ -3093,6 +3118,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
@@ -3140,6 +3173,21 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
+        },
+        {
+          "source": "Bastos et al. (2026), Anais da Academia Brasileira de Ciências",
+          "doi": "10.1590/0001-3765202620250124",
+          "type": "Ecologia trófica — análise palinológica",
+          "scope": "Mata Atlântica, sul da Bahia; não é registro de ocorrência do RN",
+          "note": "Estudo de dieta polínica com 61 tipos polínicos; destaque para Miconia/Melastomataceae. Não demonstra por si só polinização efetiva nem interação local no RN."
         }
       ]
     },
@@ -3199,6 +3247,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
@@ -3840,6 +3896,14 @@
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
         }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
+        }
       ]
     },
     {
@@ -3874,6 +3938,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
@@ -3944,6 +4016,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
@@ -4525,6 +4605,14 @@
           "page": null,
           "url": null,
           "evidenceNote": "Vínculo de fonte herdado; NÃO comprova ocorrência individual nem município"
+        }
+      ],
+      "supplementaryEvidence": [
+        {
+          "source": "Jardim do Mel — Guia nacional de abelhas sem ferrão do Brasil",
+          "type": "Checklist estadual compilatório",
+          "scope": "Rio Grande do Norte (estado); sem confirmação municipal adicional",
+          "note": "Nome presente no recorte estadual do guia; concordância nominal com a base MELISFERA RN. Não acrescenta ocorrência, voucher ou município; verificar fonte primária antes de atualizar distribuição."
         }
       ]
     },
