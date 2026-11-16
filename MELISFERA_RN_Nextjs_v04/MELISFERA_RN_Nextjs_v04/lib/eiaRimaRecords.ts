@@ -206,3 +206,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "validation": "Registro documental de campo — coordenadas e evidência individual pendentes"
   }
 ];
+
+/** Critério MELISFERA RN: somente registros com componente primário permanecem na camada pública de EIA/RIMA. */
+export const eiaRimaPrimaryRecords=eiaRimaRecords.filter(r=>r.evidence==='Primário'||r.evidence==='Primário e secundário');
+export const eiaRimaExcludedSecondaryCount=eiaRimaRecords.length-eiaRimaPrimaryRecords.length;
