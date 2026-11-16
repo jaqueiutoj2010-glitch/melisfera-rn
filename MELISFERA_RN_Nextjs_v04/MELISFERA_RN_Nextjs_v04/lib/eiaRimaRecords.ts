@@ -208,5 +208,13 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
 ];
 
 /** Critério MELISFERA RN: somente registros com componente primário permanecem na camada pública de EIA/RIMA. */
+/** Registros secundários admitidos somente após conferência da evidência original.
+ * Preencher exclusivamente com IDs taxonômicos e municípios conferidos, junto com
+ * identificador persistente da fonte e justificativa documental. Não inferir do EIA.
+ */
+export type VerifiedSecondaryEvidence={catalogId:string;municipality:string;sourceIdentifier:string;sourceUrl:string;identificationEvidence:string;localityEvidence:string;reviewNote:string};
+export const verifiedSecondaryEvidence:VerifiedSecondaryEvidence[]=[];
 export const eiaRimaPrimaryRecords=eiaRimaRecords.filter(r=>r.evidence==='Primário'||r.evidence==='Primário e secundário');
-export const eiaRimaExcludedSecondaryCount=eiaRimaRecords.length-eiaRimaPrimaryRecords.length;
+export const eiaRimaVerifiedSecondaryRecords=eiaRimaRecords.filter(r=>r.evidence==='Secundário'&&verifiedSecondaryEvidence.some(v=>v.catalogId===r.catalogId&&v.municipality===r.municipality&&Boolean(v.sourceIdentifier&&v.sourceUrl&&v.identificationEvidence&&v.localityEvidence)));
+export const eiaRimaPublicRecords=[...eiaRimaPrimaryRecords,...eiaRimaVerifiedSecondaryRecords];
+export const eiaRimaExcludedSecondaryCount=eiaRimaRecords.length-eiaRimaPublicRecords.length;
