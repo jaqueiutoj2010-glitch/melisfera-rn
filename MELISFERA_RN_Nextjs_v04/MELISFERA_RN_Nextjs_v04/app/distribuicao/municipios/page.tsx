@@ -35,9 +35,10 @@ const referenciasMunicipais=Array.from(new Map([
 const situacao:Record<string,string>={
  primario_documentado:'EIA · dado primário',
  autoral_a_documentar:'Observação autoral · metadados a complementar',
- fonte_primaria_a_conferir:'Catálogo · fonte primária a conferir'
+ fonte_primaria_a_conferir:'Catálogo · fonte primária a conferir',
+ localidade_a_conferir:'Publicação científica · localidade e taxonomia a conferir'
 };
-export default function Municipios(){return <main className="shell section">
+export default function Municipios(){return <div className="shell section">
 <p className="eyebrow">MELISFERA RN · RASTREABILIDADE TERRITORIAL</p>
 <h1>Registros de abelhas por município</h1>
 <p className="intro">Uma ficha por município, reunindo táxons, fontes científicas, observações de campo e documentos ambientais. A mesma espécie pode ter múltiplas fontes sem ser contada duas vezes.</p>
@@ -45,7 +46,7 @@ export default function Municipios(){return <main className="shell section">
 <strong>Critério de interpretação:</strong> cada vínculo representa uma associação entre táxon, município e fonte, não um exemplar único. A presença em catálogo, um registro autoral e um levantamento com dados primários são evidências de naturezas diferentes. Coordenadas municipais representam apenas a sede, não os locais de coleta.
 </div>
 <h2>Fichas municipais</h2>
-<p>Municípios sem espécies individualizadas permanecem identificados para extração futura. Os números abaixo não substituem indicadores de riqueza validada.</p>
+<p>Municípios sem espécies individualizadas permanecem identificados para extração futura. Os números abaixo representam táxons distintos com vínculos documentais por município, não riqueza validada; registros duplicados da mesma espécie são agrupados.</p>
 <div style={{display:'grid',gap:18,margin:'24px 0 44px'}}>
 {municipios.map(m=>{
 const registros=registrosMunicipais.filter(r=>norm(r.municipio)===norm(m));
@@ -57,7 +58,7 @@ const sede=coordenadasSede[m];
 const macambira=m==='Santa Maria'||m==='João Câmara';
 return <section id={municipioId(m)} key={m} style={{border:'1px solid #d7e3d8',borderRadius:18,padding:'22px 25px',background:'#fbfcf8'}}>
 <details open={macambira}>
-<summary style={{cursor:'pointer',fontSize:23,fontFamily:'Georgia,serif',color:'#194a30',fontWeight:600}}>{m} <span style={{fontFamily:'Arial,sans-serif',fontSize:13,fontWeight:400,color:'#587061'}}>· {especies.length} táxons individualizados</span></summary>
+<summary style={{cursor:'pointer',fontSize:23,fontFamily:'Georgia,serif',color:'#194a30',fontWeight:600}}>{m} <span style={{fontFamily:'Arial,sans-serif',fontSize:13,fontWeight:400,color:'#587061'}}>· {especies.length} táxons documentados</span></summary>
 <div style={{marginTop:17}}>
 {sede&&<p style={{fontSize:13}}><strong>Sede municipal (coordenadas aproximadas):</strong> {sede.lat.toFixed(2)}, {sede.lon.toFixed(2)} · IBGE {sede.ibge} · <a href={'https://www.openstreetmap.org/?mlat='+sede.lat+'&mlon='+sede.lon+'#map=11/'+sede.lat+'/'+sede.lon} target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></p>}
 {m==='João Câmara'&&<p><strong>Fonte principal:</strong> Planoambiental (2025), EIA do Complexo Fotovoltaico João Câmara, seção Abelhas. Foram informadas 14 espécies e 418 indivíduos em duas campanhas (dezembro de 2024 e março de 2025). Os 418 indivíduos pertencem exclusivamente ao EIA e não devem ser somados a Santa Maria.</p>}
@@ -89,4 +90,4 @@ return <section id={municipioId(m)} key={m} style={{border:'1px solid #d7e3d8',b
 <p>As referências abaixo estão disponíveis para a próxima etapa de extração. Não foram convertidas em ocorrências municipais.</p>
 <div className="taxaList">{fontes.filter(f=>f.municipios.length===0).map(f=><article className="reference" key={f.id}><h3>{f.title}</h3><p>{f.nota}</p>{f.url&&<a href={f.url} target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a>}</article>)}</div>
 <p style={{marginTop:30}}><Link href="/distribuicao">← Voltar ao atlas</Link> · <Link href="/fontes">Todas as fontes</Link> · <Link href="/instituicoes">Meliponários, associações e coleções</Link></p>
-</main>}
+</div>}
