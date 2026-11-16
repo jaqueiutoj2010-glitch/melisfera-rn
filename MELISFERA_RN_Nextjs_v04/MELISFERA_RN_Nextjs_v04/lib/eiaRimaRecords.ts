@@ -10,7 +10,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0006",
     "evidence": "Primário e secundário",
     "area": "AII",
-    "note": "Tabela 14: fonte 1 = Biodiversity4All; fonte 2 = dados primários. O estudo refere-se a Upanema, mas ainda é necessário verificar a localização e a evidência individual do registro.",
+    "note": "Tabela 14: fonte 1 = Biodiversity4All; fonte 2 = dados primários. Método primário: fotodocumentação sem captura, em campanha de cinco dias (EIA, pp. 105–106). A localização e a fotografia individual precisam ser conferidas.",
     "validation": "Registro documental de campo — coordenadas e evidência individual pendentes"
   },
   {
@@ -22,7 +22,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0134",
     "evidence": "Primário e secundário",
     "area": "AID, ADA",
-    "note": "Tabela 14: fonte 1 = Biodiversity4All; fonte 2 = dados primários. O estudo refere-se a Upanema, mas ainda é necessário verificar a localização e a evidência individual do registro.",
+    "note": "Tabela 14: fonte 1 = Biodiversity4All; fonte 2 = dados primários. Método primário: fotodocumentação sem captura, em campanha de cinco dias (EIA, pp. 105–106). A localização e a fotografia individual precisam ser conferidas.",
     "validation": "Registro documental de campo — coordenadas e evidência individual pendentes"
   },
   {
@@ -34,7 +34,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0140",
     "evidence": "Secundário",
     "area": null,
-    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org); sem identificador individual nem área de influência indicada na tabela. Confirmar a localidade na fonte original antes de atribuir ocorrência ao município.",
+    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org). O EIA informa que a pesquisa secundária considerou os municípios do empreendimento (p. 105), mas não fornece ID individual da observação nem área de influência nesta linha. Conferir localidade original antes de atribuir ocorrência ao município.",
     "validation": "Referência secundária — confirmar ocorrência original"
   },
   {
@@ -46,7 +46,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0139",
     "evidence": "Secundário",
     "area": null,
-    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org); sem identificador individual nem área de influência indicada na tabela. Confirmar a localidade na fonte original antes de atribuir ocorrência ao município.",
+    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org). O EIA informa que a pesquisa secundária considerou os municípios do empreendimento (p. 105), mas não fornece ID individual da observação nem área de influência nesta linha. Conferir localidade original antes de atribuir ocorrência ao município.",
     "validation": "Referência secundária — confirmar ocorrência original"
   },
   {
@@ -58,7 +58,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0137",
     "evidence": "Secundário",
     "area": null,
-    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org); sem identificador individual nem área de influência indicada na tabela. Confirmar a localidade na fonte original antes de atribuir ocorrência ao município.",
+    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org). O EIA informa que a pesquisa secundária considerou os municípios do empreendimento (p. 105), mas não fornece ID individual da observação nem área de influência nesta linha. Conferir localidade original antes de atribuir ocorrência ao município.",
     "validation": "Referência secundária — confirmar ocorrência original"
   },
   {
@@ -70,7 +70,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": "ARN-0092",
     "evidence": "Secundário",
     "area": null,
-    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org); sem identificador individual nem área de influência indicada na tabela. Confirmar a localidade na fonte original antes de atribuir ocorrência ao município.",
+    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org). O EIA informa que a pesquisa secundária considerou os municípios do empreendimento (p. 105), mas não fornece ID individual da observação nem área de influência nesta linha. Conferir localidade original antes de atribuir ocorrência ao município.",
     "validation": "Referência secundária — confirmar ocorrência original"
   },
   {
@@ -82,7 +82,7 @@ export const eiaRimaRecords:EiaRimaRecord[]=[
     "catalogId": null,
     "evidence": "Secundário",
     "area": null,
-    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org); sem identificador individual nem área de influência indicada na tabela. Confirmar a localidade na fonte original antes de atribuir ocorrência ao município.",
+    "note": "Fonte 1: Biodiversity4All (biodiversity4all.org). O EIA informa que a pesquisa secundária considerou os municípios do empreendimento (p. 105), mas não fornece ID individual da observação nem área de influência nesta linha. Conferir localidade original antes de atribuir ocorrência ao município.",
     "validation": "Referência secundária — confirmar ocorrência original"
   },
   {
