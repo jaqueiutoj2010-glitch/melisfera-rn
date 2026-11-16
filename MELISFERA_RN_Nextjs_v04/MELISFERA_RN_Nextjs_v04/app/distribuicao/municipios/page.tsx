@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import Link from 'next/link';
 import {taxa} from '@/lib/catalog';
 import {registrosMunicipais} from '@/lib/registros-municipais';
+import {eiaRimaPublicRecords} from '@/lib/eiaRimaRecords';
 
 export const metadata:Metadata={title:'Registros por município | MELISFERA RN',description:'Ocorrências de abelhas por município, com fontes, autoria e níveis de evidência.'};
 const fontes=[
@@ -24,7 +25,7 @@ const estudoMacambira={title:'Jorge et al. (2024) — Hymenoptera e serviços ec
 const especiesMacambira=['Apis mellifera','Centris sp.','Melipona mandacaia','Melipona subnitida','Plebeia flavocincta','Trigona spinipes','Xylocopa abbreviata','Xylocopa macambirae'];
 const norm=(v:string)=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase();
 const municipiosCatalogo=taxa.flatMap(t=>t.sources.map(s=>(s.municipality||'').trim())).filter(v=>v&&v!=='Não informado'&&!v.startsWith('RN;'));
-const municipios=Array.from(new Set([...municipiosCatalogo,...fontes.flatMap(f=>f.municipios),...registrosMunicipais.map(r=>r.municipio)])).sort((a,b)=>a.localeCompare(b,'pt-BR'));
+const municipios=Array.from(new Set([...municipiosCatalogo,...fontes.flatMap(f=>f.municipios),...registrosMunicipais.map(r=>r.municipio),...eiaRimaPublicRecords.map(r=>r.municipality)])).sort((a,b)=>a.localeCompare(b,'pt-BR'));
 const municipioId=(m:string)=>'municipio-'+encodeURIComponent(m);
 const referenciasMunicipais=Array.from(new Map([
  ...fontes.flatMap(f=>f.municipios.map(m=>({municipio:m,titulo:f.title,url:f.url,tipo:f.tipo,nota:f.status}))),
@@ -48,7 +49,8 @@ export default function Municipios(){return <main className="shell section">
 <div style={{display:'grid',gap:18,margin:'24px 0 44px'}}>
 {municipios.map(m=>{
 const registros=registrosMunicipais.filter(r=>norm(r.municipio)===norm(m));
-const especies=Array.from(new Set(registros.map(r=>r.taxon))).sort((a,b)=>a.localeCompare(b,'pt-BR'));
+const registrosEia=eiaRimaPublicRecords.filter(r=>norm(r.municipality)===norm(m));
+const especies=Array.from(new Set([...registros.map(r=>r.taxon),...registrosEia.map(r=>r.taxon)])).sort((a,b)=>a.localeCompare(b,'pt-BR'));
 const estudos=fontes.filter(f=>f.municipios.some(v=>norm(v)===norm(m)));
 const candidatos=taxa.filter(t=>t.sources.some(s=>norm(s.municipality||'')===norm(m)));
 const sede=coordenadasSede[m];
@@ -60,7 +62,7 @@ return <section id={municipioId(m)} key={m} style={{border:'1px solid #d7e3d8',b
 {sede&&<p style={{fontSize:13}}><strong>Sede municipal (coordenadas aproximadas):</strong> {sede.lat.toFixed(2)}, {sede.lon.toFixed(2)} · IBGE {sede.ibge} · <a href={'https://www.openstreetmap.org/?mlat='+sede.lat+'&mlon='+sede.lon+'#map=11/'+sede.lat+'/'+sede.lon} target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></p>}
 {m==='João Câmara'&&<p><strong>Fonte principal:</strong> Planoambiental (2025), EIA do Complexo Fotovoltaico João Câmara, seção Abelhas. Foram informadas 14 espécies e 418 indivíduos em duas campanhas (dezembro de 2024 e março de 2025). Os 418 indivíduos pertencem exclusivamente ao EIA e não devem ser somados a Santa Maria.</p>}
 {m==='Santa Maria'&&<p><strong>Fonte principal:</strong> Jaqueiuto S. Jorge, registros de campo informados pelo autor, com as mesmas 14 espécies da lista primária do EIA de João Câmara. Datas, vouchers e abundâncias individuais ainda não foram anexados.</p>}
-{especies.length>0?<div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',textAlign:'left'}}><thead><tr><th style={{padding:10}}>Táxon</th><th style={{padding:10}}>Fonte</th><th style={{padding:10}}>Situação</th></tr></thead><tbody>{especies.map(nome=>{const fontesTaxon=registros.filter(r=>r.taxon===nome);return <tr key={nome} style={{borderTop:'1px solid #dce5db'}}><td style={{padding:10}}><i>{nome}</i></td><td style={{padding:10,fontSize:13}}>{fontesTaxon.map(r=><div key={r.fonte}>{r.url?<a href={r.url} target="_blank" rel="noopener noreferrer">{r.fonte} ↗</a>:r.fonte}</div>)}</td><td style={{padding:10,fontSize:13}}>{fontesTaxon.map(r=><div key={r.fonte}>{situacao[r.status]||r.status}{'ninhos' in r&&'individuos' in r?' · '+String(r.ninhos)+' ninhos / '+String(r.individuos)+' emergidos':'percentual' in r?' · '+String(r.percentual)+'% dos 123 machos':''}</div>)}</td></tr>})}</tbody></table></div>:<p>Nenhuma espécie individualizada nesta rodada. A fonte municipal está identificada, mas a extração taxonômica ainda é necessária.</p>}
+{especies.length>0?<div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',textAlign:'left'}}><thead><tr><th style={{padding:10}}>Táxon</th><th style={{padding:10}}>Fonte</th><th style={{padding:10}}>Situação</th></tr></thead><tbody>{especies.map(nome=>{const fontesTaxon=registros.filter(r=>r.taxon===nome);const eiaTaxon=registrosEia.filter(r=>r.taxon===nome);return <tr key={nome} style={{borderTop:'1px solid #dce5db'}}><td style={{padding:10}}><i>{nome}</i></td><td style={{padding:10,fontSize:13}}>{fontesTaxon.map(r=><div key={r.fonte}>{r.url?<a href={r.url} target="_blank" rel="noopener noreferrer">{r.fonte} ↗</a>:r.fonte}</div>)}{eiaTaxon.map(r=><div key={r.study}>{r.study} · {r.page}</div>)}</td><td style={{padding:10,fontSize:13}}>{fontesTaxon.map(r=><div key={r.fonte}>{situacao[r.status]||r.status}{'ninhos' in r&&'individuos' in r?' · '+String(r.ninhos)+' ninhos / '+String(r.individuos)+' emergidos':'percentual' in r?' · '+String(r.percentual)+'% dos 123 machos':''}</div>)}{eiaTaxon.map(r=><div key={r.study}>{r.evidence==='Secundário'?'EIA · evidência secundária validada':'EIA · evidência primária documentada'} · identificação e localização individual a conferir</div>)}</td></tr>})}</tbody></table></div>:<p>Nenhuma espécie individualizada nesta rodada. A fonte municipal está identificada, mas a extração taxonômica ainda é necessária.</p>}
 {macambira&&<div style={{background:'#f1f5ed',padding:17,borderRadius:12,marginTop:22}}>
 <h3 style={{margin:'0 0 8px'}}>Publicações complementares sobre macambiras</h3>
 <p>O artigo de Hymenoptera apresenta oito táxons no conjunto da pesquisa: {especiesMacambira.map((n,i)=><span key={n}><i>{n}</i>{i<especiesMacambira.length-1?', ':'.'}</span>)} Esses dados não constituem oito ocorrências municipais adicionais automaticamente, nem permitem distribuir as abundâncias publicadas entre Santa Maria e João Câmara.</p>
